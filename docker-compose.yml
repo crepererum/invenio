@@ -19,7 +19,7 @@
 
 web:
   build: .
-  command: inveniomanage runserver -h 0.0.0.0 -p 5000
+  command: inveniomanage runserver -h 0.0.0.0 -p 5000 -d
   ports:
     - "5000:5000"
   environment:
@@ -27,6 +27,7 @@ web:
     - CFG_DATABASE_HOST=db
     - INVENIO_APP_CONFIG_ENVS=CACHE_REDIS_HOST,CFG_DATABASE_HOST
   volumes:
+    - ./invenio:/code/invenio:ro
     - /tmp:/tmp
   links:
     - mysql:db
@@ -35,9 +36,12 @@ worker:
   build: .
   command: celery worker --purge -E -A invenio.celery.celery --loglevel=DEBUG
   environment:
+    - BROKER_URL=redis://cache:6379/1
+    - C_FORCE_ROOT=true
     - CACHE_REDIS_HOST=cache
+    - CELERY_RESULT_BACKEND=redis://cache:6379/1
     - CFG_DATABASE_HOST=db
-    - INVENIO_APP_CONFIG_ENVS=CACHE_REDIS_HOST,CFG_DATABASE_HOST
+    - INVENIO_APP_CONFIG_ENVS=BROKER_URL,CELERY_RESULT_BACKEND,CACHE_REDIS_HOST,CFG_DATABASE_HOST
   volumes_from:
     - web
   links:
