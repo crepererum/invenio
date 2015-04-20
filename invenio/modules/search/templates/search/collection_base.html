@@ -34,6 +34,11 @@ search_also, with context -%}
 <style>
 .websearch .nav > li > ul > li {
   float: left;
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+.websearch .nav > li {
+  margin-bottom: 10px;
 }
 .websearch .nav > li a {
   display: inline;
@@ -56,6 +61,17 @@ search_also, with context -%}
 }
 .websearch .badge {
   font-size: 80%;
+}
+.websearch .counter {
+  vertical-align: 5%;
+}
+
+.collection {
+  box-shadow: none !important;
+}
+
+.collection > div {
+  padding-top: 0 !important;
 }
 
 .collection ul.nav-list {
@@ -96,9 +112,15 @@ search_also, with context -%}
 
   {%- block index_right -%}
   {% if collection.collection_children_r %}
-    <div class="col-md-{{ '4' if collection.collection_children_v else '8' }} collection clearfix">
-      <h4>{{ collection.get_collectionbox_name(box_type='r') }}</h4>
-      {{ collection_tree(collection.collection_children_r, limit=2, class="nav nav-list clearfix") }}
+    <div class="col-md-{{ '4' if collection.collection_children_v else '8' }} clearfix">
+      <div class="panel collection">
+        <div class="panel-heading">
+          <h4 class="panel-title">{{ collection.get_collectionbox_name(box_type='r') }}</h4>
+        </div>
+        <div class="panel-body">
+        {{ collection_tree(collection.collection_children_r, limit=2, class="nav nav-list clearfix") }}
+        </div>
+      </div>
     </div>
   {% else %}
       <div class="col-md-{{ '4' if collection.collection_children_v else '8' }}">
@@ -130,11 +152,17 @@ search_also, with context -%}
 
   {%- block index_left -%}
   {% if collection.collection_children_v %}
-    <div class="col-md-4 collection clearfix">
-      <h4>{{ collection.get_collectionbox_name(box_type='v') }}</h4>
-      {{ collection_tree(collection.collection_children_v, limit=2, class="nav nav-list clearfix") }}
+    <div class="col-md-4 clearfix">
+      <div class="panel collection">
+        <div class="panel-heading">
+          <h4 class="panel-title">{{ collection.get_collectionbox_name(box_type='v') }}</h4>
+        </div>
+        <div class="panel-body">
+          {{ collection_tree(collection.collection_children_v, limit=2, class="nav nav-list clearfix") }}
 
-      {{ search_also(collection.externalcollections_2) }}
+          {{ search_also(collection.externalcollections_2) }}
+        </div>
+      </div>
     </div>
   {% elif collection.externalcollections_2 %}
       <div class="col-md-2">
