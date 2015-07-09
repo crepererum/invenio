@@ -1,0 +1,1509 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Git Workflow &mdash; Invenio 2.2.0.dev20150608 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Invenio 2.2.0.dev20150608 documentation" href="../index.html"/>
+        <link rel="up" title="Developer’s Guide" href="index.html"/>
+        <link rel="next" title="Commit quality check" href="kwalitee.html"/>
+        <link rel="prev" title="Tutorial" href="tutorial.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Invenio
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/introduction.html">Introduction to Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-is-a-registry">What is a Registry?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-do-i-need">What do I need?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo and Example Sites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#demo-sites">Demo Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#production-sites">Production Sites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/features.html">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#navigable-collection-tree">Navigable collection tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#powerful-search-engine">Powerful search engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#flexible-metadata">Flexible metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#user-personalization">User personalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#multiple-output-formats">Multiple output formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/first-steps.html">First Steps with Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#about">1. About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#prerequisites">2. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#debian-ubuntu-lts">2.1. Debian / Ubuntu LTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#centos-rhel">2.2. Centos / RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#os-x">2.3. OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#extra-tools">2.4. Extra tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#quick-instructions-for-the-impatient-invenio-developer">3. Quick instructions for the impatient Invenio developer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#installation">3.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#configuration">3.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#development">3.3. Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#final-words">4. Final words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/overlay.html">How to create an Invenio overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#what-is-an-overlay">What is an overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#creating-your-first-invenio-overlay">Creating your first Invenio overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-global-setup">The global setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-virtual-environment">The virtual environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-base-of-the-overlay">The base of the overlay</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#sensitive-configuration">Sensitive configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#database-setup">Database setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#assets">Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#running">Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#translations">Translations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#message-extraction">Message Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#create-catalog-for-new-language">Create Catalog for New Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#compiling-catalog">Compiling Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#updating-strings">Updating Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#deployment">Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#preparing-the-tarball">Preparing the tarball</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#creating-the-virtual-environement">Creating the virtual environement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#installing-the-package">Installing the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id2">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#dealing-with-versions">Dealing with versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/common-concepts.html">Common Concepts</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introducing Invenio for Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extensions.html">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extensions.html#plugging-an-existing-extension">Plugging an Existing Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extensions.html#code-structure">Code structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="registries.html">Pluggable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.html#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#quering">Quering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#subqueries">Subqueries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#schema">Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#improve-code-readability">Improve code readability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="howtomodule.html">How to develop a module: Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="howtomodule.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="howtomodulepart2.html">How to develop a module: Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="howtomodulepart2.html#multiple-views">Multiple views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howtomodulepart2.html#module-wide-configuration">Module-wide configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="howtomodulepart3.html">How to develop a module: Part 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="howtomodulepart3.html#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howtomodulepart3.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Git Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-things-up">Setting things up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#s1-setting-up-your-git-identity">S1. Setting up your Git identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s2-setting-up-your-private-repo">S2. Setting up your private repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s3-backuping-your-private-repo-only-developers-at-cern">S3. Backuping your private repo (only developers at CERN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s4-setting-up-your-public-repo">S4. Setting up your public repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s5-pushing-to-your-public-repo-from-outside-cern">S5. Pushing to your public repo from outside CERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s6-making-your-public-repo-visible-on-the-web">S6. Making your public repo visible on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s7-using-remote-repository-locally">S7. Using remote repository locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-official-repo-branches">Understanding official repo branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#maint"><code class="docutils literal"><span class="pre">maint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next"><code class="docutils literal"><span class="pre">next</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#working-on-new-features-overview">Working on new features - overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-on-new-features-details">Working on new features - details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#w1-cloning-the-repo">W1. Cloning the repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w2-working-with-local-topic-branches">W2. Working with local topic branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w3-working-on-new-feature-b">W3. Working on new-feature-b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w4-using-temporary-stash">W4. Using temporary stash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w5-testing-on-dev-servers">W5. Testing on DEV servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w6-rebasing-against-latest-git-master">W6. Rebasing against latest git/master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w7-publishing-your-work">W7. Publishing your work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#w8-review-process">W8. Review process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remarks-often-made-during-code-review">Remarks often made during code review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#r1-remarks-on-commit-history">R1. Remarks on commit history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#r2-remarks-on-commit-log-messages">R2. Remarks on commit log messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#r3-remarks-on-the-coding">R3. Remarks on the coding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#r4-notes-on-the-review-process-timeline">R4. Notes on the review process timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kwalitee.html">Commit quality check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#interactive-sessions">Interactive sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#code-changes-and-live-reloading">Code changes and live reloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docker.html#overlays">Overlays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Admin&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibauthority-admin-guide.html">BibAuthority Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#enforcing-types-of-authority-records">Enforcing types of authority records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibedit">BibEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibindex">BibIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#configuration-file-overview">Configuration File Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibclassify-admin-guide.html">BibClassify Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#thesaurus">1.1 Thesaurus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#keyword-extraction">1.2 Keyword extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#running-bibclassify">2. Running BibClassify</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibconvert-admin-guide.html">BibConvert Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#a-overview">A. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#b-xml-oriented-mode">B. XML-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#configuration-file-examples">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#running-bibconvert">2. Running BibConvert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#c-plain-text-oriented-mode">C. Plain Text-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id2">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id3">2. Running BibConvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#bibconvert-configuration-guide">3. BibConvert Configuration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibedit-admin-guide.html">BibEdit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-web-interface">2. Edit records via Web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#keyboard-shortcuts-on-bibedit">2.1 Keyboard shortcuts on BibEdit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-multiple-records-via-web-interface">3. Edit multiple records via web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#multi-record-editor-user-guide">3.1 Multi-Record Editor user guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-command-line">4. Edit records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-records-via-command-line">5. Delete records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-all-records">6. Delete all records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#access-record-history">7. Access record history</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#configure-knowledge-bases">2. Configure Knowledge Bases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-knowledge-base">2.1 Add a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-knowledge-base">2.2 Remove a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-mapping">2.3 Add a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-mapping">2.4 Remove a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-a-mapping">2.5 Edit a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-the-attributes-of-a-knowledge-base">2.6 Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibmatch-admin-guide.html">BibMatch Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#what-is-bibmatch">1.1 What is BibMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#features">1.2 Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#usage">2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#basic-usage">2.1 Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#advanced-usage">2.2 Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#more-examples">3. More examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#id2">3.1 More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#appendix">Appendix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#a-querystrings">A. Querystrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#b-bibconvert-formats">B. BibConvert formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#c-predefined-fields">C. Predefined fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#d-bibmatch-commmand-line-tool">D. BibMatch commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsched-admin-guide.html">BibSched Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-graphical-interface">Bibsched graphical interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#manual-mode">Manual mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#automatic-mode">Automatic mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-maintenance">Bibsched maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#priorities">Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-logging">Task logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-concurrency">Task concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-command-line-interface">Bibsched command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibtasks-command-line-interface">Bibtasks command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-tasklets">BibSched Tasklets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibupload-admin-guide.html">BibUpload Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#configuring-bibupload">2. Configuring BibUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#running-bibupload">3. Running BibUpload</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-new-records">3.1 Inserting new records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-records-into-the-holding-pen">3.2 Inserting records into the Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#updating-existing-records">3.3 Updating existing records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-and-updating-at-the-same-time">3.4 Inserting and updating at the same time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#obtaining-feedbacks">3.7 Obtaining feedbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#assigning-additional-information-to-documents-and-other-entities">3.8 Assigning additional information to documents and other entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#batch-uploader">4. Batch Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-cataloguers">4.1 Web interface - Cataloguers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-robots">4.2 Web interface - Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#daemon-mode">4.2 Daemon mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-data-harvesting">2. OAI Data Harvesting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-harvest-admin-interface">2.1 OAI Harvest Admin Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oaiharvest-commmand-line-tool">2.2 oaiharvest commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oairepository-admin-guide.html">OAIRepository Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#oai-repository-exporting">2. OAI Repository (<em>Exporting</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#definition-of-oai-sets">2.1. Definition of OAI sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#exposing-metadata-via-oai-repository-gateway">2.2. Exposing metadata via OAI Repository Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/publiline-admin-guide.html">Publiline Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#configure-publiline">Configure Publiline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-1-define-a-publication-committee-chair">Step 1 : Define a Publication Committee Chair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-2-create-a-group">Step 2 : Create a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-3-define-project-leader-s">Step 3 : Define Project Leader(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#overview-and-usage">Overview and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/websession-admin-guide.html">WebSession Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/websession-admin-guide.html#guest-user-sessions">Guest User Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webstyle-admin-guide.html">WebStyle Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#css-style-sheet-and-images">1.1 CSS Style Sheet and Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#html-page-layout">1.2 HTML Page Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#look-of-bibliographic-references">1.3 Look of Bibliographic References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#specific-configurations">1.4 Specific Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#detailed-record-pages">2. Detailed Record Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#available-tabs">2.1 Available tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#showing-hiding-tabs">2.2 Showing/Hiding tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-content-of-tabs">2.3 Customizing content of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-look-of-tabs">2.4 Customizing look of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#custom-redirections">Custom Redirections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../base.html">Base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#invenio-base">invenio.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.wrappers">Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.bundles">Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#extensions">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ext/assets.html">Assets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.commands">Flask-Script commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.registry">Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.wrappers">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/arxiv.html">ArXiv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/arxiv.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/crossref.html">CrossRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/crossref.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/es.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/fs.html">Cloud Filesystems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#dropbox">Dropbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#google-drive">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/jasmine.html">Jasmine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#missing-features">Missing features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#flightjs-tests">FlightJS tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#fixtures">Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#howto">HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/logging.html">Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#logging-errors">Logging errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#log-handlers">Log handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#legacy-handling-of-errors">Legacy handling of errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#error-handling-do-s-and-don-ts">Error handling do&#8217;s and don&#8217;ts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#backends">Backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/login.html">Login</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login">invenio.ext.login package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login.legacy_user">invenio.ext.login.legacy_user module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/passlib.html">Passlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/passlib.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/script.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/script.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.backends">Backends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.interface">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/sqlalchemy.html">SQLAlchemy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/template.html">Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.config">Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.loader">Loader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.bccache">BCCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.context_processor">Context Processor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules/annotations.html">Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#invenio-modules-annotations">invenio.modules.annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.noteutils">Noteutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/apikeys.html">API Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documentation.html">Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documents.html">Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-api">invenio.modules.documents.api</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-errors">invenio.modules.documents.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/formatter.html">Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/jsonalchemy.html">JSONAlchemy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#module-structure">Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-to-extend-jsonalchemy-behaviour">How to Extend JSONAlchemy Behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#invenio-use-cases">Invenio Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/knowledge.html">Knowledge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/oauthclient.html">OAuthClient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#authorization-flow-overview">Authorization Flow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#module-invenio.modules.oauthclient.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#contrib">Contrib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/redirector.html">Redirector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.manage">Manage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/upgrader.html">Upgrader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#module-invenio.modules.upgrader.models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/uploader.html">Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.workflows">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/workflows.html">Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-workflow">Create a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-task">Create a task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#run-a-workflow">Run a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#holding-pen">Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#engine">Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#id2">Workers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#views">Views</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../utils/datastructures.html">Datastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/washers.html">Washers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/forms.html">Forms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#legacy">Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../legacy/bibrecord.html">BibRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community/code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecationpolicy.html">Deprecation policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#fast-track-deprecation">Fast track deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#how-to-deprecate-a-feature">How to deprecate a feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#invenio-license">Invenio License</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Invenio</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Developer&#8217;s Guide</a> &raquo;</li>
+      
+    <li>Git Workflow</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="git-workflow">
+<span id="id1"></span><h1>Git Workflow<a class="headerlink" href="#git-workflow" title="Permalink to this headline">¶</a></h1>
+<p>This page describes the Git collaboration workflow that we try to
+follow in our development.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Our collaboration model is basically a pull-on-demand model similar to
+the one used for the Linux kernel.  You may want to read a
+<a class="reference external" href="http://hgbook.red-bean.com/read/collaborating-with-other-people.html">chapter on this collaboration model in the Mercurial book</a>.</p>
+<p>In the recipes below you will encounter several personas with
+different roles:</p>
+<ul class="simple">
+<li>Joe Bloggs, head developer and system integrator</li>
+<li>John Doe, developer, maintainer of the <em>WebFoo</em> module</li>
+<li>Erika Mustermann, developer, maintainer of the <em>WebBar</em> module</li>
+</ul>
+</div>
+<div class="section" id="setting-things-up">
+<h2>Setting things up<a class="headerlink" href="#setting-things-up" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="s1-setting-up-your-git-identity">
+<h3>S1. Setting up your Git identity<a class="headerlink" href="#s1-setting-up-your-git-identity" title="Permalink to this headline">¶</a></h3>
+<p>How to set up your Git identity.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> vim ~/.gitconfig
+<span class="gp">$</span> cat ~/.gitconfig
+<span class="go">[alias]</span>
+<span class="go">    k = log --graph --decorate --pretty=oneline --abbrev-commit</span>
+<span class="go">[user]</span>
+<span class="go">    email = john.doe@cern.ch</span>
+<span class="go">    name = John Doe</span>
+<span class="go">[color]</span>
+<span class="go">    ui = auto</span>
+</pre></div>
+</div>
+<p>Please use the same full name and email address that was used in the
+good old CVS !ChangeLog, so that the repo history looks nicely
+coherent over time.</p>
+</div>
+<div class="section" id="s2-setting-up-your-private-repo">
+<h3>S2. Setting up your private repo<a class="headerlink" href="#s2-setting-up-your-private-repo" title="Permalink to this headline">¶</a></h3>
+<p>This is how to set up your private repo (on your laptop).</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd</span> ~/src
+<span class="gp">$</span> git clone http://invenio-software.org/repo/invenio.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="s3-backuping-your-private-repo-only-developers-at-cern">
+<h3>S3. Backuping your private repo (only developers at CERN)<a class="headerlink" href="#s3-backuping-your-private-repo-only-developers-at-cern" title="Permalink to this headline">¶</a></h3>
+<p>This is how to mirror your private repo to the CERN AFS space.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> rsync -rlptDvz -e ssh --delete ~/src/invenio/ <span class="se">\</span>
+<span class="go">    johndoe@lxplus.cern.ch:private/src/invenio</span>
+</pre></div>
+</div>
+<p>You should mirror your private repo and your working files from your
+laptop to your private AFS space every night or so.  This will give
+you a safety of having AFS backups around should something bad happen
+to your laptop.  This is important, because you may have some features
+existing only in your personal repo for weeks or months (see below).</p>
+<p>Also, having a mirror of your private repo on AFS will provide you
+with an easy way of testing your private uncommitted code on various
+other machines, notably CDSDEV.</p>
+</div>
+<div class="section" id="s4-setting-up-your-public-repo">
+<h3>S4. Setting up your public repo<a class="headerlink" href="#s4-setting-up-your-public-repo" title="Permalink to this headline">¶</a></h3>
+<p>This is how to set up your public repo (on your AFS public space).</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh johndoe@lxplus.cern.ch <span class="c"># LXPLUS (SLC5) now has git</span>
+<span class="go">johndoe@lxplus&gt; mkdir /afs/cern.ch/user/j/johndoe/public/repo</span>
+<span class="go">johndoe@lxplus&gt; cd /afs/cern.ch/user/j/johndoe/public/repo</span>
+<span class="go">johndoe@lxplus&gt; mkdir invenio-johndoe.git</span>
+<span class="go">johndoe@lxplus&gt; cd invenio-johndoe.git</span>
+<span class="go">johndoe@lxplus&gt; git --bare init</span>
+<span class="go">johndoe@lxplus&gt; chmod a+rx hooks/post-update</span>
+<span class="go">johndoe@lxplus&gt; echo &quot;John Doe&#39;s personal tree.&quot; &gt; description</span>
+</pre></div>
+</div>
+<p>You can now push your private master branch (from your laptop) to your
+public repo (on AFS).</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd</span> ~/src/invenio
+<span class="gp">$</span> git push ssh://johndoe@lxplus.cern.ch/~/public/repo/invenio-johndoe.git master
+</pre></div>
+</div>
+<p>You can define a shortcut called <code class="docutils literal"><span class="pre">johndoe-public</span></code> for your public repo
+in order to ease future push commands.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git remote add johndoe-public <span class="se">\</span>
+<span class="go">    ssh://johndoe@lxplus.cern.ch/~/public/repo/invenio-johndoe.git</span>
+<span class="gp">$</span> git push johndoe-public master
+</pre></div>
+</div>
+</div>
+<div class="section" id="s5-pushing-to-your-public-repo-from-outside-cern">
+<h3>S5. Pushing to your public repo from outside CERN<a class="headerlink" href="#s5-pushing-to-your-public-repo-from-outside-cern" title="Permalink to this headline">¶</a></h3>
+<p>In order to be able to push to your public repo from outside of CERN
+to a specific machine such as cdswaredev that has ssh port hidden
+behind the firewall, you should configure your ssh client to connect
+to cdswaredev via lxplus proxy gateway, using netcat to forward
+traffic to cdswaredev.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> cat ~/.ssh/config
+<span class="go">Host lxplus.cern.ch</span>
+<span class="go">    ProxyCommand ssh lxplus.cern.ch exec /usr/bin/nc %h %p</span>
+</pre></div>
+</div>
+<p>This will enable you to have apparently direct ssh/scp/git command
+connection from your laptop to cdsware, as if you were inside CERN.</p>
+<p>Note that this is not needed for regular branch pushing, since LXPLUS
+now has git.  It is only needed to access git repos on specific
+machines, which is rarely the typical developer use case.</p>
+</div>
+<div class="section" id="s6-making-your-public-repo-visible-on-the-web">
+<h3>S6. Making your public repo visible on the Web<a class="headerlink" href="#s6-making-your-public-repo-visible-on-the-web" title="Permalink to this headline">¶</a></h3>
+<p>Please contact Joe Bloggs in order to make your public repo visible on
+Invenio&#8217;s <a class="reference external" href="http://invenio-software.org/repo/">repo web interface</a>.</p>
+</div>
+<div class="section" id="s7-using-remote-repository-locally">
+<h3>S7. Using remote repository locally<a class="headerlink" href="#s7-using-remote-repository-locally" title="Permalink to this headline">¶</a></h3>
+<p>If you prefer, you can mount the remote afs filesystem in the local drive, and work
+as normal. To accomplish that you need sshfs package installed.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mkdir ~/afsrepo
+<span class="gp">$</span> sshfs -o <span class="nv">workaround</span><span class="o">=</span>rename &lt;username&gt;@lxplus.cern.ch:/afs/cern.ch/user/r/&lt;username&gt;/public/repo <span class="se">\</span>
+<span class="go">    ~/afsrepo/</span>
+<span class="gp">$</span> git push ~/afsrepo/invenio.git/ master
+</pre></div>
+</div>
+<p>To unmount the repository.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">fusermount -u ~/afsrepo</span>
+</pre></div>
+</div>
+<p>You can create aliases or edit /etc/fstab to help you mount the public repository.</p>
+<div class="highlight-text"><div class="highlight"><pre>sshfs#&lt;USERNAME&gt;@lxplus.cern.ch:/afs/cern.ch/user/&lt;LETTER&gt;/&lt;USERNAME&gt;/public/repo fuse user,noauto 0 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="understanding-official-repo-branches">
+<h2>Understanding official repo branches<a class="headerlink" href="#understanding-official-repo-branches" title="Permalink to this headline">¶</a></h2>
+<p>The official Invenio repository contains several branches for
+maintenance and development purposes.  We roughly follow the usual git
+model as described in
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/gitworkflows.html">man 7 gitworkflows</a>
+and elsewhere.</p>
+<p>In summary, the new patchlevel releases (X.Y.Z) happen from the
+<code class="docutils literal"><span class="pre">maint</span></code> branch, the new minor feature releases (X.Y) happen from the
+<code class="docutils literal"><span class="pre">master</span></code> branch, and new major feature releases (X) happen after they
+mature in the <code class="docutils literal"><span class="pre">next</span></code> branch.  A more detailed description follows.</p>
+<div class="section" id="maint">
+<h3><code class="docutils literal"><span class="pre">maint</span></code><a class="headerlink" href="#maint" title="Permalink to this headline">¶</a></h3>
+<p>This is the maintenance branch for the latest stable release.  There
+can be several maintenance branches for every release series
+(<strong>maint-0.99</strong>, <strong>maint-1.0</strong>, <strong>maint-1.1</strong>), but typically we use only
+<code class="docutils literal"><span class="pre">maint</span></code> for the latest stable release.</p>
+<p>The code that goes to the maintenance branch is of bugfix nature
+only.  It should not alter DB table schema, Invenio config file
+schema, local configurations in the <code class="docutils literal"><span class="pre">etc</span></code> folder or template function
+parameters in a backward-incompatible way.  If it contains any new
+features, then they are switched off in order to be fully compatible
+with the previous releases in this series.  Therefore, for
+installations using any Invenio released X.Y series, it should be
+always safe to upgrade the system at any moment in time by (1) backing
+up their <code class="docutils literal"><span class="pre">etc</span></code> folder containing local configuration, (2) installing
+the corresponding <code class="docutils literal"><span class="pre">maint-X.Y</span></code> branch updates, and (3) rolling back the
+<code class="docutils literal"><span class="pre">etc</span></code> folder with their customizations.  This upgrade process will be
+automatized in the future via special <code class="docutils literal"><span class="pre">inveniomanage</span></code> options.</p>
+</div>
+<div class="section" id="master">
+<h3><code class="docutils literal"><span class="pre">master</span></code><a class="headerlink" href="#master" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">master</span></code> branch is where the new features are being developed and
+where the new feature releases are being made from.  The code in
+<code class="docutils literal"><span class="pre">master</span></code> is reviewed and verified, so that it should be possible to
+make a new release out of this branch almost at any given point in
+time.  However, Invenio installations that would like to track this
+branch should be aware that DB table definitions are not frozen and
+may change, the config is not frozen and may change, etc, until the
+release time.  So while <code class="docutils literal"><span class="pre">master</span></code> is relatively stable for usage, it
+should be treated with extreme care, because updates between day D1
+and day D2 may require DB schema and <code class="docutils literal"><span class="pre">etc</span></code> configuration changes that
+are not covered by usual <code class="docutils literal"><span class="pre">inveniomanage</span></code> update statements, so people
+should be prepared to study the differences and update DB schemata and
+config files themselves.</p>
+</div>
+<div class="section" id="next">
+<h3><code class="docutils literal"><span class="pre">next</span></code><a class="headerlink" href="#next" title="Permalink to this headline">¶</a></h3>
+<p>If a new feature is well implemented, tested and considered stable, it
+goes directly into the <code class="docutils literal"><span class="pre">master</span></code> branch described previously.  If it is
+cleaned, tested and almost stable, but not fully <code class="docutils literal"><span class="pre">master</span></code> worthy yet,
+then it may go to the <code class="docutils literal"><span class="pre">next</span></code> branch.  The <code class="docutils literal"><span class="pre">next</span></code> branch serves as a
+kind of stabilization branch for <code class="docutils literal"><span class="pre">master</span></code>.  The features may stay in
+<code class="docutils literal"><span class="pre">next</span></code> for a long enough time to get stabilized, and when they
+are ready, they are promoted to <code class="docutils literal"><span class="pre">master</span></code> (or to <code class="docutils literal"><span class="pre">maint</span></code> in some
+scenarios).  The code in <code class="docutils literal"><span class="pre">next</span></code> may have bugs, may not pass the test
+suite, but anyway should be stable enough so that it is almost never
+revoked/rebased.</p>
+<p>Usually, <code class="docutils literal"><span class="pre">master</span></code> contains all of <code class="docutils literal"><span class="pre">maint</span></code>, and <code class="docutils literal"><span class="pre">next</span></code> contains all of
+<code class="docutils literal"><span class="pre">master</span></code>.  This is assured by periodical upward merges
+(maint-to-master, master-to-next, etc).</p>
+</div>
+</div>
+<div class="section" id="working-on-new-features-overview">
+<h2>Working on new features - overview<a class="headerlink" href="#working-on-new-features-overview" title="Permalink to this headline">¶</a></h2>
+<p>Here is a schema summarizing how John Doe would work on new features
+and fixes and how Joe Bloggs would integrate them.</p>
+<a class="reference internal image-reference" href="../_images/invenio-git-workflow.png"><img alt="invenio git workflow with features." src="../_images/invenio-git-workflow.png" style="width: 859px;" /></a>
+<p>The most important thing to recall is that <em>any topic branch</em>, be it a
+bugfix or a new feature, <em>should be started off by the developer from the
+lowest maint branch it applies to</em>,
+since it will then be merged upwards to all the other branches as part
+of the integration process.</p>
+<a class="reference internal image-reference" href="../_images/invenio-git-branches.png"><img alt="git tree with maint and master read only branches as well as two features or bugfix branches." src="../_images/invenio-git-branches.png" style="width: 348px;" /></a>
+<p>Example: if there is an important bug in v0.99.1 that John is going to
+fix, then John should create a topic branch from the tip of
+<code class="docutils literal"><span class="pre">maint-0.99</span></code>, test and everything, and send it over for integration,
+and it will then get merged both to <code class="docutils literal"><span class="pre">maint-0.99</span></code> as well as to all the
+necessary upwards branches (<code class="docutils literal"><span class="pre">maint-1.0</span></code>, <code class="docutils literal"><span class="pre">maint-1.1</span></code>, <code class="docutils literal"><span class="pre">master</span></code>, etc),
+as needed, e.g. via periodical <code class="docutils literal"><span class="pre">maint-&gt;master</span></code> merges.</p>
+<p>Backporting fixes from <code class="docutils literal"><span class="pre">master</span></code> to <code class="docutils literal"><span class="pre">maint</span></code> should remain exceptional.</p>
+</div>
+<div class="section" id="working-on-new-features-details">
+<h2>Working on new features - details<a class="headerlink" href="#working-on-new-features-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="w1-cloning-the-repo">
+<h3>W1. Cloning the repo<a class="headerlink" href="#w1-cloning-the-repo" title="Permalink to this headline">¶</a></h3>
+<p>After you clone the official repo (see S2 above), you keep working on
+your laptop in your own private git repo, using Atlantis Institute of
+Fictive Science setup conditions.</p>
+</div>
+<div class="section" id="w2-working-with-local-topic-branches">
+<h3>W2. Working with local topic branches<a class="headerlink" href="#w2-working-with-local-topic-branches" title="Permalink to this headline">¶</a></h3>
+<p>You never work on the master branch, you always checkout local <em>topic
+branches</em> for every feature you are implementing.  This will permit
+you to switch between topics easily, implement some urgent fixes for
+older releases, publish some features while retaining features not
+yet ready for public eyes, etc.</p>
+<p>In our workflow example above we created several branches to tackle
+several different tasks.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git checkout master
+<span class="gp">$</span> git branch new-feature-a
+<span class="gp">$</span> git branch new-feature-b
+<span class="gp">$</span> git branch refactor-c
+<span class="gp">$</span> git checkout next
+<span class="gp">$</span> git branch wild-idea-d
+<span class="gp">$</span> git checkout maint
+<span class="gp">$</span> git branch bugfix-e
+</pre></div>
+</div>
+<p>The topical branches do not necessarily have to stem from the same
+point in the master branch.</p>
+<p>Please name your topical branches sensibly, since their names may
+appear in the central repo logs in case of non-trivial merges.
+(Please use a dash rather than an underscore in topical branch names.)</p>
+</div>
+<div class="section" id="w3-working-on-new-feature-b">
+<h3>W3. Working on new-feature-b<a class="headerlink" href="#w3-working-on-new-feature-b" title="Permalink to this headline">¶</a></h3>
+<p>You now have some time to work on feature B, so.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git checkout new-feature-b
+<span class="go">[ edit, test, edit, test, commit ]</span>
+<span class="go">[ edit, test, edit, test, commit ]</span>
+<span class="go">[ more of the same ]</span>
+</pre></div>
+</div>
+<p>until things work as they should for the Atlantis Institute of Fictive
+Science demo site.  This can take a minute or a few weeks, depending
+on the complexity of B.</p>
+<p>While working on B, you can switch to other branches to work on
+various more urgent problems, etc.</p>
+</div>
+<div class="section" id="w4-using-temporary-stash">
+<h3>W4. Using temporary stash<a class="headerlink" href="#w4-using-temporary-stash" title="Permalink to this headline">¶</a></h3>
+<p>If you want to switch branches, you have to commit all the
+stuff you are currently editing, which may not be what you want.  In
+that case you can <strong>stash</strong> your commits into a temporary git stash,
+switch to a branch, do what you want, and when you come back, replay
+the changes from the stash.  Here is an example.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git stash <span class="c"># put local edits to the stash</span>
+<span class="gp">$</span> git stash list <span class="c"># list what you have there</span>
+<span class="go">stash@`informe 0 &lt;report/0&gt;`_: WIP on foo.py: 2340b5a... WebFoo: new support for baz</span>
+<span class="gp">$</span> git checkout refactor-c <span class="c"># work on the refactor-c branch a bit</span>
+<span class="go"> ... &lt;...&gt;</span>
+<span class="gp">$</span> git checkout new-feature-b  <span class="c"># come back to the new-feature-b branch</span>
+<span class="gp">$</span> git stash apply <span class="c"># replay stuff from stash</span>
+<span class="gp">$</span> git diff <span class="c"># verify</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="w5-testing-on-dev-servers">
+<h3>W5. Testing on DEV servers<a class="headerlink" href="#w5-testing-on-dev-servers" title="Permalink to this headline">¶</a></h3>
+<p>When your new-feature-b code works okay on the demo site, and you
+synced it to your /private/ AFS space, you should now test it under
+<strong>CDSDEV</strong> or <strong>INSPIREDEV</strong> operating conditions.  Some more editing,
+testing, and committing may be needed if things are not working as
+expected.</p>
+<p>If the code is working properly on CDSDEV in itself, but say some
+scalability issues were encountered, then there are two options: (i)
+either some more of the editing/testing/committing cycle is needed, or
+(ii) the code is considered working fine enough to be merged now,
+while the performance issues are savannized to be solved later.</p>
+</div>
+<div class="section" id="w6-rebasing-against-latest-git-master">
+<h3>W6. Rebasing against latest git/master<a class="headerlink" href="#w6-rebasing-against-latest-git-master" title="Permalink to this headline">¶</a></h3>
+<p>At this step the new-feature-b code is working both for Atlantis
+and for CDS contexts.  You should now check the official repo for any
+updates to catch any changes that may have been committed to
+origin/master in the meantime.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git checkout master
+<span class="gp">$</span> git pull
+</pre></div>
+</div>
+<p>You can then <strong>rebase</strong> your new-feature-b branch against recent master.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git checkout new-feature-b
+<span class="gp">$</span> git rebase master
+</pre></div>
+</div>
+<p>In case of conflicts during the rebase, say in file foo.py, you should
+resolve them.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> vim foo.py
+<span class="gp">$</span> git add foo.py
+<span class="gp">$</span> git rebase --continue
+</pre></div>
+</div>
+<p>or you can stop the rebase for good.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git rebase --abort
+</pre></div>
+</div>
+<p>You may prefer rebasing of your local commits rather than merging, so
+that the project log looks nice.  (No ugly empty merge commits, no
+unnecessary temporary versions.)</p>
+<p>While rebasing, you may want to squash your commits together, to keep
+the git repo history clean.  See section R4 below for more details.</p>
+<p>You should test your code once more to verify that it was not broken by
+the updates.</p>
+</div>
+<div class="section" id="w7-publishing-your-work">
+<h3>W7. Publishing your work<a class="headerlink" href="#w7-publishing-your-work" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="w7-a-pushing-into-your-public-repo">
+<h4>W7.a Pushing into your public repo<a class="headerlink" href="#w7-a-pushing-into-your-public-repo" title="Permalink to this headline">¶</a></h4>
+<p>The new-feature-b code is now ready to be pushed into your
+<strong>public repo</strong> for public consumption.  Please make sure to check again
+that the test cases are working well, and please check once more the
+basic code kwalitee, as mentioned in the section R3 below.</p>
+<p>If the test cases work and the code kwalitee is acceptable, push
+your branch into your public repo this way:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git push johndoe-public new-feature-b
+</pre></div>
+</div>
+<p>Then alert Joe Bloggs with a request to review and integrate the
+branch, indicating <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">johndoe/new-feature-b</span></code> in the email
+Subject header so that the emails will be threaded properly and given
+special treatment in the haystack of Joe&#8217;s usual email conversation.
+Please also add any special observations for merge.  Example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">From: john.doe@cern.ch</span>
+<span class="go">To: joe.bloggs@cern.ch</span>
+<span class="go">Subject: git branch johndoe/new-feature-b</span>
+
+<span class="go">Hi Joe:</span>
+
+<span class="go">Please merge git branch johndoe/new-feature-b.  Tests added,</span>
+<span class="go">kwalitee checked, needed quickly for Jane&#39;s forthcoming</span>
+<span class="go">new-feature-c.</span>
+
+<span class="go">Cheers, John Doe</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="w7-b-sending-patches-by-email">
+<h4>W7.b Sending patches by email<a class="headerlink" href="#w7-b-sending-patches-by-email" title="Permalink to this headline">¶</a></h4>
+<p>If some occasional code contributors do not have a public repo, they
+can generate and <strong>send patches by email</strong> to Joe.  Say like this.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git checkout master
+<span class="gp">$</span> git pull
+<span class="gp">$</span> git branch foo-fix
+<span class="gp">$</span> git checkout foo-fix
+<span class="gp">$</span> emacs bar.py
+<span class="gp">$</span> git commit -a -m <span class="s1">&#39;WebFoo: fixed bad problem&#39;</span>
+<span class="gp">$</span> git format-patch master
+<span class="gp">$</span> ls -l 0001-WebFoo-fixed-bad-problem.patch
+<span class="gp">$</span> git send-email --to joe.bloggs@cern.ch 0001-WebFoo-fixed-bad-problem.patch
+</pre></div>
+</div>
+<p>Or, instead of the last command, send Joe a normal verbose email with
+attached <code class="docutils literal"><span class="pre">0001-WebFoo-fixed-bad-problem.patch</span></code> file.</p>
+</div>
+<div class="section" id="w7-c-sending-patch-suggestions">
+<h4>W7.c Sending patch-suggestions<a class="headerlink" href="#w7-c-sending-patch-suggestions" title="Permalink to this headline">¶</a></h4>
+<p>As we said in the introduction, John usually maintains the !WebFoo module
+while Erika usually maintains the !WebBar module.  What happens if Erika
+spots a problem some !WebFoo feature?</p>
+<p>If the problem and its solution is clear, Erika can
+simply alert John that she&#8217;s up to it, fix the problem and publish a
+branch or send an email to Joe asking for integration.</p>
+<p>If the problem a little bit more complicated or there are several
+possible solutions and it is not clear which one is the best or the
+solution to the problem requires some deep changes inside the structure
+of !WebFoo that may affect other things or the problem requires
+optimizations of several pre-existing functions, then it may be best
+if Erika contacts John as the !WebFoo module maintainer about the
+problem.  Maybe John would like to do the changes himself or John can
+advise Erika how to go about the problem, etc.</p>
+<p>In the latter case Erika can implement the proposed solution and send
+the patch-suggestion email to John as explained in W7.b.  John can
+than review and approve the change and eventually change what has to be
+changed and forward the branch to Joe for integration.</p>
+<p>Note that if such a change to !WebFoo may affect other modules and/or
+other APIs, then these have to be usually discussed/reviewed by Joe in
+advance, just like other intra-module vs inter-module issues.</p>
+</div>
+</div>
+<div class="section" id="w8-review-process">
+<h3>W8. Review process<a class="headerlink" href="#w8-review-process" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="w8-a-reviewing-and-merging-branches">
+<h4>W8.a Reviewing and merging branches<a class="headerlink" href="#w8-a-reviewing-and-merging-branches" title="Permalink to this headline">¶</a></h4>
+<p>Joe now starts to <strong>review and integrate</strong> the new-feature-b branch.
+This usually takes two rounds: 1) pure reading of the patch can
+generate some comments; after the round one is over, 2) testing the
+patch can generate other comments.</p>
+<p>If the changes to be done are rather small, then Joe usually does it
+himself.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git log master..johndoe/new-feature-b <span class="c"># even when master is well ahead in future</span>
+<span class="gp">$</span> git diff master...johndoe/new-feature-b
+<span class="gp">$</span> git merge --log johndoe/new-feature-b
+<span class="gp">$</span> git commit --amend <span class="c"># change log message</span>
+<span class="gp">$</span> vim Makefile.am <span class="c"># edit to fix something</span>
+<span class="gp">$</span> git add Makefile.am
+<span class="gp">$</span> git commit --amend -s <span class="c"># commit also this new change and sign-off</span>
+<span class="gp">$</span> git push origin-writable master <span class="c"># push to public repo</span>
+</pre></div>
+</div>
+<p>If the changes to be done are rather important, and may reveal a
+necessity to make some more amendments to the code, this can eventually
+lead to longer edit/test/commit iterations done in
+your private repo.  If this happens, then, since your code was
+already published into a public space (even though as personal only),
+you should not rebase anymore (since rebase rewrites history); you
+should only merge your new amendments.  Or, in case of bigger
+rewrites, you can publish a new branch.</p>
+</div>
+<div class="section" id="w8-b-reviewing-and-committing-patches">
+<h4>W8.b Reviewing and committing patches<a class="headerlink" href="#w8-b-reviewing-and-committing-patches" title="Permalink to this headline">¶</a></h4>
+<p>For patches received by email, a similar review procedure takes
+place. To integrate such a patch.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> less ~/0001-Foo.patch
+<span class="gp">$</span> emacs ~/0001-Foo.patch <span class="c"># for small edits</span>
+<span class="gp">$</span> git am -3 ~/0001-Foo.patch
+<span class="gp">$</span> git commit --amend <span class="c"># to change commit message</span>
+</pre></div>
+</div>
+<p>or, for bigger patches that may require more integration work:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> less ~/0001-Foo.patch
+<span class="gp">$</span> git am -3 ~/0001-Foo.patch
+<span class="gp">$</span> emacs foo.py <span class="c"># change what is needed</span>
+<span class="gp">$</span> emacs bar.py <span class="c"># change what is needed</span>
+<span class="gp">#</span> <span class="nb">test</span>, install, etc
+<span class="gp">$</span> git add foo.py <span class="c"># add silently Joe&#39;s changes to original patch</span>
+<span class="gp">$</span> git add bar.py <span class="c"># add silently Joe&#39;s changes to original patch</span>
+<span class="gp">$</span> git commit --amend <span class="c"># commit everything in John&#39;s name</span>
+</pre></div>
+</div>
+<p>Although the last process may be evil at times, since Joe kind of
+usurps John&#8217;s name for the changes, and commits in his name.  Hence
+this method is usually acceptable only for tiny commits
+(e.g. correcting typos).</p>
+</div>
+<div class="section" id="w8-c-reviewing-and-cherry-picking-commits">
+<h4>W8.c Reviewing and cherry-picking commits<a class="headerlink" href="#w8-c-reviewing-and-cherry-picking-commits" title="Permalink to this headline">¶</a></h4>
+<p>Instead of integrating branches in full, Joe may want to <strong>cherry-pick</strong>
+some particular commits or squash branches to keep the project
+history clean.  An example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="c"># see log of a branch:</span>
+<span class="gp">$</span> git log erika/cool-stuff
+<span class="gp">#</span> pick one particular commit: <span class="o">(</span>e.g. some other author in Erika<span class="s1">&#39;s branch)</span>
+<span class="gp">$</span><span class="s1"> git cherry-pick 027e1524cd1b823a620620d4b60dd570596fd641</span>
+<span class="gp">$</span><span class="s1"> # edit its log message:</span>
+<span class="gp">$</span><span class="s1"> git commit --amend</span>
+<span class="gp">$</span><span class="s1"> # squash other commits together while merging: (e.g. other author in Erika&#39;</span>s branch<span class="o">)</span>
+<span class="gp">$</span> git diff 027e1524cd1b823a620620d4b60dd570596fd641 394d1a2a8488cbd0554f12b627ce478c8d1ee65c &gt; ~/z.patch
+<span class="gp">$</span> git apply --check z.patch
+<span class="gp">$</span> git apply ~/z.patch --check <span class="c"># test whether patch applies</span>
+<span class="gp">$</span> emacs ~/z.patch <span class="c"># edit some lines away, retest until applies</span>
+<span class="gp">$</span> git apply --reject z.patch <span class="c"># alternatively, apply only good junks, study rejects later</span>
+<span class="gp">$</span> <span class="c"># commit changes as Erika:</span>
+<span class="gp">$</span> git commit -a --author<span class="o">=</span><span class="s1">&#39;Erika Mustermann &lt;erika.mustermann@cern.ch&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="w9-checking-integrated-branch">
+<h4>W9. Checking integrated branch<a class="headerlink" href="#w9-checking-integrated-branch" title="Permalink to this headline">¶</a></h4>
+<p>Once all the integration-related iterations are over, and your
+new-feature-b code was integrated into the Invenio master branch,
+then you fetch it to <strong>check</strong> if it was well integrated, and you delete
+your new-feature-b branch since you don&#8217;t need it anymore.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git checkout master
+<span class="gp">$</span> git pull
+<span class="gp">$</span> git diff master..new-feature-b
+<span class="gp">$</span> git branch -d new-feature-b
+</pre></div>
+</div>
+<p>If Joe edits something during merge, then the commit SHA1s may not
+match, but you would notice and study the differences using diff.</p>
+</div>
+<div class="section" id="w10-deleting-integrated-branch">
+<h4>W10. Deleting integrated branch<a class="headerlink" href="#w10-deleting-integrated-branch" title="Permalink to this headline">¶</a></h4>
+<p>Once new-feature-b is fully merged, you <strong>delete</strong> this branch in your
+public repo.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git push johndoe-public :new-feature-b
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="remarks-often-made-during-code-review">
+<h2>Remarks often made during code review<a class="headerlink" href="#remarks-often-made-during-code-review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r1-remarks-on-commit-history">
+<h3>R1. Remarks on commit history<a class="headerlink" href="#r1-remarks-on-commit-history" title="Permalink to this headline">¶</a></h3>
+<p>Before a topical branch is sent for review and integration, the commit
+history of the branch should be checked and eventually polished.  Here
+is an example.</p>
+<p>Consider a topical branch with history like this.</p>
+<div class="highlight-text"><div class="highlight"><pre>commit1 WebFoo: new xyzzy facility
+commit2 WebFoo: fixed typo
+commit3 WebFoo: speed-ups for xyzzy daemon
+commit4 WebFoo: Python-2.4 compatibility
+commit5 WebFoo: Friday weekly cleanup
+commit6 WebFoo: even more speed ups
+commit7 WebFoo: oops, cleaned documention
+commit8 WebFoo: amendments of zyxxy
+</pre></div>
+</div>
+<p>This is not very good.  While preserving full commit history in the git
+repository would be nice, the problem here is that historical versions
+of the xyzzy facility in the topical branch are not always working
+properly.  The whoops commits are not eliminated.  Keeping
+intermediary commits does not make sense if they are not working
+properly, they would only be making <cite>git bisect</cite> harder in the future.</p>
+<p>Ideally, the individual commits should be in an always-working state
+and they should be presented in logical groups.  For example the above
+branch is better to be squashed as follows:</p>
+<div class="highlight-text"><div class="highlight"><pre>commit1 WebFoo: new xyzzy facility
+ + commit2 WebFoo: fixed typo
+ + commit4 WebFoo: Python-2.4 compatibility
+ + commit7a WebFoo: oops, cleaned documention
+commit3 WebFoo: speed-ups for xyzzy daemon
+ + commit5 WebFoo: Friday weekly cleanup
+ + commit7b WebFoo: oops, cleaned documention
+commit6 WebFoo: even more speed ups
+ + commit7c WebFoo: oops, cleaned documention
+commit8 WebFoo: amendments of zyxxy
+</pre></div>
+</div>
+<p>That is, the initial commit should be without typos and syntax errors,
+should be working on Python-2.4 environment already and should
+contain respective documentation already.  The speed optimisation is
+an independent improvement, so this would logically constitute our
+second commit.  If the commit6 contained documentation bits about
+optimisations, the should be presented here.  The same is true for the
+next even-more-speedups commit.  Finally, feature amendments come
+last.</p>
+<p>Git has powerful tools to help cleaning topical branches like this.
+Notably, you can run <cite>git rebase master -i</cite> to squash/reorder commits,
+<cite>git gui</cite> to separate various hunks inside commits, etc.</p>
+<p>Here is an illustration of a typical thinking process during branch
+cleanups:</p>
+<ul class="simple">
+<li>Is the facility fully working now as expected?  If it is, keep the
+commit.</li>
+<li>Is this facility or some related one broken in one of the aspects?
+If it is, amend and squash.</li>
+<li>Is this commit an improvement over an already-working facility?  If
+it is, keep the commit.</li>
+<li>Is this commit intermediary?  Is it worth keeping?  Is there a
+chance that somebody might want to start off a new branch at this
+point in some day?  Does this commit helps some future developer to
+understand the branch history better?  If not, squash.</li>
+<li>Is the primary author of this commit different?  If he is, keep the
+commit.  Alternatively, squash it, but use <cite>Co-authored-by</cite> commit
+log directive.</li>
+<li>Is the same commit addressing more than one logically separate problem?
+If it is, split.</li>
+</ul>
+<p>Having a clean branch history helps in providing sensibly working atomic
+updates, helps in understanding commits and code, eases eventual
+future bug-hunting via git bisecting, and makes the software generally
+more robust.</p>
+</div>
+<div class="section" id="r2-remarks-on-commit-log-messages">
+<h3>R2. Remarks on commit log messages<a class="headerlink" href="#r2-remarks-on-commit-log-messages" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="r2a-commit-message-format">
+<h4>R2a. Commit message format<a class="headerlink" href="#r2a-commit-message-format" title="Permalink to this headline">¶</a></h4>
+<p>Invenio git commit log messages are usually formatted in the following
+way:</p>
+<ul class="simple">
+<li>commit message headline providing short summary (maximum 50 chars)
+formatted in the style of <code class="docutils literal"><span class="pre">component:</span> <span class="pre">short</span> <span class="pre">description</span></code>. (using
+mostly nouns, no verbs);</li>
+<li>empty line;</li>
+<li>commit message body with a detailed description of what this patch does,
+formatted as a bulletted list, with one empty line between items (using
+present tense). If a given element in the list should appear in the release
+notes (to describe changes to Invenio admins and developers) it must be
+prefixed with one of the following labels:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">label</th>
+<th class="head">meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NEW</td>
+<td>commit adds a new feature</td>
+</tr>
+<tr class="row-odd"><td>SECURITY</td>
+<td>commit fixes a security issue</td>
+</tr>
+<tr class="row-even"><td>FIX</td>
+<td>commit fixes a bug</td>
+</tr>
+<tr class="row-odd"><td>BETTER</td>
+<td>commit improves an existing feature</td>
+</tr>
+<tr class="row-even"><td>AMENDS</td>
+<td>commit invalidates message from different commit identified
+by its SHA1</td>
+</tr>
+<tr class="row-odd"><td>INCOMPATIBLE</td>
+<td>compatibility remarks, removing features and dependencies</td>
+</tr>
+<tr class="row-even"><td>NOTE</td>
+<td>any general note (if needed)</td>
+</tr>
+</tbody>
+</table>
+<p>Here is an example: <a class="reference external" href="https://github.com/inveniosoftware/invenio/commit/71df9665bf5fcdd020b67e4cbcedfaddfd6cadaa">https://github.com/inveniosoftware/invenio/commit/71df9665bf5fcdd020b67e4cbcedfaddfd6cadaa</a>.</p>
+<div class="highlight-text"><div class="highlight"><pre>WebSearch: field-filtered MARCXML API output
+
+* Implements field-filtered MARCXML output in Python and Web APIs.
+  This was working for the TextMARC output, not for MARCXML output.
+  This commit fixes the problem.  Usage: `/record/123?of=xm&amp;ot=100,700`
+  or `/search?p=ellis&amp;of=xm&amp;ot=100,700`.  (closes #1591)
+
+* Adds new tests for trying to access hidden fields via the
+  filtered-field API technique.
+</pre></div>
+</div>
+<p>Note that if you use <code class="docutils literal"><span class="pre">vim</span></code> or <code class="docutils literal"><span class="pre">emacs</span> <span class="pre">git-modes</span></code> to write your commit
+messages, you will be alerted about the excessive headline length
+(more than 50 characters) via colour syntax highlighting. To use <code class="docutils literal"><span class="pre">vim</span></code>
+for example as your commit message editor, add <code class="docutils literal"><span class="pre">export</span> <span class="pre">EDITOR=vim</span></code> to
+your <code class="docutils literal"><span class="pre">.bashrc</span></code>, <code class="docutils literal"><span class="pre">bash_profile</span></code> or variants.</p>
+<p>The short commit logs are easily readable on narrow mobile devices,
+are helpful to quickly localise features, and ease any possible
+hunting for bugs via git bisecting later, should any trouble arise.</p>
+<p>Here is an example listing the last 15 commits on the master branch.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git log -n <span class="m">15</span> maint-1.1..master --pretty<span class="o">=</span>oneline <span class="p">|</span> grep -v <span class="s1">&#39;Merge b&#39;</span>
+<span class="go">c7cd1f184188207b55903e00e78e5b1acbff33c3 BibFormat: author links for mobile app</span>
+<span class="go">6f0641cbde7866adc521793e434f77e2d842f40e WebSearch: display number of hits in mobile output</span>
+<span class="go">be86ab82f632c60aea7dfc10677f091104155a86 BibFormat: initial release of mobile app formats</span>
+<span class="go">81dc101b4377951f345b7a174c2f673b672c1c3a BibDocFile: improve BibDoc display in Files tab</span>
+<span class="go">d8fd1f23aa63e6c842b3aed9c1509fc1294be719 BibDocFile: raise exception in _build_file_list()</span>
+<span class="go">e4a1804b7bbdf61f2b7fe8698684c16aced3f58a BibField: creation date addition and keyword fix</span>
+<span class="go">b0e6e6cacfec91393ab1cbfd04ec6dcfdff32dcd BibFormat: new Solr fulltext snippet facility</span>
+<span class="go">b98f24bf38b95dd7366d57e8d6d90804957099e5 BibDocFile: additional mimetypes support</span>
+<span class="go">211065f10e1a967e1050b08560e03edca58d9c34 BibField: new fft field in `atlantis.cfg`</span>
+<span class="go">e40be7d8af9223483fe63d97f64463d2492fa890 BibRank: increase rnkDOWNLOADS.file_format size</span>
+<span class="go">b18ee3fd919c1a06b143761f4611c02f4ac91cab BibField: Python-2.4 compatibility fix</span>
+</pre></div>
+</div>
+<p>See also commit message practices used in the git world, such as
+<a class="reference external" href="http://spheredev.org/wiki/Git_for_the_lazy#Writing_good_commit_messages">Git for the lazy: Writing good commit messages</a> and
+<a class="reference external" href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">A Note About Git Commit Messages</a>.</p>
+</div>
+<div class="section" id="r2b-commit-message-qa-review-directives">
+<h4>R2b. Commit message QA/review directives<a class="headerlink" href="#r2b-commit-message-qa-review-directives" title="Permalink to this headline">¶</a></h4>
+<p>The authors can use the following commit signature directives in order
+to highlight the quality of the patch at hand before requesting its
+review and merge.</p>
+<p>Example:  <a class="reference external" href="https://github.com/inveniosoftware/invenio/commit/e4a1804b7bbdf61f2b7fe8698684c16aced3f58a">https://github.com/inveniosoftware/invenio/commit/e4a1804b7bbdf61f2b7fe8698684c16aced3f58a</a></p>
+<div class="highlight-text"><div class="highlight"><pre>BibField: creation date addition and keyword fix
+
+
+* Adds new derived field &#39;creation_date&#39;.
+
+
+* Fixes keywords defition to always return list.
+
+Signed-off-by: Jiri Kuncar &lt;jiri.kuncar@cern.ch&gt;
+Reviewed-by: Tibor Simko &lt;tibor.simko@cern.ch&gt;
+</pre></div>
+</div>
+<p>Here is the list of QA directives that the author may use:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">Reported-by</span></code></dt>
+<dd>Acknowledges the user who originally reported the bug that this commit
+fixes.</dd>
+<dt><code class="docutils literal"><span class="pre">Signed-off-by</span></code></dt>
+<dd>The author says, in essence: &#8220;I have carefully implemented the feature
+without any leftover to-be-fixed places, I have run all code kwalitee
+checks and all relevant unit and functional tests, and everything is good.
+To the best of my knowledge, this commit is good to go into the fast merge
+track&#8221;.</dd>
+<dt><code class="docutils literal"><span class="pre">Co-authored-by</span></code></dt>
+<dd>Used when more persons than the current author were involved in creating
+the code. This usually happens in peer programming.</dd>
+<dt><code class="docutils literal"><span class="pre">Improved-by</span></code></dt>
+<dd>Acknowledges the person who improved the current code significantly after
+the original committer left, say. This differs from review in that the
+author provides much more improvements than in a usual review.</dd>
+</dl>
+</div></blockquote>
+<p>The reviewers then usually add one of the following tags:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">Acked-by</span></code></dt>
+<dd>The reviewer says, in essence: &#8220;I have seen this commit from a distance
+while walking in the corridor, it looks useful, but I have not had time to
+deal with it further&#8221;. Rarely used.</dd>
+<dt><code class="docutils literal"><span class="pre">Tested-by</span></code></dt>
+<dd>The reviewer says, in essence: &#8220;In addition, I have paged through the code,
+tested its kwalitee, tested the desired functionality that this commit
+implements, and all is well.&#8221;</dd>
+<dt><code class="docutils literal"><span class="pre">Reviewed-by</span></code></dt>
+<dd>The reviewer says, in essence: &#8220;In addition, I have read every line of the
+source code in detail.&#8221;</dd>
+</dl>
+</div></blockquote>
+<p>Note that a similar system is used in the git world, e.g. Linux kernel
+<a class="reference external" href="https://www.kernel.org/doc/Documentation/SubmittingPatches">https://www.kernel.org/doc/Documentation/SubmittingPatches</a> or Git
+itself
+<a class="reference external" href="http://git.kernel.org/cgit/git/git.git/plain/Documentation/SubmittingPatches">http://git.kernel.org/cgit/git/git.git/plain/Documentation/SubmittingPatches</a>.
+While we use some tags in similar context, we use some other tags
+slightly differently.</p>
+</div>
+</div>
+<div class="section" id="r3-remarks-on-the-coding">
+<h3>R3. Remarks on the coding<a class="headerlink" href="#r3-remarks-on-the-coding" title="Permalink to this headline">¶</a></h3>
+<p>Here is a small sample of often-made code remarks:</p>
+<ul class="simple">
+<li>Compliance to our <a class="reference external" href="http://invenio-demo.cern.ch/help/hacking/coding-style">coding standards</a>.  Stick to PEP 8, run <code class="docutils literal"><span class="pre">pylint</span></code> often.</li>
+<li>Missing <a class="reference external" href="http://invenio-demo.cern.ch/help/hacking/test-suite">test cases</a>.</li>
+<li>Sanitisation of input variables.  Default value check, XSS.</li>
+<li>Proper escaping of HTML output.  Use <code class="docutils literal"><span class="pre">cgi.escape()</span></code>.</li>
+<li>Proper <code class="docutils literal"><span class="pre">run_sql()</span></code> argument quoting.  SQL injection.</li>
+<li>Compliance to Python 2.3. Test on SLC4.</li>
+</ul>
+<p>Ideally you should make sure they are not present in your public
+branches before asking for merge into the git/master.  You can do a
+<strong>code kwalitee</strong> check yourself by running.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd </span>src/invenio/modules/bibedit/lib
+<span class="go">... hack on bibrecord_engine.py and friends</span>
+<span class="go">... make install etc until satisfaction</span>
+<span class="gp">$</span> python ../../miscutil/lib/kwalitee.py --check-all ./bibrecord*.py
+</pre></div>
+</div>
+<p>and then follow the output recommendations.  (If =&#8211;check-all= is too
+troublesome to implement e.g. due to bad legacy code, then please fix
+at least the recommendations produced by running =&#8211;check-some=.)</p>
+<p>For more information on the code kwalitee checking, on the
+above-listed problems and on ways to solve them, as well as some
+other frequently made remarks on the coding, please see the dedicated
+InvenioQualityAssurances wiki page.</p>
+</div>
+<div class="section" id="r4-notes-on-the-review-process-timeline">
+<h3>R4. Notes on the review process timeline<a class="headerlink" href="#r4-notes-on-the-review-process-timeline" title="Permalink to this headline">¶</a></h3>
+<p>Our pull-on-demand collaboration model enables us to have a <em>clean</em>
+development version of Invenio - there are no problems anymore with
+the CVS HEAD being broken because people were committing things before
+checking etc.</p>
+<p>The price we pay for the inherent review process in the pull-on-demand
+collaboration model is a certain time delay before the code becomes
+published and visible.  It is normal for John and Erika to have many
+branches sitting around, waiting for Joe to integrate them.  The
+integration delay can vary depending on the complexity of the branch.</p>
+<p>E.g. it helps to check in advance the list of frequent remarks
+mentioned in the section R3 above.</p>
+<p>E.g. it helps to provide test cases for every bigger commit.
+(Especially for deep changes that may affect a lot of the codebase, not
+mentioning changes affecting inter-module relationships.)</p>
+<p>E.g. it does not help if a branch combines several different features
+together.  We should not mix feature A and feature B together in the
+same commit and/or branch that implements some new feature C.  It is
+always better to separate different features into different topical
+branches.  On the other hand, it may not be good to separate too much,
+if features A and B are clearly logically linked.  The common sense
+will tell how much separation is needed.  (Similarly to how the common
+sense says when to stop the database design normalization process.)</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kwalitee.html" class="btn btn-neutral float-right" title="Commit quality check" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, 2014, 2015 CERN.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.2.0.dev20150608',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

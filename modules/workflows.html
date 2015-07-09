@@ -1,0 +1,2558 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Workflows &mdash; Invenio 2.2.0.dev20150608 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Invenio 2.2.0.dev20150608 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="../api.html"/>
+        <link rel="next" title="Datastructures" href="../utils/datastructures.html"/>
+        <link rel="prev" title="Uploader" href="uploader.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Invenio
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/introduction.html">Introduction to Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-is-a-registry">What is a Registry?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-do-i-need">What do I need?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo and Example Sites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#demo-sites">Demo Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#production-sites">Production Sites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/features.html">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#navigable-collection-tree">Navigable collection tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#powerful-search-engine">Powerful search engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#flexible-metadata">Flexible metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#user-personalization">User personalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#multiple-output-formats">Multiple output formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/first-steps.html">First Steps with Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#about">1. About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#prerequisites">2. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#debian-ubuntu-lts">2.1. Debian / Ubuntu LTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#centos-rhel">2.2. Centos / RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#os-x">2.3. OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#extra-tools">2.4. Extra tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#quick-instructions-for-the-impatient-invenio-developer">3. Quick instructions for the impatient Invenio developer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#installation">3.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#configuration">3.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#development">3.3. Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#final-words">4. Final words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/overlay.html">How to create an Invenio overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#what-is-an-overlay">What is an overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#creating-your-first-invenio-overlay">Creating your first Invenio overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-global-setup">The global setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-virtual-environment">The virtual environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-base-of-the-overlay">The base of the overlay</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#sensitive-configuration">Sensitive configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#database-setup">Database setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#assets">Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#running">Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#translations">Translations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#message-extraction">Message Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#create-catalog-for-new-language">Create Catalog for New Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#compiling-catalog">Compiling Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#updating-strings">Updating Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#deployment">Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#preparing-the-tarball">Preparing the tarball</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#creating-the-virtual-environement">Creating the virtual environement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#installing-the-package">Installing the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id2">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#dealing-with-versions">Dealing with versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/common-concepts.html">Common Concepts</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developer&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers/introduction.html">Introducing Invenio for Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/extensions.html">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#plugging-an-existing-extension">Plugging an Existing Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#code-structure">Code structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/registries.html">Pluggable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/models.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#quering">Quering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#subqueries">Subqueries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#schema">Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#improve-code-readability">Improve code readability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/modules.html#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodule.html">How to develop a module: Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodule.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart2.html">How to develop a module: Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#multiple-views">Multiple views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#module-wide-configuration">Module-wide configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart3.html">How to develop a module: Part 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/git-workflow.html">Git Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#setting-things-up">Setting things up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s1-setting-up-your-git-identity">S1. Setting up your Git identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s2-setting-up-your-private-repo">S2. Setting up your private repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s3-backuping-your-private-repo-only-developers-at-cern">S3. Backuping your private repo (only developers at CERN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s4-setting-up-your-public-repo">S4. Setting up your public repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s5-pushing-to-your-public-repo-from-outside-cern">S5. Pushing to your public repo from outside CERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s6-making-your-public-repo-visible-on-the-web">S6. Making your public repo visible on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s7-using-remote-repository-locally">S7. Using remote repository locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#understanding-official-repo-branches">Understanding official repo branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#maint"><code class="docutils literal"><span class="pre">maint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#next"><code class="docutils literal"><span class="pre">next</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-overview">Working on new features - overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-details">Working on new features - details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w1-cloning-the-repo">W1. Cloning the repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w2-working-with-local-topic-branches">W2. Working with local topic branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w3-working-on-new-feature-b">W3. Working on new-feature-b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w4-using-temporary-stash">W4. Using temporary stash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w5-testing-on-dev-servers">W5. Testing on DEV servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w6-rebasing-against-latest-git-master">W6. Rebasing against latest git/master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w7-publishing-your-work">W7. Publishing your work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w8-review-process">W8. Review process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#remarks-often-made-during-code-review">Remarks often made during code review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r1-remarks-on-commit-history">R1. Remarks on commit history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r2-remarks-on-commit-log-messages">R2. Remarks on commit log messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r3-remarks-on-the-coding">R3. Remarks on the coding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r4-notes-on-the-review-process-timeline">R4. Notes on the review process timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/kwalitee.html">Commit quality check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/docker.html">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#interactive-sessions">Interactive sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#code-changes-and-live-reloading">Code changes and live reloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#overlays">Overlays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Admin&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibauthority-admin-guide.html">BibAuthority Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#enforcing-types-of-authority-records">Enforcing types of authority records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibedit">BibEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibindex">BibIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#configuration-file-overview">Configuration File Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibclassify-admin-guide.html">BibClassify Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#thesaurus">1.1 Thesaurus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#keyword-extraction">1.2 Keyword extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#running-bibclassify">2. Running BibClassify</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibconvert-admin-guide.html">BibConvert Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#a-overview">A. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#b-xml-oriented-mode">B. XML-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#configuration-file-examples">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#running-bibconvert">2. Running BibConvert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#c-plain-text-oriented-mode">C. Plain Text-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id2">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id3">2. Running BibConvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#bibconvert-configuration-guide">3. BibConvert Configuration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibedit-admin-guide.html">BibEdit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-web-interface">2. Edit records via Web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#keyboard-shortcuts-on-bibedit">2.1 Keyboard shortcuts on BibEdit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-multiple-records-via-web-interface">3. Edit multiple records via web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#multi-record-editor-user-guide">3.1 Multi-Record Editor user guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-command-line">4. Edit records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-records-via-command-line">5. Delete records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-all-records">6. Delete all records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#access-record-history">7. Access record history</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#configure-knowledge-bases">2. Configure Knowledge Bases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-knowledge-base">2.1 Add a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-knowledge-base">2.2 Remove a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-mapping">2.3 Add a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-mapping">2.4 Remove a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-a-mapping">2.5 Edit a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-the-attributes-of-a-knowledge-base">2.6 Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibmatch-admin-guide.html">BibMatch Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#what-is-bibmatch">1.1 What is BibMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#features">1.2 Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#usage">2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#basic-usage">2.1 Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#advanced-usage">2.2 Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#more-examples">3. More examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#id2">3.1 More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#appendix">Appendix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#a-querystrings">A. Querystrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#b-bibconvert-formats">B. BibConvert formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#c-predefined-fields">C. Predefined fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#d-bibmatch-commmand-line-tool">D. BibMatch commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsched-admin-guide.html">BibSched Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-graphical-interface">Bibsched graphical interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#manual-mode">Manual mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#automatic-mode">Automatic mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-maintenance">Bibsched maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#priorities">Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-logging">Task logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-concurrency">Task concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-command-line-interface">Bibsched command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibtasks-command-line-interface">Bibtasks command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-tasklets">BibSched Tasklets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibupload-admin-guide.html">BibUpload Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#configuring-bibupload">2. Configuring BibUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#running-bibupload">3. Running BibUpload</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-new-records">3.1 Inserting new records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-records-into-the-holding-pen">3.2 Inserting records into the Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#updating-existing-records">3.3 Updating existing records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-and-updating-at-the-same-time">3.4 Inserting and updating at the same time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#obtaining-feedbacks">3.7 Obtaining feedbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#assigning-additional-information-to-documents-and-other-entities">3.8 Assigning additional information to documents and other entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#batch-uploader">4. Batch Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-cataloguers">4.1 Web interface - Cataloguers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-robots">4.2 Web interface - Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#daemon-mode">4.2 Daemon mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-data-harvesting">2. OAI Data Harvesting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-harvest-admin-interface">2.1 OAI Harvest Admin Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oaiharvest-commmand-line-tool">2.2 oaiharvest commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oairepository-admin-guide.html">OAIRepository Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#oai-repository-exporting">2. OAI Repository (<em>Exporting</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#definition-of-oai-sets">2.1. Definition of OAI sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#exposing-metadata-via-oai-repository-gateway">2.2. Exposing metadata via OAI Repository Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/publiline-admin-guide.html">Publiline Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#configure-publiline">Configure Publiline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-1-define-a-publication-committee-chair">Step 1 : Define a Publication Committee Chair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-2-create-a-group">Step 2 : Create a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-3-define-project-leader-s">Step 3 : Define Project Leader(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#overview-and-usage">Overview and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/websession-admin-guide.html">WebSession Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/websession-admin-guide.html#guest-user-sessions">Guest User Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webstyle-admin-guide.html">WebStyle Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#css-style-sheet-and-images">1.1 CSS Style Sheet and Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#html-page-layout">1.2 HTML Page Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#look-of-bibliographic-references">1.3 Look of Bibliographic References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#specific-configurations">1.4 Specific Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#detailed-record-pages">2. Detailed Record Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#available-tabs">2.1 Available tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#showing-hiding-tabs">2.2 Showing/Hiding tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-content-of-tabs">2.3 Customizing content of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-look-of-tabs">2.4 Customizing look of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#custom-redirections">Custom Redirections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../base.html">Base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#invenio-base">invenio.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.wrappers">Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.bundles">Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#extensions">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ext/assets.html">Assets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.commands">Flask-Script commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.registry">Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.wrappers">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/arxiv.html">ArXiv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/arxiv.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/crossref.html">CrossRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/crossref.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/es.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/fs.html">Cloud Filesystems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#dropbox">Dropbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#google-drive">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/jasmine.html">Jasmine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#missing-features">Missing features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#flightjs-tests">FlightJS tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#fixtures">Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#howto">HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/logging.html">Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#logging-errors">Logging errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#log-handlers">Log handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#legacy-handling-of-errors">Legacy handling of errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#error-handling-do-s-and-don-ts">Error handling do&#8217;s and don&#8217;ts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#backends">Backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/login.html">Login</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login">invenio.ext.login package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login.legacy_user">invenio.ext.login.legacy_user module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/passlib.html">Passlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/passlib.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/script.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/script.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.backends">Backends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.interface">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/sqlalchemy.html">SQLAlchemy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/template.html">Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.config">Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.loader">Loader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.bccache">BCCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.context_processor">Context Processor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="annotations.html">Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="annotations.html#invenio-modules-annotations">invenio.modules.annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotations.html#module-invenio.modules.annotations.models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotations.html#module-invenio.modules.annotations.noteutils">Noteutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotations.html#module-invenio.modules.annotations.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apikeys.html">API Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation.html">Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation.html#module-invenio.modules.documentation.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation.html#module-invenio.modules.documentation.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documents.html">Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documents.html#invenio-modules-documents-api">invenio.modules.documents.api</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documents.html#invenio-modules-documents-errors">invenio.modules.documents.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="formatter.html">Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jsonalchemy.html">JSONAlchemy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jsonalchemy.html#module-structure">Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jsonalchemy.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jsonalchemy.html#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jsonalchemy.html#how-to-extend-jsonalchemy-behaviour">How to Extend JSONAlchemy Behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jsonalchemy.html#invenio-use-cases">Invenio Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jsonalchemy.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="knowledge.html">Knowledge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="knowledge.html#module-invenio.modules.knowledge.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="knowledge.html#module-invenio.modules.knowledge.api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="oauthclient.html">OAuthClient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="oauthclient.html#authorization-flow-overview">Authorization Flow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oauthclient.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oauthclient.html#module-invenio.modules.oauthclient.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oauthclient.html#contrib">Contrib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oauthclient.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="redirector.html">Redirector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="redirector.html#module-invenio.modules.redirector.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="redirector.html#module-invenio.modules.redirector.api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="redirector.html#module-invenio.modules.redirector.manage">Manage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="upgrader.html">Upgrader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="upgrader.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="upgrader.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="upgrader.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="upgrader.html#module-invenio.modules.upgrader.models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="uploader.html">Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="uploader.html#module-invenio.modules.uploader.tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="uploader.html#module-invenio.modules.uploader.workflows">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-workflow">Create a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-task">Create a task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-a-workflow">Run a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#holding-pen">Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#engine">Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Workers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#views">Views</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../utils/datastructures.html">Datastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/washers.html">Washers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/forms.html">Forms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#legacy">Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../legacy/bibrecord.html">BibRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community/code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecationpolicy.html">Deprecation policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#fast-track-deprecation">Fast track deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#how-to-deprecate-a-feature">How to deprecate a feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#invenio-license">Invenio License</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Invenio</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../api.html">API</a> &raquo;</li>
+      
+    <li>Workflows</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="workflows">
+<span id="id1"></span><h1>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-invenio.modules.workflows"></span><p>This module allows you to easily push your data through a determined set of tasks
+and stop/continue execution if necessary.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Holding Pen</p>
+<p>Holding Pen (<a class="reference internal" href="#module-invenio.modules.workflows.views.holdingpen" title="invenio.modules.workflows.views.holdingpen"><code class="xref py py-mod docutils literal"><span class="pre">views.holdingpen</span></code></a>) is a web interface displaying
+all the data objects that ran through a workflow.</p>
+<p class="last">Here you can interact with the workflows and data directly via a GUI.</p>
+</div>
+<div class="section" id="create-a-workflow">
+<h2>Create a workflow<a class="headerlink" href="#create-a-workflow" title="Permalink to this headline">¶</a></h2>
+<p>Create a workflow for your data using functions as individual tasks.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.modules.workflows.tasks.sample_tasks</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">add_data</span><span class="p">,</span>
+    <span class="n">halt_if_higher_than_20</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">myworkflow</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    \<span class="s">&quot;</span><span class="se">\&quot;\&quot;</span><span class="s">Add 20 to integer and halt if higher.</span><span class="se">\&quot;\&quot;\&quot;</span>
+    <span class="n">workflow</span> <span class="o">=</span> <span class="p">[</span><span class="n">add_data</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+                <span class="n">halt_if_higher_than_20</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Save it as a new file in your module located under <cite>workflows/</cite> with the same
+name as the class. For example at <cite>yourmodule/workflows/myworkflow.py</cite>.</p>
+<p>The <cite>workflow</cite> attribute should be a list of functions
+(or list of lists of tasks) as per the conditions of the
+underlying <a class="reference external" href="https://pypi.python.org/pypi/workflow/1.01">workflows-module</a>.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Naming things</p>
+<p class="sidebar-subtitle">A valid workflow must:</p>
+<p>(a) Have matching class name and file-name or (b) map the class
+name using <code class="docutils literal"><span class="pre">__all__</span> <span class="pre">=</span> <span class="pre">[&quot;myname&quot;]</span></code> notation.</p>
+<p class="last">The workflows registry will make sure pick up any files under <cite>workflows/</cite>.</p>
+</div>
+</div>
+<div class="section" id="create-a-task">
+<h2>Create a task<a class="headerlink" href="#create-a-task" title="Permalink to this headline">¶</a></h2>
+<p>The functions in the workflow are called tasks. Each task must <em>at least</em>
+take two arguments:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">halt_if_higher_than_20</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">eng</span><span class="p">):</span>
+    \<span class="s">&quot;</span><span class="se">\&quot;\&quot;</span><span class="s">Check if current data is more than than 20.</span><span class="se">\&quot;\&quot;\&quot;</span>
+    <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="n">eng</span><span class="o">.</span><span class="n">halt</span><span class="p">(</span><span class="s">&quot;Data higher than 20.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><cite>obj</cite> (<a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a>)</dt>
+<dd><p class="first"><em>is the current object being worked on</em></p>
+<p class="last"><cite>obj</cite> adds extra functionality by wrapping around your data and
+provide utilities to interface with the Holding Pen interface.</p>
+</dd>
+<dt><cite>eng</cite> (<a class="reference internal" href="#invenio.modules.workflows.engine.BibWorkflowEngine" title="invenio.modules.workflows.engine.BibWorkflowEngine"><code class="xref py py-class docutils literal"><span class="pre">engine.BibWorkflowEngine</span></code></a>)</dt>
+<dd><p class="first"><em>is the current instance of the workflow engine</em></p>
+<p class="last"><cite>eng</cite> give you access to manipulating the workflow execution itself and
+to retrieve all the objects being processed.</p>
+</dd>
+</dl>
+<p>Other parameters may be passed as <cite>*args</cite> or <cite>**kwargs</cite>.</p>
+<div class="section" id="pass-additional-arguments">
+<h3>Pass additional arguments<a class="headerlink" href="#pass-additional-arguments" title="Permalink to this headline">¶</a></h3>
+<p>To allow arguments being passed to the task from the workflow definition,
+simply wrap your task in a closure:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">add_data</span><span class="p">(</span><span class="n">data_param</span><span class="p">):</span>
+    \<span class="s">&quot;</span><span class="se">\&quot;\&quot;</span><span class="s">Add data_param to the obj.data.</span><span class="se">\&quot;\&quot;\&quot;</span>
+    <span class="k">def</span> <span class="nf">_add_data</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">eng</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data_param</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">data</span> <span class="o">+=</span> <span class="n">data</span>
+
+    <span class="k">return</span> <span class="n">_add_data</span>
+</pre></div>
+</div>
+<p>It can then be called from the workflow definition as <cite>add_data(20)</cite>,
+returning the inner function.</p>
+</div>
+</div>
+<div class="section" id="run-a-workflow">
+<h2>Run a workflow<a class="headerlink" href="#run-a-workflow" title="Permalink to this headline">¶</a></h2>
+<p>Finally, to run your workflow you there are mainly two use-cases:</p>
+<blockquote>
+<div><ul class="simple">
+<li>run only a <strong>single data object</strong>, or</li>
+<li>run <strong>multiple data objects</strong> through a workflow.</li>
+</ul>
+</div></blockquote>
+<p>The former use the <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a> model API, and
+the latter use the <a class="reference internal" href="#module-invenio.modules.workflows.api" title="invenio.modules.workflows.api"><code class="xref py py-mod docutils literal"><span class="pre">api</span></code></a>.</p>
+<div class="section" id="run-a-single-data-object">
+<h3>Run a single data object<a class="headerlink" href="#run-a-single-data-object" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is recommended if you only have one data
+item you want to run through the workflow.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.modules.workflows.models</span> <span class="kn">import</span> <span class="n">BibWorkflowObject</span>
+<span class="n">myobj</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="o">.</span><span class="n">create_object</span><span class="p">()</span>
+<span class="n">myobj</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">eng</span> <span class="o">=</span> <span class="n">myobj</span><span class="o">.</span><span class="n">start_workflow</span><span class="p">(</span><span class="s">&quot;myworkflow&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once the workflow completes it will return the engine instance that ran it.</p>
+<p>To get the data, simply call the <cite>get_data()</cite> function of
+<a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">myobj</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>  <span class="c"># outputs: 30</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-multiple-data-objects">
+<h3>Run multiple data objects<a class="headerlink" href="#run-multiple-data-objects" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is recommended if you need to run several objects through a workflow.</p>
+</div>
+<p>To do this simply import the workflows API function <cite>start()</cite> and provide
+a list of objects:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.modules.workflows.api</span> <span class="kn">import</span> <span class="n">start</span>
+<span class="n">eng</span> <span class="o">=</span> <span class="n">start</span><span class="p">(</span><span class="n">workflow_name</span><span class="o">=</span><span class="s">&quot;myworkflow&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><em>Here we are passing simple data objects in form integers.</em></p>
+<p>As usual, the <cite>start()</cite> function returns the <cite>eng</cite> instance that ran the
+workflow. You can query this object to retrieve the data you sent in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">objects</span><span class="p">)</span>  <span class="c"># outputs: 4</span>
+</pre></div>
+</div>
+<p>Why 4 objects when we only shipped 2 objects? Well, we take initial snapshots
+(copy of BibWorkflowObject) of the original data. In the example above,
+we get 4 objects back as each object passed have a snapshot created.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Object versions and YOU</p>
+<p>The data you pass to the workflows API is wrapped in a BibWorkflowObject.</p>
+<p>This object have a <cite>version</cite> property which tells you the state of object.
+For example, if the object is currently <em>halted</em> in the middle of a
+workflow, or if it is an <em>initial</em> object.</p>
+<p class="last"><em>initial</em> objects are basically snapshots of the BibWorkflowObject just
+before the workflow started. These are created to allow for objects to
+be easily restarted in the workflow with the initial data intact.</p>
+</div>
+<p>You can also query the engine instance to only give you the objects which are in
+a certain state.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">initial_objects</span><span class="p">)</span>  <span class="c"># outputs: 2</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">halted_objects</span><span class="p">)</span>  <span class="c"># outputs: 2</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">completed_objects</span><span class="p">)</span>  <span class="c"># outputs: 0</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">running_objects</span><span class="p">)</span>  <span class="c"># outputs: 0</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">waiting_objects</span><span class="p">)</span>  <span class="c"># outputs: 0</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">error_objects</span><span class="p">)</span>  <span class="c"># outputs: 0</span>
+</pre></div>
+</div>
+<p>(<cite>eng.completed_objects</cite> is empty because both objects passed is halted.)</p>
+<p>This output is actually representative of snapshots of the objects, not the
+objects themselves. The _default_ snapshotting behaviour is also evident here:
+There is one snapshot taken in the beginning of the execution and one
+when the object reaches one of the other states. A snapshot can only be in a
+single state.</p>
+<p>No object will ever be in the <cite>running</cite> state under usual operation.</p>
+<p>Moreover, to retrieve the data from the first object, you can use
+<cite>get_data()</cite> as with single objects:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">res</span> <span class="o">=</span> <span class="n">halted_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">res</span>
+<span class="c"># outputs: 25</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-workflows-asynchronously">
+<h3>Run workflows asynchronously<a class="headerlink" href="#run-workflows-asynchronously" title="Permalink to this headline">¶</a></h3>
+<p>So far we have in been running our workflows in the current process. However,
+for long running processes we do not want to wait for the workflow to finish
+before continuing the processing.</p>
+<p>Luckily, there is API to do this:</p>
+<dl class="docutils">
+<dt><cite>BibWorkflowObject.start_workflow(delayed=True)</cite></dt>
+<dd>as when running single objects, you can pass the delayed parameter to
+enable asynchronous execution.</dd>
+<dt><cite>api.start_delayed()</cite></dt>
+<dd>The API provide this function <cite>start_delayed()</cite> to run a workflow
+asynchronously.</dd>
+</dl>
+<p>To use this functionality you need to make sure you are running a task queue
+such as <a class="reference external" href="http://www.celeryproject.org/">Celery</a> that will run the workflow in a separate process.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The delayed API returns a <a class="reference internal" href="#invenio.modules.workflows.worker_result.AsynchronousResultWrapper" title="invenio.modules.workflows.worker_result.AsynchronousResultWrapper"><code class="xref py py-class docutils literal"><span class="pre">worker_result.AsynchronousResultWrapper</span></code></a>
+instead of a <a class="reference internal" href="#invenio.modules.workflows.engine.BibWorkflowEngine" title="invenio.modules.workflows.engine.BibWorkflowEngine"><code class="xref py py-class docutils literal"><span class="pre">engine.BibWorkflowEngine</span></code></a> instance.</p>
+</div>
+<p>In order to communicate with such a task queue we make use of <em>worker plugins</em>.</p>
+</div>
+<div class="section" id="workers">
+<h3>Workers<a class="headerlink" href="#workers" title="Permalink to this headline">¶</a></h3>
+<p>A worker is a plugin (or bridge) from the Invenio workflows module to some
+distributed task queue. By default, we have provided workers for <a class="reference external" href="http://www.celeryproject.org/">Celery</a> and
+<a class="reference external" href="http://python-rq.org/">RQ</a>.</p>
+<p>These plugins are used by the <a class="reference internal" href="#module-invenio.modules.workflows.worker_engine" title="invenio.modules.workflows.worker_engine"><code class="xref py py-mod docutils literal"><span class="pre">worker_engine</span></code></a> to launch workflows
+asynchronously in a task queue.</p>
+<p><em>We recommend to use Celery as the default asynchronous worker.</em></p>
+</div>
+<div class="section" id="working-with-extra-data">
+<h3>Working with extra data<a class="headerlink" href="#working-with-extra-data" title="Permalink to this headline">¶</a></h3>
+<p>If you need to add some extra data to the <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a> that is
+not suitable to add to the <code class="docutils literal"><span class="pre">obj.data</span></code> attribute, you can make use if the
+<code class="docutils literal"><span class="pre">obj.extra_data</span></code> attribute.</p>
+<p>The extra_data attribute is basically a normal dictionary that you can fill. However
+it contains some additional information by default.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;_tasks_results&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s">&quot;_task_counter&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s">&quot;_error_msg&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s">&quot;_last_task_name&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="s">&quot;latest_object&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s">&quot;_action&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="s">&quot;redis_search&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s">&quot;source&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="s">&quot;_task_history: [],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This information is used by the <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a> to store some additional
+data related to the workflow execution and additional data added by tasks.</p>
+<p>It also stores information that is integrated with Holding Pen - the graphical interface
+for all the data objects.</p>
+</div>
+</div>
+<div class="section" id="holding-pen">
+<h2>Holding Pen<a class="headerlink" href="#holding-pen" title="Permalink to this headline">¶</a></h2>
+<p>The graphical interface over all the data objects that have been executed in a workflow.</p>
+<p>The name <em>Holding Pen</em> originates from a library use case of having some incoming bibliographical
+meta-data records on &#8220;hold&#8221; - awaiting some human curator to analyze the record and decide if
+the record should be inserted into the repository.</p>
+<p>One common usage of this interface is acceptance of user submissions.</p>
+<p>We will take this concept of record approval further throughout this guide as we explain the
+most common use cases for the Holding Pen.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Holding Pen is accessible under <cite>/admin/holdingpen</cite></p>
+</div>
+<div class="section" id="data-object-display-in-holding-pen">
+<h3>Data object display in Holding Pen<a class="headerlink" href="#data-object-display-in-holding-pen" title="Permalink to this headline">¶</a></h3>
+<p>To properly represent a data objects in the Holding Pen, the workflow definition
+explained above can be further enriched by adding some static functions to the class.</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt><cite>get_title</cite>: return the &#8220;title&#8221; of the data object shown in the table display.</dt>
+<dd><p class="first last">E.g. title of meta-data record</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>get_description</cite>: return a short desciption of the data object shown in the table display.</dt>
+<dd><p class="first last">E.g. identifiers and categories</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>formatter</cite>: used in the object detailed display to render the data in the object for the user.</dt>
+<dd><p class="first last">E.g. the detailed record format of a meta-data record.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="actions-in-holding-pen">
+<h3>Actions in Holding Pen<a class="headerlink" href="#actions-in-holding-pen" title="Permalink to this headline">¶</a></h3>
+<p>An action in Holding Pen is a generic term describing an action that can be taken
+on a data object.</p>
+<p>To use the example of record approval, we basically mean adding GUI buttons to
+accept or reject a data object. The action taken (the button pressed) on the data object
+is then connected to a custom action back-end that may then decide to
+e.g. continue the workflow or simply delete the object.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Approval action</p>
+<p class="last">In our example of the <em>approval action</em> we will make use of front-end assets
+(JavaScript/HTML/templates) to display and listen to events on buttons and
+a Python back-end plugin to react on the chosen action.</p>
+</div>
+<div class="section" id="adding-an-action">
+<h4>Adding an action<a class="headerlink" href="#adding-an-action" title="Permalink to this headline">¶</a></h4>
+<p>By default we have added an approval action which can be used to allow a data object
+to continue the workflow or be deleted.</p>
+<dl class="docutils">
+<dt><cite>workflows/actions/approval.py</cite></dt>
+<dd>Action back-end located in <code class="docutils literal"><span class="pre">workflows/actions/approval.py</span></code> that implements
+<code class="docutils literal"><span class="pre">render()</span></code>, <code class="docutils literal"><span class="pre">render_mini()</span></code> and <code class="docutils literal"><span class="pre">resolve()</span></code>. <code class="docutils literal"><span class="pre">resolve()</span></code> handles the
+continuation or deletion of the data object using the workflows API.</dd>
+<dt><cite>templates/workflows/actions/approval_(main|mini|side).html</cite></dt>
+<dd><p class="first">jinja templates used to render the action UI. There are different templates
+in play here depending on position.</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li><cite>mini</cite>: displayed in the main table (for a quick action).</li>
+<li><cite>side</cite>: displayed on the right side of the object details page.</li>
+<li><cite>main</cite>: displayed in the middle of the object details page.</li>
+</ul>
+</div></blockquote>
+</dd>
+<dt><cite>static/workflows/actions/approval.js</cite></dt>
+<dd>JavaScript file listening to events in the approval UI to call the backend
+via ajax calls.</dd>
+</dl>
+<p>To enable the JavaScript to be loaded via requireJS, you need to override the
+actions &#8220;init&#8221; JavaScript file <cite>static/workflows/actions/init.js</cite> on your overlay
+and add any initialization code for the action (e.g. attaching events).</p>
+</div>
+<div class="section" id="using-an-action">
+<h4>Using an action<a class="headerlink" href="#using-an-action" title="Permalink to this headline">¶</a></h4>
+<p>There are two ways of activating an action:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>When halting a workflow:</strong> <a class="reference internal" href="#invenio.modules.workflows.engine.BibWorkflowEngine.halt" title="invenio.modules.workflows.engine.BibWorkflowEngine.halt"><code class="xref py py-meth docutils literal"><span class="pre">engine.BibWorkflowEngine.halt()</span></code></a> has
+a parameter that allows you to set an action that needs to be taken in
+the Holding Pen - along with a message to be displayed.</li>
+<li><strong>Directly using the :py:class:`.models.BibWorkflowObject` API</strong>. <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject.set_action" title="invenio.modules.workflows.models.BibWorkflowObject.set_action"><code class="xref py py-meth docutils literal"><span class="pre">models.BibWorkflowObject.set_action()</span></code></a>
+<a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject.remove_action" title="invenio.modules.workflows.models.BibWorkflowObject.remove_action"><code class="xref py py-meth docutils literal"><span class="pre">models.BibWorkflowObject.remove_action()</span></code></a> <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject.get_action" title="invenio.modules.workflows.models.BibWorkflowObject.get_action"><code class="xref py py-meth docutils literal"><span class="pre">models.BibWorkflowObject.get_action()</span></code></a>.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="task-results-in-holding-pen">
+<h3>Task results in Holding Pen<a class="headerlink" href="#task-results-in-holding-pen" title="Permalink to this headline">¶</a></h3>
+<p>If you want to add some special task results to be displayed on the details page
+of the data object in Holding Pen, you can use the task results API available
+in <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a>.</p>
+<p>The API provides functions to manipulate the task results:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject.add_task_result" title="invenio.modules.workflows.models.BibWorkflowObject.add_task_result"><code class="xref py py-meth docutils literal"><span class="pre">models.BibWorkflowObject.add_task_result()</span></code></a></dt>
+<dd>Adds a task result to the end of a list associated with a label (name).</dd>
+<dt><a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject.update_task_results" title="invenio.modules.workflows.models.BibWorkflowObject.update_task_results"><code class="xref py py-meth docutils literal"><span class="pre">models.BibWorkflowObject.update_task_results()</span></code></a></dt>
+<dd>Update task result for a specific label (name).</dd>
+<dt><a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject.get_tasks_results" title="invenio.modules.workflows.models.BibWorkflowObject.get_tasks_results"><code class="xref py py-meth docutils literal"><span class="pre">models.BibWorkflowObject.get_tasks_results()</span></code></a></dt>
+<dd>Return all tasks results as a dictionary as <code class="docutils literal"><span class="pre">{</span> <span class="pre">name:</span> <span class="pre">[result,</span> <span class="pre">..]</span> <span class="pre">}</span></code></dd>
+</dl>
+<p>The <em>task result</em> is a dictionary given as context to the template
+when rendered. The result given here is added to a list of results
+for this name.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="p">()</span>  <span class="c"># or BibWorkflowObject.query.get(id)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">add_task_result</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="n">my_result</span><span class="p">,</span> <span class="s">&quot;path/to/template&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See sample templates under <cite>templates/workflows/results/*.html</cite>.</p>
+</div>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><span class="target" id="module-invenio.modules.workflows.api"></span><p>Main API for the workflows.</p>
+<p>If you want to run a workflow using the workflows module,
+this is the high level API you will want to use.</p>
+<dl class="class">
+<dt id="invenio.modules.workflows.api.WorkerBackend">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">WorkerBackend</code><a class="headerlink" href="#invenio.modules.workflows.api.WorkerBackend" title="Permalink to this definition">¶</a></dt>
+<dd><p>WorkerBackend is a class representing the worker.</p>
+<p>It will automatically get the worker thanks to the configuration
+when called.</p>
+<dl class="attribute">
+<dt id="invenio.modules.workflows.api.WorkerBackend.worker">
+<code class="descname">worker</code><a class="headerlink" href="#invenio.modules.workflows.api.WorkerBackend.worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represent the worker.</p>
+<p>This cached property is the one which is returning the worker
+to use.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the worker configured into the configuration file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.continue_oid">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">continue_oid</code><span class="sig-paren">(</span><em>oid</em>, <em>start_point='continue_next'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.continue_oid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continue workflow for given object id (oid).</p>
+<p>Depending on <cite>start_point</cite> it may start from previous, current or
+next task.</p>
+<p>Special custom keyword arguments can be given to the workflow engine
+in order to pass certain variables to the tasks in the workflow execution,
+such as a task-id from BibSched, the current user etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>oid</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; id of BibWorkflowObject to run.</li>
+<li><strong>start_point</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; where should the workflow start from? One of:
+* restart_prev: will restart from the previous task
+* continue_next: will continue to the next task
+* restart_task: will restart the current task</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine that ran the workflow</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.continue_oid_delayed">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">continue_oid_delayed</code><span class="sig-paren">(</span><em>oid</em>, <em>start_point='continue_next'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.continue_oid_delayed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continue workflow for given object id (oid), asynchronously.</p>
+<p>Similar behavior as <a class="reference internal" href="#invenio.modules.workflows.api.continue_oid" title="invenio.modules.workflows.api.continue_oid"><code class="xref py py-func docutils literal"><span class="pre">continue_oid()</span></code></a>, except it runs it
+asynchronously.</p>
+<p>For example, it may enqueue the execution of the workflow in
+a task queue such as Celery (<a class="reference external" href="http://celeryproject.org">http://celeryproject.org</a>).</p>
+<p>This function returns a sub-classed AsynchronousResultWrapper that
+holds a reference to the workflow id via the function
+<cite>AsynchronousResultWrapper.get</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>oid</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; id of BibWorkflowObject to run.</li>
+<li><strong>start_point</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; where should the workflow start from? One of:
+* restart_prev: will restart from the previous task
+* continue_next: will continue to the next task
+* restart_task: will restart the current task</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">AsynchronousResultWrapper.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.resume_objects_in_workflow">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">resume_objects_in_workflow</code><span class="sig-paren">(</span><em>id_workflow</em>, <em>start_point='continue_next'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.resume_objects_in_workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resume workflow for any halted or failed objects from given workflow.</p>
+<p>This is a generator function and will yield every workflow created per
+object which needs to be resumed.</p>
+<p>To identify the original workflow containing the halted objects,
+the ID (or UUID) of the workflow is required. The starting point
+to resume the objects from can optionally be given. By default,
+the objects resume with their next task in the workflow.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id_workflow</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; id of Workflow with objects to resume.</li>
+<li><strong>start_point</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; where should the workflow start from? One of:
+* restart_prev: will restart from the previous task
+* continue_next: will continue to the next task
+* restart_task: will restart the current task</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>yield: BibWorkflowEngine that ran the workflow</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.start">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">start</code><span class="sig-paren">(</span><em>workflow_name</em>, <em>data</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a workflow by given name for specified data.</p>
+<p>The name of the workflow to start is considered unique and it is
+equal to the name of a file containing the workflow definition.</p>
+<p>The data passed should be a list of object(s) to run through the
+workflow. For example: a list of dict, JSON string, BibWorkflowObjects
+etc.</p>
+<p>Special custom keyword arguments can be given to the workflow engine
+in order to pass certain variables to the tasks in the workflow execution,
+such as a taskid from BibSched, the current user etc.</p>
+<p>The workflow engine object generated is returned upon completion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>workflow_name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the workflow name to run. Ex: &#8220;my_workflow&#8221;.</li>
+<li><strong>data</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; the workflow name to run. Ex: &#8220;my_workflow&#8221;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine that ran the workflow.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.start_by_oids">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">start_by_oids</code><span class="sig-paren">(</span><em>workflow_name</em>, <em>oids</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.start_by_oids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start workflow by name with <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a> ids.</p>
+<p>Wrapper to call <a class="reference internal" href="#invenio.modules.workflows.api.start" title="invenio.modules.workflows.api.start"><code class="xref py py-func docutils literal"><span class="pre">start()</span></code></a> with list of
+<a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a> ids.</p>
+<p>Special custom keyword arguments can be given to the workflow engine
+in order to pass certain variables to the tasks in the workflow execution,
+such as a task-id from BibSched, the current user etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>workflow_name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the workflow name to run. Ex: &#8220;my_workflow&#8221;.</li>
+<li><strong>oids</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; BibWorkflowObject id&#8217;s to run.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine that ran the workflow.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.start_by_oids_delayed">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">start_by_oids_delayed</code><span class="sig-paren">(</span><em>workflow_name</em>, <em>oids</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.start_by_oids_delayed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start asynchronously workflow by name with <a class="reference internal" href="#invenio.modules.workflows.models.BibWorkflowObject" title="invenio.modules.workflows.models.BibWorkflowObject"><code class="xref py py-class docutils literal"><span class="pre">models.BibWorkflowObject</span></code></a> ids.</p>
+<p>Similar behavior as <a class="reference internal" href="#invenio.modules.workflows.api.start_by_oids" title="invenio.modules.workflows.api.start_by_oids"><code class="xref py py-func docutils literal"><span class="pre">start_by_oids()</span></code></a>, except it calls
+<a class="reference internal" href="#invenio.modules.workflows.api.start_delayed" title="invenio.modules.workflows.api.start_delayed"><code class="xref py py-func docutils literal"><span class="pre">start_delayed()</span></code></a>.</p>
+<p>For example, it may enqueue the execution of the workflow in
+a task queue such as Celery (<a class="reference external" href="http://celeryproject.org">http://celeryproject.org</a>).</p>
+<p>This function returns a sub-classed AsynchronousResultWrapper that
+holds a reference to the workflow id via the function
+<cite>AsynchronousResultWrapper.get</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>workflow_name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the workflow name to run. Ex: &#8220;my_workflow&#8221;.</li>
+<li><strong>oids</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; list of BibWorkflowObject id&#8217;s to run.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">AsynchronousResultWrapper.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.start_by_wid">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">start_by_wid</code><span class="sig-paren">(</span><em>wid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.start_by_wid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Re-start given workflow, by workflow uuid (wid).</p>
+<p>It is restarted from the beginning with the original data given.</p>
+<p>Special custom keyword arguments can be given to the workflow engine
+in order to pass certain variables to the tasks in the workflow execution,
+such as a task-id from BibSched, the current user etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wid</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the workflow uuid. Ex: &#8220;550e8400-e29b-41d4-a716-446655440000&#8221;.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">BibWorkflowEngine that ran the workflow.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.start_by_wid_delayed">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">start_by_wid_delayed</code><span class="sig-paren">(</span><em>wid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.start_by_wid_delayed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Re-start given workflow, by workflow uuid (wid), asynchronously.</p>
+<p>Similar behavior as <a class="reference internal" href="#invenio.modules.workflows.api.start_by_wid" title="invenio.modules.workflows.api.start_by_wid"><code class="xref py py-func docutils literal"><span class="pre">start_by_wid()</span></code></a>, except it starts the
+workflow <em>delayed</em> by using one of the defined workers available.</p>
+<p>For example, it may enqueue the execution of the workflow in
+a task queue such as Celery (<a class="reference external" href="http://celeryproject.org">http://celeryproject.org</a>).</p>
+<p>This function returns a sub-classed AsynchronousResultWrapper that
+holds a reference to the workflow id via the function
+<cite>AsynchronousResultWrapper.get</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wid</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the workflow uuid. Ex: &#8220;550e8400-e29b-41d4-a716-446655440000&#8221;.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">AsynchronousResultWrapper</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.api.start_delayed">
+<code class="descclassname">invenio.modules.workflows.api.</code><code class="descname">start_delayed</code><span class="sig-paren">(</span><em>workflow_name</em>, <em>data</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.api.start_delayed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a workflow by given name for specified data, asynchronously.</p>
+<p>Similar behavior as <a class="reference internal" href="#invenio.modules.workflows.api.start" title="invenio.modules.workflows.api.start"><code class="xref py py-func docutils literal"><span class="pre">start()</span></code></a>, except it starts the
+workflow <em>delayed</em> by using one of the defined workers available.</p>
+<p>For example, it may enqueue the execution of the workflow in
+a task queue such as Celery (<a class="reference external" href="http://celeryproject.org">http://celeryproject.org</a>).</p>
+<p>This function returns a sub-classed AsynchronousResultWrapper that
+holds a reference to the workflow id via the object
+<cite>AsynchronousResultWrapper.get</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>workflow_name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the workflow name to run. Ex: &#8220;my_workflow&#8221;.</li>
+<li><strong>data</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; the workflow name to run. Ex: &#8220;my_workflow&#8221;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">AsynchronousResultWrapper</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><span class="target" id="module-invenio.modules.workflows.models"></span><p>Models for BibWorkflow Objects.</p>
+<dl class="class">
+<dt id="invenio.modules.workflows.models.Workflow">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.models.</code><code class="descname">Workflow</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a workflow instance.</p>
+<p>Used by BibWorkflowEngine to store the state of the workflow.</p>
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.Workflow.delete">
+<em class="property">classmethod </em><code class="descname">delete</code><span class="sig-paren">(</span><em>*a</em>, <em>**k</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to manage DB session.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.Workflow.get">
+<em class="property">classmethod </em><code class="descname">get</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper to get a specified object.</p>
+<p>A wrapper for the filter and filter_by functions of sqlalchemy.
+Define a dict with which columns should be filtered by which values.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">)</span>
+<span class="n">Workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Workflow</span><span class="o">.</span><span class="n">uuid</span> <span class="o">!=</span> <span class="n">uuid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function supports also &#8220;hybrid&#8221; arguments.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Workflow</span><span class="o">.</span><span class="n">module_name</span> <span class="o">!=</span> <span class="s">&#39;i_hate_this_module&#39;</span><span class="p">,</span>
+             <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See also SQLAlchemy BaseQuery&#8217;s filter and filter_by documentation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.Workflow.get_extra_data">
+<code class="descname">get_extra_data</code><span class="sig-paren">(</span><em>user_id=0</em>, <em>uuid=None</em>, <em>key=None</em>, <em>getter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.get_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the extra_data for the object.</p>
+<p>Returns a JSON of the column extra_data or
+if any of the other arguments are defined,
+a specific value.</p>
+<p>You can define either the key or the getter function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> &#8211; the key to access the desirable value</li>
+<li><strong>getter</strong> &#8211; callable that takes a dict as param and returns a value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.Workflow.get_most_recent">
+<em class="property">classmethod </em><code class="descname">get_most_recent</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.get_most_recent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the most recently modified workflow.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.Workflow.get_objects">
+<em class="property">classmethod </em><code class="descname">get_objects</code><span class="sig-paren">(</span><em>uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.get_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the objects of the workflow.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.Workflow.get_status">
+<em class="property">classmethod </em><code class="descname">get_status</code><span class="sig-paren">(</span><em>uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the status of the workflow.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.Workflow.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>*a</em>, <em>**k</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to manage DB session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.Workflow.set_extra_data">
+<code class="descname">set_extra_data</code><span class="sig-paren">(</span><em>user_id=0</em>, <em>uuid=None</em>, <em>key=None</em>, <em>value=None</em>, <em>setter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.Workflow.set_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace extra_data.</p>
+<p>Modifies the JSON of the column extra_data or
+if any of the other arguments are defined, a specific value.
+You can define either the key, value or the setter function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> &#8211; the key to access the desirable value</li>
+<li><strong>value</strong> &#8211; the new value</li>
+<li><strong>setter</strong> &#8211; a callable that takes a dict as param and modifies it</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.models.</code><code class="descname">BibWorkflowObject</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data model for wrapping data being run in the workflows.</p>
+<p>Main object being passed around in the workflows module
+when using the workflows API.</p>
+<p>It can be instantiated like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Or, like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="o">.</span><span class="n">create_object</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>BibWorkflowObject provides some handy functions such as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="s">&quot;&lt;xml ..... /&gt;&quot;</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span> <span class="o">==</span> <span class="s">&quot;&lt;xml ..... /&gt;&quot;</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_extra_data</span><span class="p">({</span><span class="s">&quot;param&quot;</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_extra_data</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s">&quot;param&quot;</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">add_task_result</span><span class="p">(</span><span class="s">&quot;myresult&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Then to finally save the object</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now you can for example run it in a workflow:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span><span class="o">.</span><span class="n">start_workflow</span><span class="p">(</span><span class="s">&quot;sample_workflow&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.add_task_result">
+<code class="descname">add_task_result</code><span class="sig-paren">(</span><em>name</em>, <em>result</em>, <em>template='workflows/results/default.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.add_task_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new task result defined by name.</p>
+<p>The name is the dictionary key used to group similar types of
+results as well as a possible label for the result.</p>
+<p>The result is a dictionary given as context to the template
+when rendered. The result given here is added to a list of results
+for this name.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obj</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="p">()</span>  <span class="c"># or BibWorkflowObject.query.get(id)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">add_task_result</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="n">my_result</span><span class="p">,</span> <span class="s">&quot;path/to/template&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#string" title="(in Jinja2 v2.8-dev)"><em>string</em></a>) &#8211; The name of the task in human friendly way.
+It is used as a key and label for the result rendering.</li>
+<li><strong>result</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#dict" title="(in Jinja2 v2.8-dev)"><em>dict</em></a>) &#8211; The result to store - passed to render_template().</li>
+<li><strong>template</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#string" title="(in Jinja2 v2.8-dev)"><em>string</em></a>) &#8211; The location of the template to render the result.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.change_status">
+<code class="descname">change_status</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.change_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the status.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.continue_workflow">
+<code class="descname">continue_workflow</code><span class="sig-paren">(</span><em>start_point='continue_next'</em>, <em>delayed=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.continue_workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continue the workflow for this object.</p>
+<p>Will continue a previous execution for the object using
+<a class="reference internal" href="#invenio.modules.workflows.api.continue_oid" title="invenio.modules.workflows.api.continue_oid"><code class="xref py py-func docutils literal"><span class="pre">api.continue_oid()</span></code></a> (or <a class="reference internal" href="#invenio.modules.workflows.api.continue_oid_delayed" title="invenio.modules.workflows.api.continue_oid_delayed"><code class="xref py py-func docutils literal"><span class="pre">api.continue_oid_delayed()</span></code></a>
+if <cite>delayed=True</cite>).</p>
+<p>The parameter <cite>start_point</cite> allows you to specify the point of where
+the workflow shall continue:</p>
+<ul class="simple">
+<li>restart_prev: will restart from the previous task</li>
+<li>continue_next: will continue to the next task</li>
+<li>restart_task: will restart the current task</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start_point</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; where should the workflow start from?</li>
+<li><strong>delayed</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; should the workflow run asynchronously?</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine (or AsynchronousResultWrapper).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy data and metadata except id and id_workflow.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.create_object">
+<em class="property">classmethod </em><code class="descname">create_object</code><span class="sig-paren">(</span><em>*a</em>, <em>**k</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.create_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to manage DB session.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.create_object_revision">
+<em class="property">classmethod </em><code class="descname">create_object_revision</code><span class="sig-paren">(</span><em>*a</em>, <em>**k</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.create_object_revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to manage DB session.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.delete">
+<em class="property">classmethod </em><code class="descname">delete</code><span class="sig-paren">(</span><em>*a</em>, <em>**k</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to manage DB session.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get">
+<em class="property">classmethod </em><code class="descname">get</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper of SQLAlchemy to get a BibWorkflowObject.</p>
+<p>A wrapper for the filter and filter_by functions of SQLAlchemy.
+Define a dict with which columns should be filtered by which values.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">)</span>
+<span class="n">Workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Workflow</span><span class="o">.</span><span class="n">uuid</span> <span class="o">!=</span> <span class="n">uuid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function supports also &#8220;hybrid&#8221; arguments.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Workflow</span><span class="o">.</span><span class="n">module_name</span> <span class="o">!=</span> <span class="s">&#39;i_hate_this_module&#39;</span><span class="p">,</span>
+             <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See also SQLAlchemy BaseQuery&#8217;s filter and filter_by documentation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_action">
+<code class="descname">get_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the currently assigned action, if any.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">name of action assigned as string, or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_action_message">
+<code class="descname">get_action_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_action_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the currently assigned widget, if any.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_current_task">
+<code class="descname">get_current_task</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_current_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current task from the workflow engine for this object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_current_task_info">
+<code class="descname">get_current_task_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_current_task_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dictionary of current task function info for this object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data saved in the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_error_message">
+<code class="descname">get_error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the error message, if any.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_extra_data">
+<code class="descname">get_extra_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get extra data saved to the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_formatted_data">
+<code class="descname">get_formatted_data</code><span class="sig-paren">(</span><em>of='hd'</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_formatted_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the formatted representation for this object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_log">
+<code class="descname">get_log</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of log entries from BibWorkflowObjectLog.</p>
+<p>You can specify additional filters following the SQLAlchemy syntax.</p>
+<p>Get all the logs for the object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">b</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">get_log</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Get all the logs for the object labeled as ERROR.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">b</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">get_log</span><span class="p">(</span><span class="n">BibWorkflowObjectLog</span><span class="o">.</span><span class="n">log_type</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of BibWorkflowObjectLog</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_tasks_results">
+<code class="descname">get_tasks_results</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_tasks_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the complete set of tasks results.</p>
+<p>The result is given as a dictionary where each result is
+structured like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">task_result</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+   <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">,</span>
+   <span class="s">&quot;template&quot;</span><span class="p">:</span> <span class="n">template</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary of results as {name: [result, ..], ..}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.get_workflow_name">
+<code class="descname">get_workflow_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.get_workflow_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the workflow name for this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.log">
+<code class="descname">log</code><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access logger object for this instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.remove_action">
+<code class="descname">remove_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.remove_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the currently assigned action.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.reset_error_message">
+<code class="descname">reset_error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.reset_error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the error message.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>*a</em>, <em>**k</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function to manage DB session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.save_to_file">
+<code class="descname">save_to_file</code><span class="sig-paren">(</span><em>directory=None</em>, <em>prefix='workflow_object_data_'</em>, <em>suffix='.obj'</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.save_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the contents of self.data[&#8216;data&#8217;] to file.</p>
+<p>Returns path to saved file.</p>
+<p>Warning: Currently assumes non-binary content.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.set_action">
+<code class="descname">set_action</code><span class="sig-paren">(</span><em>action</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.set_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the action to be taken for this object.</p>
+<p>Assign an special &#8220;action&#8221; to this object to be taken
+in consideration in Holding Pen. The widget is referred to
+by a string with the filename minus extension.</p>
+<p>A message is also needed to tell the user the action
+required in a textual way.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>action</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#string" title="(in Jinja2 v2.8-dev)"><em>string</em></a>) &#8211; name of the action to add (i.e. &#8220;approval&#8221;)</li>
+<li><strong>message</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#string" title="(in Jinja2 v2.8-dev)"><em>string</em></a>) &#8211; message to show to the user</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.set_data">
+<code class="descname">set_data</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save data to the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.set_error_message">
+<code class="descname">set_error_message</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.set_error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an error message.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.set_extra_data">
+<code class="descname">set_extra_data</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.set_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save extra data to the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#dict" title="(in Jinja2 v2.8-dev)"><em>dict</em></a>) &#8211; what you want to replace extra_data with.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.start_workflow">
+<code class="descname">start_workflow</code><span class="sig-paren">(</span><em>workflow_name</em>, <em>delayed=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.start_workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the workflow specified on the object.</p>
+<p>Will start workflows execution for the object using
+<a class="reference internal" href="#invenio.modules.workflows.api.start" title="invenio.modules.workflows.api.start"><code class="xref py py-func docutils literal"><span class="pre">api.start()</span></code></a> (or <a class="reference internal" href="#invenio.modules.workflows.api.start_delayed" title="invenio.modules.workflows.api.start_delayed"><code class="xref py py-func docutils literal"><span class="pre">api.start_delayed()</span></code></a>
+if <cite>delayed=True</cite>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>workflow_name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of workflow to run</li>
+<li><strong>delayed</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; should the workflow run asynchronously?</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine (or AsynchronousResultWrapper).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.models.BibWorkflowObject.update_task_results">
+<code class="descname">update_task_results</code><span class="sig-paren">(</span><em>name</em>, <em>results</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObject.update_task_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update tasks results by name.</p>
+<p>The name is the dictionary key used to group similar types of
+results as well as a possible label for the result.</p>
+<p>This functions allows you to update (replace) the list of results
+associated with a name where each result is structured like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">task_result</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;foo&quot;</span><span class="p">,</span>
+   <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">,</span>
+   <span class="s">&quot;template&quot;</span><span class="p">:</span> <span class="n">template</span>
+<span class="p">}</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">BibWorkflowObject</span><span class="p">()</span>  <span class="c"># or BibWorkflowObject.query.get(id)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">update_task_results</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">task_result</span><span class="p">])</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#string" title="(in Jinja2 v2.8-dev)"><em>string</em></a>) &#8211; The name of the task in human friendly way.
+It is used as a key and label for the result rendering.</li>
+<li><strong>results</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; List of results to store - passed to render_template().</li>
+<li><strong>template</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#string" title="(in Jinja2 v2.8-dev)"><em>string</em></a>) &#8211; The location of the template to render the result.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.modules.workflows.models.BibWorkflowObjectLog">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.models.</code><code class="descname">BibWorkflowObjectLog</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObjectLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a log entry for BibWorkflowObjects.</p>
+<p>This class represent a record of a log emit by an object
+into the database. The object must be saved before using
+this class as it requires the object id.</p>
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObjectLog.delete">
+<em class="property">classmethod </em><code class="descname">delete</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObjectLog.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an instance in database.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObjectLog.get">
+<em class="property">classmethod </em><code class="descname">get</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObjectLog.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>SQLAlchemy wrapper to get BibworkflowLogs.</p>
+<p>A wrapper for the filter and filter_by functions of SQLAlchemy.
+Define a dict with which columns should be filtered by which values.</p>
+<p>See also SQLAlchemy BaseQuery&#8217;s filter and filter_by documentation.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowObjectLog.get_most_recent">
+<em class="property">classmethod </em><code class="descname">get_most_recent</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowObjectLog.get_most_recent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the most recently created log.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.modules.workflows.models.BibWorkflowEngineLog">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.models.</code><code class="descname">BibWorkflowEngineLog</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowEngineLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a log entry for BibWorkflowEngine.</p>
+<p>This class represent a record of a log emit by an object
+into the database. The object must be saved before using
+this class as it requires the object id.</p>
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowEngineLog.delete">
+<em class="property">classmethod </em><code class="descname">delete</code><span class="sig-paren">(</span><em>uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowEngineLog.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an instance in database.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowEngineLog.get">
+<em class="property">classmethod </em><code class="descname">get</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowEngineLog.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sqlalchemy wrapper to get BibWorkflowEngineLog.</p>
+<p>A wrapper for the filter and filter_by functions of sqlalchemy.
+Define a dict with which columns should be filtered by which values.</p>
+<p>look up also sqalchemy BaseQuery&#8217;s filter and filter_by documentation</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.modules.workflows.models.BibWorkflowEngineLog.get_most_recent">
+<em class="property">classmethod </em><code class="descname">get_most_recent</code><span class="sig-paren">(</span><em>*criteria</em>, <em>**filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.models.BibWorkflowEngineLog.get_most_recent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the most recently created log.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="engine">
+<h2>Engine<a class="headerlink" href="#engine" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><span class="target" id="module-invenio.modules.workflows.engine"></span><p>The workflow engine extension of GenericWorkflowEngine.</p>
+<dl class="class">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.engine.</code><code class="descname">BibWorkflowEngine</code><span class="sig-paren">(</span><em>name=None</em>, <em>uuid=None</em>, <em>curr_obj=0</em>, <em>workflow_object=None</em>, <em>id_user=0</em>, <em>module_name='Unknown'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>GenericWorkflowEngine with DB persistence for py:mod:<cite>invenio.workflows</cite>.</p>
+<p>Adds a SQLAlchemy database model to save workflow states and
+workflow data.</p>
+<p>Overrides key functions in GenericWorkflowEngine to implement
+logging and certain workarounds for storing data before/after
+task calls (This part will be revisited in the future).</p>
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.abortProcessing">
+<code class="descname">abortProcessing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.abortProcessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort current workflow execution without saving object.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.after_processing">
+<em class="property">static </em><code class="descname">after_processing</code><span class="sig-paren">(</span><em>objects</em>, <em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.after_processing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action after process to update status.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.before_processing">
+<em class="property">static </em><code class="descname">before_processing</code><span class="sig-paren">(</span><em>objects</em>, <em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.before_processing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executed before processing the workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.completed_objects">
+<code class="descname">completed_objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.completed_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return completed objects.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.counter_object">
+<code class="descname">counter_object</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.counter_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.error_objects">
+<code class="descname">error_objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.error_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return error objects.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.execute_callback">
+<code class="descname">execute_callback</code><span class="sig-paren">(</span><em>callback</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.execute_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the callback (workflow tasks).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.extra_data">
+<code class="descname">extra_data</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.get_current_object">
+<code class="descname">get_current_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.get_current_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the currently active BibWorkflowObject.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.get_current_taskname">
+<code class="descname">get_current_taskname</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.get_current_taskname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get name of current task/step in the workflow (if applicable).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.get_default_data_type">
+<code class="descname">get_default_data_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.get_default_data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return default data type from workflow definition.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.get_extra_data">
+<code class="descname">get_extra_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.get_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main method to retrieve data saved to the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.halt">
+<code class="descname">halt</code><span class="sig-paren">(</span><em>msg</em>, <em>action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.halt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Halt the workflow by raising WorkflowHalt.</p>
+<p>Halts the currently running workflow by raising WorkflowHalt.</p>
+<p>You can provide a message and the name of an action to be taken
+(from an action in actions registry).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; message explaining the reason for halting.</li>
+<li><strong>action</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of valid action in actions registry.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">WorkflowHalt</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.halted_objects">
+<code class="descname">halted_objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.halted_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return halted objects.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.has_completed">
+<code class="descname">has_completed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.has_completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if workflow is fully completed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.id_user">
+<code class="descname">id_user</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.id_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the user id.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.increase_counter_error">
+<code class="descname">increase_counter_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.increase_counter_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate we crashed the processing of one object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.increase_counter_finished">
+<code class="descname">increase_counter_finished</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.increase_counter_finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate we finished the processing of one object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.increase_counter_halted">
+<code class="descname">increase_counter_halted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.increase_counter_halted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate we halted the processing of one object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.initial_objects">
+<code class="descname">initial_objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.initial_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return initial objects.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.module_name">
+<code class="descname">module_name</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.module_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the module name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.name">
+<code class="descname">name</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.objects">
+<code class="descname">objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the objects associated with this workflow.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.objects_of_statuses">
+<code class="descname">objects_of_statuses</code><span class="sig-paren">(</span><em>statuses</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.objects_of_statuses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get objects having given statuses.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.process">
+<code class="descname">process</code><span class="sig-paren">(</span><em>objects</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>objects</strong> &#8211; objects to process.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.processing_factory">
+<em class="property">static </em><code class="descname">processing_factory</code><span class="sig-paren">(</span><em>objects</em>, <em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.processing_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default processing factory.</p>
+<p>An extended version of the default processing factory
+with saving objects before successful processing.</p>
+<p>Default processing factory, will process objects in order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>objects</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; list of objects (passed in by self.process()).</td>
+</tr>
+</tbody>
+</table>
+<p>As the WFE proceeds, it increments the internal counter, the
+first position is the number of the element. This pointer increases
+before the object is taken.</p>
+<p>2nd pos is reserved for the array that points to the task position.
+The number there points to the task that is currently executed;
+when error happens, it will be there unchanged. The pointer is
+updated after the task finished running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.reset_extra_data">
+<code class="descname">reset_extra_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.reset_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset extra data to defaults.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><em>obj</em>, <em>task</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart the workflow engine at given object and task.</p>
+<p>Will restart the workflow engine instance at given object and task
+relative to current state.</p>
+<p><cite>obj</cite> must be either:</p>
+<ul class="simple">
+<li>&#8220;prev&#8221;: previous object</li>
+<li>&#8220;current&#8221;: current object</li>
+<li>&#8220;next&#8221;: next object</li>
+<li>&#8220;first&#8221;: first object</li>
+</ul>
+<p><cite>task</cite> must be either:</p>
+<ul class="simple">
+<li>&#8220;prev&#8221;: previous object</li>
+<li>&#8220;current&#8221;: current object</li>
+<li>&#8220;next&#8221;: next object</li>
+<li>&#8220;first&#8221;: first object</li>
+</ul>
+<p>To continue with next object from the first task:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">wfe</span><span class="o">.</span><span class="n">restart</span><span class="p">(</span><span class="s">&quot;next&quot;</span><span class="p">,</span> <span class="s">&quot;first&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>obj</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the object which should be restarted</li>
+<li><strong>task</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the task which should be restarted</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.running_objects">
+<code class="descname">running_objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.running_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return running objects.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the workflow instance to database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.set_counter_initial">
+<code class="descname">set_counter_initial</code><span class="sig-paren">(</span><em>obj_count</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.set_counter_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiate the counters of object states.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj_count</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#int" title="(in Jinja2 v2.8-dev)"><em>int</em></a>) &#8211; Number of objects to process.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.set_extra_data">
+<code class="descname">set_extra_data</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.set_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main method to update data saved to the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.set_extra_data_params">
+<code class="descname">set_extra_data_params</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.set_extra_data_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add keys/value in extra_data.</p>
+<p>Allows the addition of value in the extra_data dictionary,
+all the data must be passed as &#8220;key=value&#8221;.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.set_task_position">
+<code class="descname">set_task_position</code><span class="sig-paren">(</span><em>new_position</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.set_task_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set current task position.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.set_workflow_by_name">
+<code class="descname">set_workflow_by_name</code><span class="sig-paren">(</span><em>workflow_name</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.set_workflow_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the workflow to run by the name of this one.</p>
+<p>Allows the modification of the workflow that the engine will run
+by looking in the registry the name passed in parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>workflow_name</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of the workflow.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.skipToken">
+<code class="descname">skipToken</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.skipToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip current workflow object without saving it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.status">
+<code class="descname">status</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.uuid">
+<code class="descname">uuid</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the uuid.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.modules.workflows.engine.BibWorkflowEngine.waiting_objects">
+<code class="descname">waiting_objects</code><a class="headerlink" href="#invenio.modules.workflows.engine.BibWorkflowEngine.waiting_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return waiting objects.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.modules.workflows.engine.WorkflowStatus">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.engine.</code><code class="descname">WorkflowStatus</code><a class="headerlink" href="#invenio.modules.workflows.engine.WorkflowStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>The different possible value for Workflow Status.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>Workers<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><span class="target" id="module-invenio.modules.workflows.worker_engine"></span><p>Mediator between API and workers responsible for running the workflows.</p>
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_engine.continue_worker">
+<code class="descclassname">invenio.modules.workflows.worker_engine.</code><code class="descname">continue_worker</code><span class="sig-paren">(</span><em>oid</em>, <em>restart_point='continue_next'</em>, <em>task_offset=1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_engine.continue_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart workflow with given id (wid) at given point.</p>
+<p>By providing the <code class="docutils literal"><span class="pre">restart_point</span></code> you can change the
+point of which the workflow will continue from.</p>
+<ul class="simple">
+<li>restart_prev: will restart from the previous task</li>
+<li>continue_next: will continue to the next task (default)</li>
+<li>restart_task: will restart the current task</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">**kwargs</span></code> can be used to pass custom arguments to the engine/object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>oid</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/templates/#int" title="(in Jinja2 v2.8-dev)"><em>int</em></a>) &#8211; object id of the object to process</li>
+<li><strong>restart_point</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; point to continue from</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_engine.create_data_object_from_data">
+<code class="descclassname">invenio.modules.workflows.worker_engine.</code><code class="descname">create_data_object_from_data</code><span class="sig-paren">(</span><em>data_object</em>, <em>engine</em>, <em>data_type</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_engine.create_data_object_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new BibWorkflowObject from given data and return it.</p>
+<p>Returns a data object wrapped around data_object given. In addition
+it creates an initial snapshot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_object</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object containing the data</li>
+<li><strong>engine</strong> (py:class:<cite>.engine.BibWorkflowEngine</cite>) &#8211; Instance of Workflow that is currently running.</li>
+<li><strong>data_type</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; type of the data given as taken from workflow definition.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">new BibWorkflowObject</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_engine.generate_snapshot">
+<code class="descclassname">invenio.modules.workflows.worker_engine.</code><code class="descname">generate_snapshot</code><span class="sig-paren">(</span><em>workflow_object</em>, <em>engine</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_engine.generate_snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a version of the BibWorkflowObject passed in parameter.</p>
+<p>Given a workflow object, generate a snapshot of it&#8217;s current state
+and return the given instance to work on.</p>
+<p>Also checks if the given workflow instance has a valid version and
+is not in RUNNING state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>workflow_object</strong> (py:class:<cite>.models.BibWorkflowObject</cite>) &#8211; BibWorkflowObject to create snapshot from.</li>
+<li><strong>engine</strong> (py:class:<cite>.engine.BibWorkflowEngine</cite>) &#8211; Instance of Workflow that is currently running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">BibWorkflowObject &#8211; workflow_object instance</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">WorkflowObjectVersionError</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_engine.get_workflow_object_instances">
+<code class="descclassname">invenio.modules.workflows.worker_engine.</code><code class="descname">get_workflow_object_instances</code><span class="sig-paren">(</span><em>data</em>, <em>engine</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_engine.get_workflow_object_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analyze data and create corresponding BibWorkflowObjects.</p>
+<p>Wrap each item in the given list of data objects into BibWorkflowObject
+instances - creating appropriate versions of objects in the database and
+returning a list of these objects.</p>
+<p>This process is necessary to save an initial version of the data before
+running it (and potentially changing it) in the workflow.</p>
+<p>This function also takes into account if given data objects are already
+BibWorkflowObject instances.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; list of data objects to wrap</li>
+<li><strong>engine</strong> (py:class:<cite>.engine.BibWorkflowEngine</cite>) &#8211; instance of BibWorkflowEngine</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list of BibWorkflowObject</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_engine.restart_worker">
+<code class="descclassname">invenio.modules.workflows.worker_engine.</code><code class="descname">restart_worker</code><span class="sig-paren">(</span><em>wid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_engine.restart_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart workflow from beginning with given id (wid) and any data.</p>
+<p><code class="docutils literal"><span class="pre">**kwargs</span></code> can be used to pass custom arguments to the engine/object such
+as <code class="docutils literal"><span class="pre">data</span></code>. If <code class="docutils literal"><span class="pre">data</span></code> is not specified then it will load all
+initial data for the data objects.</p>
+<p>Data can be specified as list of objects or single id of
+BibWorkflowObjects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wid</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; workflow id (uuid) of the workflow to be restarted</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">BibWorkflowEngine instance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_engine.run_worker">
+<code class="descclassname">invenio.modules.workflows.worker_engine.</code><code class="descname">run_worker</code><span class="sig-paren">(</span><em>wname</em>, <em>data</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_engine.run_worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a workflow by name with list of data objects.</p>
+<p>The list of data can also contain BibWorkflowObjects.</p>
+<p><code class="docutils literal"><span class="pre">**kwargs</span></code> can be used to pass custom arguments to the engine/object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>wname</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of workflow to run.</li>
+<li><strong>data</strong> (<a class="reference internal" href="redirector.html#invenio.modules.redirector.manage.list" title="invenio.modules.redirector.manage.list"><em>list</em></a>) &#8211; objects to run through the workflow.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">BibWorkflowEngine instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-invenio.modules.workflows.worker_result"></span><p>Contain the AsynchronousResultWrapper class for asynchronous execution.</p>
+<dl class="class">
+<dt id="invenio.modules.workflows.worker_result.AsynchronousResultWrapper">
+<em class="property">class </em><code class="descclassname">invenio.modules.workflows.worker_result.</code><code class="descname">AsynchronousResultWrapper</code><span class="sig-paren">(</span><em>asynchronousresult</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_result.AsynchronousResultWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap results from asynchronous results.</p>
+<p>This class is an abstract class. When you inherit it you should
+absolutely implement all the functions.</p>
+<p>This class is here for two reason, get and unified interface for all
+the worker and so allow to switch from one to another seamlessly,
+and also add feature to functions.</p>
+<p>For example the get method now allow a post processing
+on the result.</p>
+<dl class="method">
+<dt id="invenio.modules.workflows.worker_result.AsynchronousResultWrapper.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>postprocess=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_result.AsynchronousResultWrapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value of the process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.modules.workflows.worker_result.AsynchronousResultWrapper.status">
+<code class="descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_result.AsynchronousResultWrapper.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current status of the tasks.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.worker_result.uuid_to_workflow">
+<code class="descclassname">invenio.modules.workflows.worker_result.</code><code class="descname">uuid_to_workflow</code><span class="sig-paren">(</span><em>uuid</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.worker_result.uuid_to_workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the workflow associated to an uuid.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="views">
+<h2>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><span class="target" id="module-invenio.modules.workflows.views"></span><p>View blueprints for Holding Pen.</p>
+<span class="target" id="module-invenio.modules.workflows.views.holdingpen"></span><p>Holding Pen is a web interface overlay for all BibWorkflowObject&#8217;s.</p>
+<p>This area is targeted to catalogers and administrators for inspecting
+and reacting to workflows executions. More importantly, allowing users to deal
+with halted workflows.</p>
+<p>For example, accepting submissions or other tasks.</p>
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.continue_record">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">continue_record</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.continue_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continue workflow for current object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.delete_from_db">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">delete_from_db</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.delete_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the object from the db.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.delete_multi">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">delete_multi</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.delete_multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete list of objects from the db.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.details">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">details</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display info about the object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.entry_data_preview">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">entry_data_preview</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.entry_data_preview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Present the data in a human readble form or in xml code.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.get_context">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">get_context</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.get_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the a JSON structure with URL maps and actions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.get_file_from_task_result">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">get_file_from_task_result</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.get_file_from_task_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the requested file to user from a workflow task result.</p>
+<p>Expects a certain file meta-data structure in task result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;Fulltext&quot;</span><span class="p">,</span>
+    <span class="s">&quot;filename&quot;</span><span class="p">:</span> <span class="s">&quot;file.pdf&quot;</span><span class="p">,</span>
+    <span class="s">&quot;full_path&quot;</span><span class="p">:</span> <span class="s">&quot;/path/to/file&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.index">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">index</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display main interface of Holdingpen.</p>
+<p>Acts as a hub for catalogers (may be removed)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.load_table">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">load_table</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.load_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get JSON data for the Holdingpen table.</p>
+<p>Function used for the passing of JSON data to DataTables:</p>
+<ol class="arabic simple">
+<li>First checks for what record version to show</li>
+<li>Then the sorting direction.</li>
+<li>Then if the user searched for something.</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON formatted str from dict of DataTables args.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.maintable">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">maintable</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.maintable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display main table interface of Holdingpen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.resolve_action">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">resolve_action</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.resolve_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve the action taken.</p>
+<p>Will call the resolve() function of the specific action.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.restart_record">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">restart_record</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.restart_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart the initial object in its workflow.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.modules.workflows.views.holdingpen.restart_record_prev">
+<code class="descclassname">invenio.modules.workflows.views.holdingpen.</code><code class="descname">restart_record_prev</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.modules.workflows.views.holdingpen.restart_record_prev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart the last task for current object.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../utils/datastructures.html" class="btn btn-neutral float-right" title="Datastructures" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="uploader.html" class="btn btn-neutral" title="Uploader" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, 2014, 2015 CERN.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.2.0.dev20150608',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

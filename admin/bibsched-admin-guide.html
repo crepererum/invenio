@@ -1,0 +1,980 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibSched Admin Guide &mdash; Invenio 2.2.0.dev20150608 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Invenio 2.2.0.dev20150608 documentation" href="../index.html"/>
+        <link rel="up" title="Admin’s Guide" href="index.html"/>
+        <link rel="next" title="BibUpload Admin Guide" href="bibupload-admin-guide.html"/>
+        <link rel="prev" title="BibMatch Admin Guide" href="bibmatch-admin-guide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Invenio
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/introduction.html">Introduction to Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-is-a-registry">What is a Registry?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-do-i-need">What do I need?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo and Example Sites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#demo-sites">Demo Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#production-sites">Production Sites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/features.html">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#navigable-collection-tree">Navigable collection tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#powerful-search-engine">Powerful search engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#flexible-metadata">Flexible metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#user-personalization">User personalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#multiple-output-formats">Multiple output formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/first-steps.html">First Steps with Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#about">1. About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#prerequisites">2. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#debian-ubuntu-lts">2.1. Debian / Ubuntu LTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#centos-rhel">2.2. Centos / RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#os-x">2.3. OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#extra-tools">2.4. Extra tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#quick-instructions-for-the-impatient-invenio-developer">3. Quick instructions for the impatient Invenio developer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#installation">3.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#configuration">3.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#development">3.3. Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#final-words">4. Final words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/overlay.html">How to create an Invenio overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#what-is-an-overlay">What is an overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#creating-your-first-invenio-overlay">Creating your first Invenio overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-global-setup">The global setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-virtual-environment">The virtual environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-base-of-the-overlay">The base of the overlay</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#sensitive-configuration">Sensitive configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#database-setup">Database setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#assets">Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#running">Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#translations">Translations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#message-extraction">Message Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#create-catalog-for-new-language">Create Catalog for New Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#compiling-catalog">Compiling Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#updating-strings">Updating Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#deployment">Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#preparing-the-tarball">Preparing the tarball</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#creating-the-virtual-environement">Creating the virtual environement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#installing-the-package">Installing the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id2">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#dealing-with-versions">Dealing with versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/common-concepts.html">Common Concepts</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developer&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers/introduction.html">Introducing Invenio for Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/extensions.html">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#plugging-an-existing-extension">Plugging an Existing Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#code-structure">Code structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/registries.html">Pluggable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/models.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#quering">Quering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#subqueries">Subqueries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#schema">Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#improve-code-readability">Improve code readability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/modules.html#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodule.html">How to develop a module: Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodule.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart2.html">How to develop a module: Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#multiple-views">Multiple views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#module-wide-configuration">Module-wide configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart3.html">How to develop a module: Part 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/git-workflow.html">Git Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#setting-things-up">Setting things up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s1-setting-up-your-git-identity">S1. Setting up your Git identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s2-setting-up-your-private-repo">S2. Setting up your private repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s3-backuping-your-private-repo-only-developers-at-cern">S3. Backuping your private repo (only developers at CERN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s4-setting-up-your-public-repo">S4. Setting up your public repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s5-pushing-to-your-public-repo-from-outside-cern">S5. Pushing to your public repo from outside CERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s6-making-your-public-repo-visible-on-the-web">S6. Making your public repo visible on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s7-using-remote-repository-locally">S7. Using remote repository locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#understanding-official-repo-branches">Understanding official repo branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#maint"><code class="docutils literal"><span class="pre">maint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#next"><code class="docutils literal"><span class="pre">next</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-overview">Working on new features - overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-details">Working on new features - details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w1-cloning-the-repo">W1. Cloning the repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w2-working-with-local-topic-branches">W2. Working with local topic branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w3-working-on-new-feature-b">W3. Working on new-feature-b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w4-using-temporary-stash">W4. Using temporary stash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w5-testing-on-dev-servers">W5. Testing on DEV servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w6-rebasing-against-latest-git-master">W6. Rebasing against latest git/master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w7-publishing-your-work">W7. Publishing your work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w8-review-process">W8. Review process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#remarks-often-made-during-code-review">Remarks often made during code review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r1-remarks-on-commit-history">R1. Remarks on commit history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r2-remarks-on-commit-log-messages">R2. Remarks on commit log messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r3-remarks-on-the-coding">R3. Remarks on the coding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r4-notes-on-the-review-process-timeline">R4. Notes on the review process timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/kwalitee.html">Commit quality check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/docker.html">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#interactive-sessions">Interactive sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#code-changes-and-live-reloading">Code changes and live reloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#overlays">Overlays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Admin&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#enforcing-types-of-authority-records">Enforcing types of authority records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#bibedit">BibEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#bibindex">BibIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#configuration-file-overview">Configuration File Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibclassify-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibclassify-admin-guide.html#thesaurus">1.1 Thesaurus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibclassify-admin-guide.html#keyword-extraction">1.2 Keyword extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibclassify-admin-guide.html#running-bibclassify">2. Running BibClassify</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibconvert-admin-guide.html#a-overview">A. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibconvert-admin-guide.html#b-xml-oriented-mode">B. XML-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#configuration-file-examples">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#running-bibconvert">2. Running BibConvert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibconvert-admin-guide.html#c-plain-text-oriented-mode">C. Plain Text-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#id2">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#id3">2. Running BibConvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#bibconvert-configuration-guide">3. BibConvert Configuration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#edit-records-via-web-interface">2. Edit records via Web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibedit-admin-guide.html#keyboard-shortcuts-on-bibedit">2.1 Keyboard shortcuts on BibEdit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#edit-multiple-records-via-web-interface">3. Edit multiple records via web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibedit-admin-guide.html#multi-record-editor-user-guide">3.1 Multi-Record Editor user guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#edit-records-via-command-line">4. Edit records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#delete-records-via-command-line">5. Delete records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#delete-all-records">6. Delete all records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#access-record-history">7. Access record history</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibknowledge-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibknowledge-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibknowledge-admin-guide.html#configure-knowledge-bases">2. Configure Knowledge Bases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#add-a-knowledge-base">2.1 Add a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#remove-a-knowledge-base">2.2 Remove a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#add-a-mapping">2.3 Add a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#remove-a-mapping">2.4 Remove a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#edit-a-mapping">2.5 Edit a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#edit-the-attributes-of-a-knowledge-base">2.6 Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibmatch-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#what-is-bibmatch">1.1 What is BibMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#features">1.2 Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibmatch-admin-guide.html#usage">2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#basic-usage">2.1 Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#advanced-usage">2.2 Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibmatch-admin-guide.html#more-examples">3. More examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#id2">3.1 More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibmatch-admin-guide.html#appendix">Appendix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#a-querystrings">A. Querystrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#b-bibconvert-formats">B. BibConvert formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#c-predefined-fields">C. Predefined fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibmatch-admin-guide.html#d-bibmatch-commmand-line-tool">D. BibMatch commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibSched Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibsched-graphical-interface">Bibsched graphical interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manual-mode">Manual mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#automatic-mode">Automatic mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#bibsched-maintenance">Bibsched maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#priorities">Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-logging">Task logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-concurrency">Task concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibsched-command-line-interface">Bibsched command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibtasks-command-line-interface">Bibtasks command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibsched-tasklets">BibSched Tasklets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#configuring-bibupload">2. Configuring BibUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#running-bibupload">3. Running BibUpload</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#inserting-new-records">3.1 Inserting new records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#inserting-records-into-the-holding-pen">3.2 Inserting records into the Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#updating-existing-records">3.3 Updating existing records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#inserting-and-updating-at-the-same-time">3.4 Inserting and updating at the same time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#obtaining-feedbacks">3.7 Obtaining feedbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#assigning-additional-information-to-documents-and-other-entities">3.8 Assigning additional information to documents and other entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#batch-uploader">4. Batch Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#web-interface-cataloguers">4.1 Web interface - Cataloguers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#web-interface-robots">4.2 Web interface - Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#daemon-mode">4.2 Daemon mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oaiharvest-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oaiharvest-admin-guide.html#oai-data-harvesting">2. OAI Data Harvesting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="oaiharvest-admin-guide.html#oai-harvest-admin-interface">2.1 OAI Harvest Admin Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oaiharvest-admin-guide.html#oaiharvest-commmand-line-tool">2.2 oaiharvest commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oairepository-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oairepository-admin-guide.html#oai-repository-exporting">2. OAI Repository (<em>Exporting</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="oairepository-admin-guide.html#definition-of-oai-sets">2.1. Definition of OAI sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oairepository-admin-guide.html#exposing-metadata-via-oai-repository-gateway">2.2. Exposing metadata via OAI Repository Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="publiline-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publiline-admin-guide.html#configure-publiline">Configure Publiline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="publiline-admin-guide.html#step-1-define-a-publication-committee-chair">Step 1 : Define a Publication Committee Chair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="publiline-admin-guide.html#step-2-create-a-group">Step 2 : Create a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="publiline-admin-guide.html#step-3-define-project-leader-s">Step 3 : Define Project Leader(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="publiline-admin-guide.html#overview-and-usage">Overview and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="websession-admin-guide.html#guest-user-sessions">Guest User Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webstyle-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webstyle-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#css-style-sheet-and-images">1.1 CSS Style Sheet and Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#html-page-layout">1.2 HTML Page Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#look-of-bibliographic-references">1.3 Look of Bibliographic References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#specific-configurations">1.4 Specific Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webstyle-admin-guide.html#detailed-record-pages">2. Detailed Record Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#available-tabs">2.1 Available tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#showing-hiding-tabs">2.2 Showing/Hiding tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#customizing-content-of-tabs">2.3 Customizing content of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#customizing-look-of-tabs">2.4 Customizing look of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#custom-redirections">Custom Redirections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../base.html">Base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#invenio-base">invenio.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.wrappers">Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.bundles">Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#extensions">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ext/assets.html">Assets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.commands">Flask-Script commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.registry">Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.wrappers">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/arxiv.html">ArXiv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/arxiv.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/crossref.html">CrossRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/crossref.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/es.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/fs.html">Cloud Filesystems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#dropbox">Dropbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#google-drive">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/jasmine.html">Jasmine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#missing-features">Missing features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#flightjs-tests">FlightJS tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#fixtures">Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#howto">HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/logging.html">Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#logging-errors">Logging errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#log-handlers">Log handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#legacy-handling-of-errors">Legacy handling of errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#error-handling-do-s-and-don-ts">Error handling do&#8217;s and don&#8217;ts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#backends">Backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/login.html">Login</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login">invenio.ext.login package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login.legacy_user">invenio.ext.login.legacy_user module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/passlib.html">Passlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/passlib.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/script.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/script.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.backends">Backends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.interface">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/sqlalchemy.html">SQLAlchemy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/template.html">Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.config">Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.loader">Loader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.bccache">BCCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.context_processor">Context Processor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules/annotations.html">Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#invenio-modules-annotations">invenio.modules.annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.noteutils">Noteutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/apikeys.html">API Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documentation.html">Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documents.html">Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-api">invenio.modules.documents.api</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-errors">invenio.modules.documents.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/formatter.html">Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/jsonalchemy.html">JSONAlchemy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#module-structure">Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-to-extend-jsonalchemy-behaviour">How to Extend JSONAlchemy Behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#invenio-use-cases">Invenio Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/knowledge.html">Knowledge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/oauthclient.html">OAuthClient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#authorization-flow-overview">Authorization Flow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#module-invenio.modules.oauthclient.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#contrib">Contrib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/redirector.html">Redirector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.manage">Manage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/upgrader.html">Upgrader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#module-invenio.modules.upgrader.models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/uploader.html">Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.workflows">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/workflows.html">Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-workflow">Create a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-task">Create a task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#run-a-workflow">Run a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#holding-pen">Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#engine">Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#id2">Workers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#views">Views</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../utils/datastructures.html">Datastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/washers.html">Washers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/forms.html">Forms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#legacy">Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../legacy/bibrecord.html">BibRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community/code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecationpolicy.html">Deprecation policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#fast-track-deprecation">Fast track deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#how-to-deprecate-a-feature">How to deprecate a feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#invenio-license">Invenio License</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Invenio</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Admin&#8217;s Guide</a> &raquo;</li>
+      
+    <li>BibSched Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="bibsched-admin-guide">
+<span id="id1"></span><h1>BibSched Admin Guide<a class="headerlink" href="#bibsched-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>BibSched &#8211; the bibliographic task scheduler &#8211; is central unit of the
+system that allows all other modules to access the bibliographic
+database in a controlled manner, preventing sharing violation threats
+and assuring the coherent execution of the database update tasks. The
+module comes with an administrative interface that allows to monitor the
+task queue including various possibilities of a manual intervention, for
+example to re-schedule queued tasks, change the task order, etc.</p>
+<p>You can run the administrative interface by doing:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibsched
+</pre></div>
+</div>
+</div></blockquote>
+<p>Note that in general you should run bibsched with the same rights of the
+Apache user of your system.</p>
+<p>The <code class="docutils literal"><span class="pre">bibsched</span></code> can run in two modes: <em>automatic</em> and <em>manual</em>. In the
+automatic mode, it will execute tasks automatically as they arrive in
+the waiting queue. In the manual mode, the administrator has to launch
+the tasks manually.</p>
+</div>
+<div class="section" id="bibsched-graphical-interface">
+<h2>Bibsched graphical interface<a class="headerlink" href="#bibsched-graphical-interface" title="Permalink to this headline">¶</a></h2>
+<p>bibsched interface is text mode graphical interface to display running
+tasks. It has three views, one for listing done tasks, one for
+scheduled/running/failed tasks and a third one for displaying archived
+tasks. You can switch among these three views by pressing respectively
+&#8220;<code class="docutils literal"><span class="pre">1</span></code>&#8221;, &#8220;<code class="docutils literal"><span class="pre">2</span></code>&#8221; or &#8220;<code class="docutils literal"><span class="pre">3</span></code>&#8221;.</p>
+<p>With the harrows you can move from one task to the other</p>
+<p>By pressing &#8220;<code class="docutils literal"><span class="pre">O</span></code>&#8221; you can see all the details of the selected task</p>
+<p>If the task is running or is already run, you can press &#8220;l&#8221; (lower case
+&#8220;<code class="docutils literal"><span class="pre">l</span></code>&#8221;) to access the standard output produced by the task, if any.
+You can press &#8220;<code class="docutils literal"><span class="pre">L</span></code>&#8221; (upper case &#8220;<code class="docutils literal"><span class="pre">L</span></code>&#8221;) to access the standard
+error produced by the task, if any.</p>
+<p>By pressing &#8220;<code class="docutils literal"><span class="pre">P</span></code>&#8221; you can clean the list of DONE tasks and
+archive/delete them.</p>
+<p>By pressing &#8220;<code class="docutils literal"><span class="pre">Q</span></code>&#8221; you can Quit the interface.</p>
+<p>By pressing &#8220;<code class="docutils literal"><span class="pre">A</span></code>&#8221; you can switch from Auto to Manual mode and
+viceversa.</p>
+<div class="section" id="manual-mode">
+<h3>Manual mode<a class="headerlink" href="#manual-mode" title="Permalink to this headline">¶</a></h3>
+<p>In manual mode, depending on the status of the task you are currently
+selecting you&#8217;re given different actions.</p>
+<p>You can press &#8220;<code class="docutils literal"><span class="pre">R</span></code>&#8221; for running Waiting tasks</p>
+<p>You can press &#8220;<code class="docutils literal"><span class="pre">D</span></code>&#8221; for deleting non running tasks</p>
+<p>You can press &#8220;<code class="docutils literal"><span class="pre">N</span></code>&#8221; for changing the priority of a waiting task.
+(the equivalent of the UNIX renice command)</p>
+<p>On a running task you can press &#8220;<code class="docutils literal"><span class="pre">K</span></code>&#8221; to kill the task immediately
+in case of emergency. &#8220;<code class="docutils literal"><span class="pre">T</span></code>&#8221; for stopping it cleanly. &#8220;<code class="docutils literal"><span class="pre">S</span></code>&#8221; for
+putting it temporarily to sleep. A sleeping task can be waken up by
+pressing &#8220;<code class="docutils literal"><span class="pre">W</span></code>&#8221;. Note that for stopping or putting to sleep a task, a
+signal is sent to the given bibtask and this, in turn, will acknowledge
+it and decide to stop or go to sleep whenever it thinks it&#8217;s safe.</p>
+<p>On a failed task you can press &#8220;<code class="docutils literal"><span class="pre">K</span></code>&#8221; the acknowledge the error. This
+is necessary in case you wish to put bibsched back to automatic mode.</p>
+</div>
+<div class="section" id="automatic-mode">
+<h3>Automatic mode<a class="headerlink" href="#automatic-mode" title="Permalink to this headline">¶</a></h3>
+<p>In automatic mode bibsched will take care of launching tasks based on
+their priority and runtime schedule. The available option are only those
+that allow you to query a given task (see the logs and the options).</p>
+<p>If you have configured bibsched to allow for the execution of concurrent
+bibtasks, bibsched will take care of launching compatible tasks
+concurrently (note that this feature is currently experimental).
+Bibupload tasks will always be executed in the chronological order (to
+preserve input consistency).</p>
+</div>
+</div>
+<div class="section" id="bibsched-maintenance">
+<h2>Bibsched maintenance<a class="headerlink" href="#bibsched-maintenance" title="Permalink to this headline">¶</a></h2>
+<p>bibsched produce two log files. bibsched.log and bibsched.err, located
+under the usual log directory of your Invenio installation. The former
+will contain all the actions (either automatic of manual) that bibsched
+has performed. The latter will contain all the exceptional errors.</p>
+<p>In case of a bibtask failing while bibsched is in automatic mode,
+bibsched will stop by switching to manual mode, and will send an email
+to the administrator (and an emergency SMS in case it is configured to
+do so). Note that in case of failed bibtasks, bibsched will refuse to be
+put back to automatic mode, until either the task is reinitialized, or
+deleted or the error is acknowledged.</p>
+</div>
+<div class="section" id="priorities">
+<h2>Priorities<a class="headerlink" href="#priorities" title="Permalink to this headline">¶</a></h2>
+<p>A task can be scheduled with a given <em>priority</em>, represented by an
+integer number. When at a given time two or more tasks might be
+executed, the task with higher priority will be executed first.</p>
+<p>When a task is running and is not a bibupload, the scheduler will allow
+to run higher priority tasks that don&#8217;t conflict with the former task,
+by first putting to sleep the former task, if the resources are not
+enough.</p>
+<p>If a task has priority higher than 100 and there are currently other
+task running, conflicting with the execution of this task (because the
+other tasks should not run concurrently with this task), then the other
+tasks are stopped (unless they are bibuploads).</p>
+<p>If the priority is less than -10 than the task will never be executed
+automatically.</p>
+<p>Bibupload tasks are not affected by priority with respect to each other
+and will always be executed in the proper order.</p>
+</div>
+<div class="section" id="task-logging">
+<h2>Task logging<a class="headerlink" href="#task-logging" title="Permalink to this headline">¶</a></h2>
+<p>When executed each tasks will produced (if necessary) a couple of log
+files. One called <code class="docutils literal"><span class="pre">bibsched_task_{task_id}.log</span></code> and the other
+<code class="docutils literal"><span class="pre">bibsched_task_{task_id}.err</span></code>. In case of reschedulable task, each
+time the task is rescheduled it is being assigned the same task_id.
+That means that log information of successive execution of the given
+task will be appended at the end of already existing log files.</p>
+<p>A log-rotation algorithm is applied when writing into the log file. By
+default each log will be no bigger than 1MB. After this limit is reached
+the log is rotated. Note that when viewing the log file inside the
+bibsched monitor interface, only the latest log will be displayed.</p>
+</div>
+<div class="section" id="task-concurrency">
+<h2>Task concurrency<a class="headerlink" href="#task-concurrency" title="Permalink to this headline">¶</a></h2>
+<p>A recent experimental feature of bibsched is the concurrent execution of
+compatible tasks. The current definition of when two tasks are
+considered compatible is: &#8220;If a two tasks have the same name (e.g.
+bibupload) then they&#8217;re incompatible.&#8221;</p>
+<p>Sometimes you might want to consider compatible two tasks even when they
+have the same name. For this you can add a name specification via the
+bibtask command line option <code class="docutils literal"><span class="pre">--name</span></code>. E.g. you might want to
+distinguish a generic bibupload from a bibupload carrying only
+preformatting information. For this just launch bibupload -N
+&#8220;bibformat&#8221;, and it will be considered compatible with all the other
+bibuploads.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Bibsched can be tweaked by adjusting some variables in the usual
+<code class="docutils literal"><span class="pre">invenio(-local).conf</span></code> file. Please refer to the documentation
+associated with each variable inside this file.</p>
+</div>
+<div class="section" id="bibsched-command-line-interface">
+<h2>Bibsched command line interface<a class="headerlink" href="#bibsched-command-line-interface" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>Usage: /opt/invenio/bin/bibsched [options] [start|stop|restart|monitor|status]
+
+The following commands are available for bibsched:
+
+start      start bibsched in background
+stop       stop running bibtasks and the bibsched daemon safely
+halt       halt running bibsched while keeping bibtasks running
+restart    restart a running bibsched
+monitor    enter the interactive monitor
+status     get report about current status of the queue
+purge      purge the scheduler queue from old tasks
+
+Command options:
+-d, --daemon           Launch BibSched in the daemon mode (deprecated, use &#39;start&#39;)
+General options:
+-h, --help             Print this help.
+-V, --version          Print version information.
+Status options:
+-s, --status=LIST      Which BibTask status should be considered (default is Running,waiting)
+-S, --since=TIME       Since how long time to consider tasks e.g.: 30m, 2h, 1d (default
+is all)
+-t, --tasks=LIST       Comma separated list of BibTask to consider (default
+is all)
+Purge options:
+-s, --status=LIST      Which BibTask status should be considered (default is DONE)
+-S, --since=TIME       Since how long time to consider tasks e.g.: 30m, 2h, 1d (default
+is 30 days)
+-t, --tasks=LIST       Comma separated list of BibTask to consider (default
+is bibindex,bibreformat,webcoll,bibrank,inveniogc,bibupload,oairepositoryupdater)
+</pre></div>
+</div>
+</div>
+<div class="section" id="bibtasks-command-line-interface">
+<h2>Bibtasks command line interface<a class="headerlink" href="#bibtasks-command-line-interface" title="Permalink to this headline">¶</a></h2>
+<p>Each bibtask has a common command interface in addition to the proper
+bibtask related options.</p>
+<div class="highlight-python"><div class="highlight"><pre>Scheduling options:
+-u, --user=USER       User name under which to submit this task.
+-t, --runtime=TIME    Time to execute the task. [default=now]
+                      Examples: +15s, 5m, 3h, 2002-10-27 13:57:26.
+-s, --sleeptime=SLEEP Sleeping frequency after which to repeat the task.
+                      Examples: 30m, 2h, 1d. [default=no]
+--fixed-time          Avoid drifting of execution time when using --sleeptime
+-I, --sequence-id=SEQUENCE-ID Sequence Id of the current process
+-L  --limit=LIMIT     Time limit when it is allowed to execute the task.
+                      Examples: 22:00-03:00, Sunday 01:00-05:00.
+                      Syntax: [Wee[kday]] [hh[:mm][-hh[:mm]]].
+-P, --priority=PRI    Task priority (0=default, 1=higher, etc).
+-N, --name=NAME       Task specific name (advanced option).
+
+General options:
+-h, --help            Print this help.
+-V, --version         Print version information.
+-v, --verbose=LEVEL   Verbose level (0=min, 1=default, 9=max).
+--profile=STATS       Print profile information. STATS is a comma-separated
+                      list of desired output stats (calls, cumulative,
+                      file, line, module, name, nfl, pcalls, stdname, time).
+--stop-on-error       In case of unrecoverable error stop the bibsched queue.
+--continue-on-error   In case of unrecoverable error don&#39;t stop the bibsched queue.
+--post-process=BIB_TASKLET_NAME[parameters]   Postprocesses the specified
+                      bibtasklet with the given parameters between square
+                      brackets.
+                      Example:--post-process &quot;bst_send_email[fromaddr=
+                      &#39;foo@xxx.com&#39;, toaddr=&#39;bar@xxx.com&#39;, subject=&#39;hello&#39;,
+                      content=&#39;help&#39;]&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="bibsched-tasklets">
+<h2>BibSched Tasklets<a class="headerlink" href="#bibsched-tasklets" title="Permalink to this headline">¶</a></h2>
+<p>If you have very particular needs to write your self a bibtask that can
+be scheduled through the bibliographic scheduler, and you are able to
+write a Python function you can write a <strong>BibTaskLet</strong></p>
+<p>Suppose that you have Python function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="s">&#39;default&#39;</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>that you want to execute through the bibliographic scheduler. Just put
+such a function in the
+<code class="docutils literal"><span class="pre">/opt/cds-invenio/lib/python/invenio/bibsched_tasklets</span></code> in a file
+called e.g. <code class="docutils literal"><span class="pre">bst_foo.py</span></code> (the <em>bst_</em> prefix and the <em>.py</em> extension
+are compulsory) and rename the function to <code class="docutils literal"><span class="pre">bst_foo</span></code> (the name of the
+function must be identical to the name of the file).</p>
+<p>A BibTaskLet can be executed through the <code class="docutils literal"><span class="pre">bibtasklet</span></code> BibTask. E.g.:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ # To list the available bibtasklets
+$ sudo -u apache /opt/cds-invenio/bin/bibtasklet -l
+Available tasklets:
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║ def bst_fibonacci(n=30)                                          ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║     Small tasklets that prints the the Fibonacci sequence for n. ║
+║     @param n: how many Fibonacci numbers to print.               ║
+║     @type n: int                                                 ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+╔════════════════════════════════════╗
+║ def bst_foo(arg1, arg2=&#39;default&#39;)  ║
+╠════════════════════════════════════╣
+║                                    ║
+║     No documentation.              ║
+║                                    ║
+╚════════════════════════════════════╝
+
+Broken tasklets:
+
+$ # To schedule a bibtasklet
+$ sudo -u apache /opt/cds-invenio/bin/bibtasklet -T bst_foo -a &quot;arg1=bar&quot;
+</pre></div>
+</div>
+<p>All the above bibtask options are available for any bibtasklet.</p>
+<p>See
+<code class="docutils literal"><span class="pre">/opt/cds-invenio/lib/python/invenio/bibsched_tasklets/bst_fibonacci.py</span></code>
+for an example on how a bibtasklet look like.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibupload-admin-guide.html" class="btn btn-neutral float-right" title="BibUpload Admin Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibmatch-admin-guide.html" class="btn btn-neutral" title="BibMatch Admin Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, 2014, 2015 CERN.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.2.0.dev20150608',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,1226 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to create an Invenio overlay &mdash; Invenio 2.2.0.dev20150608 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Invenio 2.2.0.dev20150608 documentation" href="../index.html"/>
+        <link rel="up" title="Getting Started" href="index.html"/>
+        <link rel="next" title="Common Concepts" href="common-concepts.html"/>
+        <link rel="prev" title="First Steps with Invenio" href="first-steps.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Invenio
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction to Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#what-is-a-registry">What is a Registry?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#what-do-i-need">What do I need?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo.html">Demo and Example Sites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#demo-sites">Demo Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="demo.html#production-sites">Production Sites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="features.html">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="features.html#navigable-collection-tree">Navigable collection tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html#powerful-search-engine">Powerful search engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html#flexible-metadata">Flexible metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html#user-personalization">User personalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html#multiple-output-formats">Multiple output formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps.html">First Steps with Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="first-steps.html#about">1. About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="first-steps.html#prerequisites">2. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#debian-ubuntu-lts">2.1. Debian / Ubuntu LTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#centos-rhel">2.2. Centos / RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#os-x">2.3. OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#extra-tools">2.4. Extra tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="first-steps.html#quick-instructions-for-the-impatient-invenio-developer">3. Quick instructions for the impatient Invenio developer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#installation">3.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#configuration">3.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="first-steps.html#development">3.3. Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="first-steps.html#final-words">4. Final words</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">How to create an Invenio overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-an-overlay">What is an overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-your-first-invenio-overlay">Creating your first Invenio overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-global-setup">The global setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-virtual-environment">The virtual environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-base-of-the-overlay">The base of the overlay</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sensitive-configuration">Sensitive configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database-setup">Database setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assets">Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#running">Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translations">Translations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#message-extraction">Message Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-catalog-for-new-language">Create Catalog for New Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compiling-catalog">Compiling Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-strings">Updating Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment">Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preparing-the-tarball">Preparing the tarball</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-virtual-environement">Creating the virtual environement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-the-package">Installing the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dealing-with-versions">Dealing with versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="common-concepts.html">Common Concepts</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developer&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers/introduction.html">Introducing Invenio for Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/extensions.html">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#plugging-an-existing-extension">Plugging an Existing Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#code-structure">Code structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/registries.html">Pluggable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/models.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#quering">Quering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#subqueries">Subqueries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#schema">Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#improve-code-readability">Improve code readability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/modules.html#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodule.html">How to develop a module: Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodule.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart2.html">How to develop a module: Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#multiple-views">Multiple views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#module-wide-configuration">Module-wide configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart3.html">How to develop a module: Part 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/git-workflow.html">Git Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#setting-things-up">Setting things up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s1-setting-up-your-git-identity">S1. Setting up your Git identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s2-setting-up-your-private-repo">S2. Setting up your private repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s3-backuping-your-private-repo-only-developers-at-cern">S3. Backuping your private repo (only developers at CERN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s4-setting-up-your-public-repo">S4. Setting up your public repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s5-pushing-to-your-public-repo-from-outside-cern">S5. Pushing to your public repo from outside CERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s6-making-your-public-repo-visible-on-the-web">S6. Making your public repo visible on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s7-using-remote-repository-locally">S7. Using remote repository locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#understanding-official-repo-branches">Understanding official repo branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#maint"><code class="docutils literal"><span class="pre">maint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#next"><code class="docutils literal"><span class="pre">next</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-overview">Working on new features - overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-details">Working on new features - details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w1-cloning-the-repo">W1. Cloning the repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w2-working-with-local-topic-branches">W2. Working with local topic branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w3-working-on-new-feature-b">W3. Working on new-feature-b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w4-using-temporary-stash">W4. Using temporary stash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w5-testing-on-dev-servers">W5. Testing on DEV servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w6-rebasing-against-latest-git-master">W6. Rebasing against latest git/master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w7-publishing-your-work">W7. Publishing your work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w8-review-process">W8. Review process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#remarks-often-made-during-code-review">Remarks often made during code review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r1-remarks-on-commit-history">R1. Remarks on commit history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r2-remarks-on-commit-log-messages">R2. Remarks on commit log messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r3-remarks-on-the-coding">R3. Remarks on the coding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r4-notes-on-the-review-process-timeline">R4. Notes on the review process timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/kwalitee.html">Commit quality check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/docker.html">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#interactive-sessions">Interactive sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#code-changes-and-live-reloading">Code changes and live reloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#overlays">Overlays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Admin&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibauthority-admin-guide.html">BibAuthority Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#enforcing-types-of-authority-records">Enforcing types of authority records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibedit">BibEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibindex">BibIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#configuration-file-overview">Configuration File Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibclassify-admin-guide.html">BibClassify Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#thesaurus">1.1 Thesaurus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#keyword-extraction">1.2 Keyword extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#running-bibclassify">2. Running BibClassify</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibconvert-admin-guide.html">BibConvert Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#a-overview">A. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#b-xml-oriented-mode">B. XML-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#configuration-file-examples">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#running-bibconvert">2. Running BibConvert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#c-plain-text-oriented-mode">C. Plain Text-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id2">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id3">2. Running BibConvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#bibconvert-configuration-guide">3. BibConvert Configuration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibedit-admin-guide.html">BibEdit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-web-interface">2. Edit records via Web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#keyboard-shortcuts-on-bibedit">2.1 Keyboard shortcuts on BibEdit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-multiple-records-via-web-interface">3. Edit multiple records via web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#multi-record-editor-user-guide">3.1 Multi-Record Editor user guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-command-line">4. Edit records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-records-via-command-line">5. Delete records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-all-records">6. Delete all records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#access-record-history">7. Access record history</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#configure-knowledge-bases">2. Configure Knowledge Bases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-knowledge-base">2.1 Add a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-knowledge-base">2.2 Remove a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-mapping">2.3 Add a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-mapping">2.4 Remove a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-a-mapping">2.5 Edit a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-the-attributes-of-a-knowledge-base">2.6 Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibmatch-admin-guide.html">BibMatch Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#what-is-bibmatch">1.1 What is BibMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#features">1.2 Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#usage">2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#basic-usage">2.1 Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#advanced-usage">2.2 Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#more-examples">3. More examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#id2">3.1 More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#appendix">Appendix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#a-querystrings">A. Querystrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#b-bibconvert-formats">B. BibConvert formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#c-predefined-fields">C. Predefined fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#d-bibmatch-commmand-line-tool">D. BibMatch commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsched-admin-guide.html">BibSched Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-graphical-interface">Bibsched graphical interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#manual-mode">Manual mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#automatic-mode">Automatic mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-maintenance">Bibsched maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#priorities">Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-logging">Task logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-concurrency">Task concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-command-line-interface">Bibsched command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibtasks-command-line-interface">Bibtasks command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-tasklets">BibSched Tasklets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibupload-admin-guide.html">BibUpload Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#configuring-bibupload">2. Configuring BibUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#running-bibupload">3. Running BibUpload</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-new-records">3.1 Inserting new records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-records-into-the-holding-pen">3.2 Inserting records into the Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#updating-existing-records">3.3 Updating existing records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-and-updating-at-the-same-time">3.4 Inserting and updating at the same time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#obtaining-feedbacks">3.7 Obtaining feedbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#assigning-additional-information-to-documents-and-other-entities">3.8 Assigning additional information to documents and other entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#batch-uploader">4. Batch Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-cataloguers">4.1 Web interface - Cataloguers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-robots">4.2 Web interface - Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#daemon-mode">4.2 Daemon mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-data-harvesting">2. OAI Data Harvesting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-harvest-admin-interface">2.1 OAI Harvest Admin Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oaiharvest-commmand-line-tool">2.2 oaiharvest commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oairepository-admin-guide.html">OAIRepository Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#oai-repository-exporting">2. OAI Repository (<em>Exporting</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#definition-of-oai-sets">2.1. Definition of OAI sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#exposing-metadata-via-oai-repository-gateway">2.2. Exposing metadata via OAI Repository Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/publiline-admin-guide.html">Publiline Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#configure-publiline">Configure Publiline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-1-define-a-publication-committee-chair">Step 1 : Define a Publication Committee Chair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-2-create-a-group">Step 2 : Create a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-3-define-project-leader-s">Step 3 : Define Project Leader(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#overview-and-usage">Overview and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/websession-admin-guide.html">WebSession Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/websession-admin-guide.html#guest-user-sessions">Guest User Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webstyle-admin-guide.html">WebStyle Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#css-style-sheet-and-images">1.1 CSS Style Sheet and Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#html-page-layout">1.2 HTML Page Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#look-of-bibliographic-references">1.3 Look of Bibliographic References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#specific-configurations">1.4 Specific Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#detailed-record-pages">2. Detailed Record Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#available-tabs">2.1 Available tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#showing-hiding-tabs">2.2 Showing/Hiding tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-content-of-tabs">2.3 Customizing content of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-look-of-tabs">2.4 Customizing look of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#custom-redirections">Custom Redirections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../base.html">Base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#invenio-base">invenio.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.wrappers">Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.bundles">Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#extensions">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ext/assets.html">Assets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.commands">Flask-Script commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.registry">Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.wrappers">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/arxiv.html">ArXiv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/arxiv.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/crossref.html">CrossRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/crossref.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/es.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/fs.html">Cloud Filesystems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#dropbox">Dropbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#google-drive">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/jasmine.html">Jasmine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#missing-features">Missing features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#flightjs-tests">FlightJS tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#fixtures">Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#howto">HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/logging.html">Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#logging-errors">Logging errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#log-handlers">Log handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#legacy-handling-of-errors">Legacy handling of errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#error-handling-do-s-and-don-ts">Error handling do&#8217;s and don&#8217;ts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#backends">Backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/login.html">Login</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login">invenio.ext.login package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login.legacy_user">invenio.ext.login.legacy_user module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/passlib.html">Passlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/passlib.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/script.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/script.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.backends">Backends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.interface">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/sqlalchemy.html">SQLAlchemy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/template.html">Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.config">Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.loader">Loader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.bccache">BCCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.context_processor">Context Processor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules/annotations.html">Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#invenio-modules-annotations">invenio.modules.annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.noteutils">Noteutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/apikeys.html">API Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documentation.html">Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documents.html">Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-api">invenio.modules.documents.api</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-errors">invenio.modules.documents.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/formatter.html">Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/jsonalchemy.html">JSONAlchemy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#module-structure">Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-to-extend-jsonalchemy-behaviour">How to Extend JSONAlchemy Behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#invenio-use-cases">Invenio Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/knowledge.html">Knowledge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/oauthclient.html">OAuthClient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#authorization-flow-overview">Authorization Flow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#module-invenio.modules.oauthclient.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#contrib">Contrib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/redirector.html">Redirector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.manage">Manage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/upgrader.html">Upgrader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#module-invenio.modules.upgrader.models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/uploader.html">Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.workflows">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/workflows.html">Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-workflow">Create a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-task">Create a task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#run-a-workflow">Run a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#holding-pen">Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#engine">Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#id2">Workers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#views">Views</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../utils/datastructures.html">Datastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/washers.html">Washers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/forms.html">Forms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#legacy">Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../legacy/bibrecord.html">BibRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community/code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecationpolicy.html">Deprecation policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#fast-track-deprecation">Fast track deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#how-to-deprecate-a-feature">How to deprecate a feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#invenio-license">Invenio License</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Invenio</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+      
+    <li>How to create an Invenio overlay</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="how-to-create-an-invenio-overlay">
+<span id="overlay"></span><h1>How to create an Invenio overlay<a class="headerlink" href="#how-to-create-an-invenio-overlay" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">TODO</p>
+<p>The following items are still missing from this document, feel free to
+contribute to it.</p>
+<ul class="simple">
+<li>celery/redis/honcho/flower</li>
+<li>populate the data</li>
+</ul>
+<p class="last">Thanks</p>
+</div>
+<div class="section" id="what-is-an-overlay">
+<h2>What is an overlay<a class="headerlink" href="#what-is-an-overlay" title="Permalink to this headline">¶</a></h2>
+<p>Invenio is a library that enable the creation of an digital library but it
+has to be coupled with an overlay. The overlay will contain your configuration
+options, your desired look and feel, the extra invenio modules you&#8217;ve developed
+and are using.</p>
+</div>
+<div class="section" id="creating-your-first-invenio-overlay">
+<h2>Creating your first Invenio overlay<a class="headerlink" href="#creating-your-first-invenio-overlay" title="Permalink to this headline">¶</a></h2>
+<p>If you&#8217;ve already setup the <a class="reference internal" href="first-steps.html#first-steps"><span>developer&#8217;s environement invenio</span></a> itself, it will feel familiar. We are reproducing here the
+steps for Ubuntu LTS. Other distributions may be found in the previous link.</p>
+<div class="section" id="the-global-setup">
+<h3>The global setup<a class="headerlink" href="#the-global-setup" title="Permalink to this headline">¶</a></h3>
+<p>Some softwares and libraries are required to work on your overlay. It&#8217;s mostly
+Python, MySQL, Redis as well as XML, XSLT and graphical libraries. Node.js is
+solely required for development purposes.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> python --version
+<span class="go">Python 2.7.5+</span>
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install build-essential git redis-server <span class="se">\</span>
+<span class="go">                       libmysqlclient-dev libxml2-dev libxslt-dev \</span>
+<span class="go">                       libjpeg-dev libfreetype6-dev libtiff-dev \</span>
+<span class="go">                       libffi-dev libssl-dev \</span>
+<span class="go">                       software-properties-common python-dev \</span>
+<span class="go">                       virtualenvwrapper</span>
+<span class="gp">$</span> sudo pip install -U virtualenvwrapper pip
+<span class="gp">$</span> <span class="nb">source</span> .bashrc
+
+<span class="gp">#</span> Install MySQL server, and keep the root password somewhere safe.
+<span class="gp">$</span> sudo apt-get install mysql-server
+
+<span class="gp">#</span> Install Node.js
+<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install nodejs
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-virtual-environment">
+<h3>The virtual environment<a class="headerlink" href="#the-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>Python development usually recommends to work within a <code class="docutils literal"><span class="pre">virtualenv</span></code>, which
+creates an isolated environment where the libraries required by one will not
+intervene with the system ones or the ones of another system. We are using
+<code class="docutils literal"><span class="pre">virtualenvwrapper</span></code> but nothing prevents your from directly using
+<code class="docutils literal"><span class="pre">virtualenv</span></code> you are familiar with it.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> mkvirtualenv myoverlay
+<span class="gp">(myoverlay)$</span> <span class="c"># we are in your overlay environment now and</span>
+<span class="gp">(myoverlay)$</span> <span class="c"># can leave it using the deactivate command.</span>
+<span class="gp">(myoverlay)$</span> deactivate
+<span class="gp">$</span> <span class="c"># Now join it back, recreating it would fail.</span>
+<span class="gp">$</span> workon myoverlay
+<span class="gp">(myoverlay)$</span> <span class="c"># That&#39;s all there is to know about it.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-base-of-the-overlay">
+<h3>The base of the overlay<a class="headerlink" href="#the-base-of-the-overlay" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s dive in.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> workon myoverlay
+<span class="gp">(myoverlay)$</span> cdvirtualenv
+<span class="gp">(myoverlay)$</span> mkdir -p src/myoverlay
+<span class="gp">(myoverlay)$</span> <span class="nb">cd </span>src/myoverlay
+<span class="gp">(myoverlay)$</span> edit setup.py
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">setup.py</span></code> file contains the definition of a python package. Having one
+means you can rely on existing tools like <code class="docutils literal"><span class="pre">pip</span></code> to package, install, deploy
+it later on. Here is its minimal content.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+<span class="n">packages</span> <span class="o">=</span> <span class="n">find_packages</span><span class="p">()</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&quot;My Overlay&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s">&quot;0.1.dev0&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s">&quot;http://invenio-software.org/&quot;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s">&quot;Invenio Software&quot;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s">&quot;invenio@invenio-software.org&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s">&quot;My first overlay&quot;</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">packages</span><span class="p">,</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="s">&quot;Invenio&gt;=2&quot;</span>
+    <span class="p">],</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s">&quot;invenio.config&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;myoverlay = myoverlay.config&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can install it in editable mode (<code class="docutils literal"><span class="pre">-e</span></code>), meaning you don&#8217;t have to
+reinstall it after each change</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> pip install -e .
+</pre></div>
+</div>
+<p>This will fetch the latest Invenio version published on PyPI. As a developer,
+you may instead want to use the development version of Invenio from GitHub. To
+do so, create a file called <code class="docutils literal"><span class="pre">requirements.txt</span></code> with the following content:</p>
+<div class="highlight-text"><div class="highlight"><pre>git+git://github.com/inveniosoftware/invenio@pu#egg=Invenio-dev
+-e .
+</pre></div>
+</div>
+<p>and install using:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> pip install -r requirements.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>As you&#8217;ve seen above, we defined an entry_point for <code class="docutils literal"><span class="pre">myoverlay.config</span></code>. It
+points to a module that will contain our configuration. So create your
+application.</p>
+<div class="highlight-text"><div class="highlight"><pre>src/
+ │
+ ├ myoverlay/
+ │  │
+ │  ├ base/
+ │  │  │
+ │  │  └ __init__.py
+ │  │
+ │  ├ __init__.py
+ │  └ config.py
+ │
+ ├ requirements.txt
+ └ setup.py
+</pre></div>
+</div>
+<p>Put the required configuration into <code class="docutils literal"><span class="pre">config.py</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">CFG_SITE_LANGS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;en&quot;</span><span class="p">]</span>
+
+<span class="n">CFG_SITE_NAME</span> <span class="o">=</span> <span class="s">&quot;My Overlay&quot;</span>
+<span class="n">CFG_SITE_NAME_INTL</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&quot;en&quot;</span><span class="p">:</span> <span class="n">CFG_SITE_NAME</span>
+<span class="p">}</span>
+
+<span class="n">PACKAGES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">&quot;myoverlay.base&quot;</span><span class="p">,</span>
+    <span class="s">&quot;invenio.modules.*&quot;</span><span class="p">,</span>
+    <span class="s">&quot;invenio.base&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">myoverlay.instance_config</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="section" id="sensitive-configuration">
+<h3>Sensitive configuration<a class="headerlink" href="#sensitive-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Other configuration elements like database username and password or the website
+url should not be put here as this file is not specific to the installation and
+may be put under a version control system such as Git or Subversion.</p>
+<p>The configuration can be handled via the <cite>inveniomanage</cite> command line interface
+(or by editing the <cite>invenio.cfg</cite> file in the instance folder and reloading
+the application).</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>create secret-key
+<span class="gp">#</span> MySQL configuration
+<span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>CFG_DATABASE_NAME mysql-database
+<span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>CFG_DATABASE_USER mysql-user
+<span class="gp">#</span> HOST configuration <span class="o">(</span><span class="k">for</span> redirects, etc.<span class="o">)</span>
+<span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>CFG_SITE_URL http://invenio.example.com
+<span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>CFG_SITE_SECURE_URL https://invenio.example.com
+<span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>DEBUG True
+<span class="gp">(myoverlay)$</span> inveniomanage config <span class="nb">set </span>ASSETS_DEBUG True
+</pre></div>
+</div>
+</div>
+<div class="section" id="database-setup">
+<h3>Database setup<a class="headerlink" href="#database-setup" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(invenio)$</span> inveniomanage database init --user<span class="o">=</span>root --password<span class="o">=</span><span class="nv">$MYSQL_ROOT</span> --yes-i-know
+<span class="go">...</span>
+<span class="gp">&gt;</span>&gt;&gt; Database has been installed.
+<span class="gp">(invenio)$</span> inveniomanage database create
+<span class="go">...</span>
+<span class="gp">&gt;</span>&gt;&gt; Tables filled successfully.
+</pre></div>
+</div>
+</div>
+<div class="section" id="assets">
+<h3>Assets<a class="headerlink" href="#assets" title="Permalink to this headline">¶</a></h3>
+<p>Most of the JavaScript and CSS libraries used are not bundled with invenio
+itself and needs to be downloaded via <a class="reference external" href="http://bower.io/">bower</a>. Bower is
+configured using two files:</p>
+<ul class="simple">
+<li><cite>.bowerrc</cite>: tells where the assets are downloaded</li>
+<li><cite>bower.json</cite>: lists the dependencies to be downloaded</li>
+</ul>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;directory&quot;</span><span class="p">:</span> <span class="s2">&quot;myoverlay/base/static/vendors&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">bower.json</span></code> can be automagically generated.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sudo su -c <span class="s2">&quot;npm install -g bower less clean-css requirejs uglify-js&quot;</span>
+<span class="gp">(myoverlay)$</span> inveniomanage bower &gt; bower.json
+<span class="gp">(myoverlay)$</span> bower install
+</pre></div>
+</div>
+<p>For invenio to see the static files from the <code class="docutils literal"><span class="pre">myoverlay.base</span></code> module, it
+needs to declare a Flask blueprint. Create the following file:
+<code class="docutils literal"><span class="pre">myoverlay/base/views.py</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span>
+
+<span class="n">blueprint</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span>
+    <span class="s">&quot;myoverlay&quot;</span><span class="p">,</span>
+    <span class="n">__name__</span><span class="p">,</span>
+    <span class="n">url_prefix</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">template_folder</span><span class="o">=</span><span class="s">&quot;templates&quot;</span><span class="p">,</span>  <span class="c"># where your custom templates will go</span>
+    <span class="n">static_folder</span><span class="o">=</span><span class="s">&quot;static&quot;</span>        <span class="c"># where the assets go</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The assets will now be collected into the instance static folder from your
+overlay, invenio itself and every libraries it uses.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> inveniomanage collect
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="running">
+<h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> inveniomanage runserver
+</pre></div>
+</div>
+</div>
+<div class="section" id="translations">
+<h2>Translations<a class="headerlink" href="#translations" title="Permalink to this headline">¶</a></h2>
+<p>Invenio comes with full internationalization and localization support
+based on <a class="reference external" href="http://babel.pocoo.org/">Babel</a> library and <a class="reference external" href="https://pythonhosted.org/Flask-Babel/">Flask-Babel</a>.  All strings you want to
+translate in your overlay have to be marked with <code class="docutils literal"><span class="pre">_()</span></code>.</p>
+<p>When you have all strings properly marked, it is time to prepare
+catalog that contains all these strings for tranlations to desired
+languages.</p>
+<div class="section" id="id1">
+<h3>Configuration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>First of all, you have to get into the source folder of your overlay and
+create a configuration file for <em>Babel</em>.</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[python: **.py]</span>
+<span class="na">encoding</span> <span class="o">=</span> <span class="s">utf-8</span>
+
+<span class="k">[jinja2: **/templates/**]</span>
+<span class="na">encoding</span> <span class="o">=</span> <span class="s">utf-8</span>
+<span class="na">extensions</span> <span class="o">=</span> <span class="s">jinja2.ext.autoescape.jinja2.ext.with_</span>
+</pre></div>
+</div>
+<p>Save it as <code class="docutils literal"><span class="pre">babel.cfg</span></code> next to your <code class="docutils literal"><span class="pre">setup.py</span></code>. Before we run the
+extraction tool we need to add section to configure translation directory
+to <code class="docutils literal"><span class="pre">setup.cfg</span></code>.</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[compile_catalog]</span>
+<span class="na">directory</span> <span class="o">=</span> <span class="s">myoverlay/base/translations/</span>
+
+<span class="k">[extract_messages]</span>
+<span class="na">output-file</span> <span class="o">=</span> <span class="s">myoverlay/base/translations/myoverlay.pot</span>
+
+<span class="k">[init_catalog]</span>
+<span class="na">input-file</span> <span class="o">=</span> <span class="s">myoverlay/base/translations/myoverlay.pot</span>
+<span class="na">output-dir</span> <span class="o">=</span> <span class="s">myoverlay/base/translations/</span>
+
+<span class="k">[update_catalog]</span>
+<span class="na">input-file</span> <span class="o">=</span> <span class="s">myoverlay/base/translations/myoverlay.pot</span>
+<span class="na">output-dir</span> <span class="o">=</span> <span class="s">myoverlay/base/translations/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="message-extraction">
+<h3>Message Extraction<a class="headerlink" href="#message-extraction" title="Permalink to this headline">¶</a></h3>
+<p>Then it’s time to run the Babel string extraction with given
+configuration:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> python setup.py extract_messages
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-catalog-for-new-language">
+<h3>Create Catalog for New Language<a class="headerlink" href="#create-catalog-for-new-language" title="Permalink to this headline">¶</a></h3>
+<p>Once all translatable strings are extracted, one need to prepare catalogs
+for new languages. Following example shows how to prepare new catalog for
+French in PO (Portable Object) format.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> python setup.py init_catalog -l fr
+</pre></div>
+</div>
+<p>Now edit the <code class="docutils literal"><span class="pre">myoverlay/base/translations/fr/LC_MESSAGES/messages.po</span></code>
+file as needed.</p>
+</div>
+<div class="section" id="compiling-catalog">
+<h3>Compiling Catalog<a class="headerlink" href="#compiling-catalog" title="Permalink to this headline">¶</a></h3>
+<p>Next step is to prepare MO (Machine Object) files in the format which is
+defined by the GNU <a class="reference external" href="http://www.gnu.org/software/gettext/">gettext</a> tools
+and the GNU <a class="reference external" href="http://sourceforge.net/projects/translation">translation project</a>.</p>
+<p>To compile the translations for use, pybabel integration with distutils
+helps again:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">(myoverlay)$</span> python setup.py compile_catalog
+</pre></div>
+</div>
+<p>If you install Invenio in development mode you must compile catalog also
+from the Invenio directory project.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>You should tell git to ignore your compliled translation by running:</p>
+<div class="last highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">echo</span> <span class="se">\*</span>.mo &gt;&gt; .gitignore
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="updating-strings">
+<h3>Updating Strings<a class="headerlink" href="#updating-strings" title="Permalink to this headline">¶</a></h3>
+<p>It is pretty common that your strings in the code will change over the
+time. Pybabel provides support for updating the translation catalog with
+new strings or changing existing ones. What do you have to do? Create a
+new <code class="docutils literal"><span class="pre">myoverlay.pot</span></code> like above and then let pybabel merge the changes:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> python setup.py update_catalog
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>Deploying Invenio is almost a piece of cake using <a class="reference external" href="http://www.fabfile.org/">Fabric</a>. The following step are inspired by the Flask
+documentation: <a class="reference external" href="http://flask.pocoo.org/docs/patterns/fabric/">Deploying with Fabric</a></p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>First, you need a server with remote access (SSH), where you&#8217;ve installed all
+the python dependencies (e.g. <code class="docutils literal"><span class="pre">build-essentials</span></code>, <code class="docutils literal"><span class="pre">python-dev</span></code>,
+<code class="docutils literal"><span class="pre">libmysqlclient-dev</span></code>, etc.).</p>
+<p>Install <cite>fabric</cite> locally,</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> pip install fabric
+</pre></div>
+</div>
+<p>and create a boilerplate <code class="docutils literal"><span class="pre">fabfile.py</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.utils</span> <span class="kn">import</span> <span class="n">error</span>
+<span class="kn">from</span> <span class="nn">fabric.contrib.files</span> <span class="kn">import</span> <span class="n">exists</span>
+
+
+<span class="n">env</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="s">&#39;invenio&#39;</span>  <span class="c"># remote username</span>
+<span class="n">env</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="s">&#39;/home/invenio/www&#39;</span>  <span class="c"># remote directory</span>
+<span class="n">env</span><span class="o">.</span><span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;yourserver&#39;</span><span class="p">]</span>  <span class="c"># list of servers</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="preparing-the-tarball">
+<h3>Preparing the tarball<a class="headerlink" href="#preparing-the-tarball" title="Permalink to this headline">¶</a></h3>
+<p>Before deploying anything, we need to locally prepare the python package to be
+installed. Thanks to our <code class="docutils literal"><span class="pre">setup.py</span></code> file, it&#8217;s very simple.</p>
+<p>Beforehand, we have to generate the static assets into our static folder. By
+doing so, it&#8217;s not required to install anything related to node.js on your
+server (no <code class="docutils literal"><span class="pre">bower</span></code>, <code class="docutils literal"><span class="pre">less</span></code>, <code class="docutils literal"><span class="pre">uglifyjs</span></code>, etc.).</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">pack</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Create a new source distribution as tarball.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;.bowerrc&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">bower</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+
+    <span class="n">local</span><span class="p">(</span><span class="s">&quot;inveniomanage assets build --directory {directory}/gen&quot;</span>
+          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">bower</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">local</span><span class="p">(</span><span class="s">&quot;python setup.py sdist --formats=gztar&quot;</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">succeeded</span>
+</pre></div>
+</div>
+<p>Try it:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> fab pack
+<span class="go">...</span>
+<span class="go">Done</span>
+<span class="gp">$</span> ls dist/
+<span class="go">My-Overlay-0.1.dev0.tar.gz</span>
+</pre></div>
+</div>
+<p>This is the package that will be installed on your server.</p>
+</div>
+<div class="section" id="creating-the-virtual-environement">
+<h3>Creating the virtual environement<a class="headerlink" href="#creating-the-virtual-environement" title="Permalink to this headline">¶</a></h3>
+<p>We love virtual environments. We recommend you to install each version into its
+own virtual env enabling quick rollbacks.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">create_virtualenv</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Create the virtualenv.&quot;&quot;&quot;</span>
+    <span class="n">package</span> <span class="o">=</span> <span class="n">local</span><span class="p">(</span><span class="s">&quot;python setup.py --fullname&quot;</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">venv</span> <span class="o">=</span> <span class="s">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">directory</span><span class="p">,</span> <span class="n">package</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">directory</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">package</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">error</span><span class="p">(</span><span class="s">&quot;This version {0} is already installed.&quot;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">package</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">run</span><span class="p">(</span><span class="s">&quot;virtualenv {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">package</span><span class="p">))</span><span class="o">.</span><span class="n">succeeded</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-the-package">
+<h3>Installing the package<a class="headerlink" href="#installing-the-package" title="Permalink to this headline">¶</a></h3>
+<p>We can now upload the local tarball into the virtualenv, and install everything
+there.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">install</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Install package.&quot;&quot;&quot;</span>
+    <span class="n">package</span> <span class="o">=</span> <span class="n">local</span><span class="p">(</span><span class="s">&quot;python setup.py --fullname&quot;</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">venv</span> <span class="o">=</span> <span class="s">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">directory</span><span class="p">,</span> <span class="n">package</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">venv</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">error</span><span class="p">(</span><span class="s">&quot;Meh? I need a virtualenv first.&quot;</span><span class="p">)</span>
+
+    <span class="c"># Upload the package and put it into our virtualenv.</span>
+    <span class="n">put</span><span class="p">(</span><span class="s">&quot;dist/{0}.tar.gz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">package</span><span class="p">),</span> <span class="s">&quot;/tmp/app.tgz&quot;</span><span class="p">)</span>
+    <span class="n">run</span><span class="p">(</span><span class="s">&quot;mkdir -p {0}/src&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">venv</span><span class="p">))</span>
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="s">&quot;{0}/src&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">venv</span><span class="p">)):</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&quot;tar xzf /tmp/app.tgz&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&quot;rm -rf /tmp/app.tgz&quot;</span><span class="p">)</span>
+
+    <span class="c"># Jump into the virtualenv and install stuff</span>
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="s">&quot;{0}/src/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">venv</span><span class="p">,</span> <span class="n">package</span><span class="p">)):</span>
+        <span class="n">success</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="s">&quot;{0}/bin/python setup.py install&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">venv</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+            <span class="c"># post install</span>
+            <span class="n">run</span><span class="p">(</span><span class="s">&quot;{0}/bin/inveniomanage collect&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">venv</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">success</span>
+</pre></div>
+</div>
+<p>Combining all the three steps:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> fab pack virtualenv install
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Configuration<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The setup doesn&#8217;t have the <code class="docutils literal"><span class="pre">invenio.cfg</span></code> file that is generated via
+<code class="docutils literal"><span class="pre">inveniomanage</span> <span class="pre">config</span></code>. You should do so manually.</p>
+</div>
+<div class="section" id="running-the-server">
+<h3>Running the server<a class="headerlink" href="#running-the-server" title="Permalink to this headline">¶</a></h3>
+<p>uWSGI is super simple and neat, all you need is two files. In the example
+below, we&#8217;ve installed two versions of our overlay and a symbolic link is
+pointing to the one we want to run.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ls www/
+<span class="go">current -&gt; My-Overlay-0.1</span>
+<span class="go">My-Overlay-0.1.dev1</span>
+<span class="go">My-Overlay-0.1.dev2</span>
+<span class="go">My-Overlay-0.1</span>
+<span class="go">wsgi.py</span>
+<span class="go">uwsgi.ini</span>
+</pre></div>
+</div>
+<p>Let&#8217;s create the <code class="docutils literal"><span class="pre">wsgi.py</span></code> file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.base.factory</span> <span class="kn">import</span> <span class="n">create_wsgi_app</span>
+
+<span class="n">application</span> <span class="o">=</span> <span class="n">create_wsgi_app</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And the µWSGI configuration:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">uwsgi</span><span class="p">]</span>
+<span class="n">http</span> <span class="o">=</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">4000</span>
+<span class="n">master</span> <span class="o">=</span> <span class="n">true</span>
+
+<span class="n">processes</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">die</span><span class="o">-</span><span class="n">on</span><span class="o">-</span><span class="n">term</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">vaccum</span> <span class="o">=</span> <span class="n">true</span>
+
+<span class="n">chdir</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span>
+<span class="n">virtualenv</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="o">/</span><span class="n">current</span><span class="o">/</span>
+<span class="n">module</span> <span class="o">=</span> <span class="n">wsgi</span><span class="p">:</span><span class="n">application</span>
+<span class="n">touch</span><span class="o">-</span><span class="nb">reload</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="o">/</span><span class="n">wsgi</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Let&#8217;s run it.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> pip install uwsgi
+
+<span class="gp">$</span> uwsgi --ini uwsgi.ini
+<span class="gp">#</span> or in daemon mode
+<span class="gp">$</span> uwsgi -d uwsgi.log --ini uwsgi.ini
+</pre></div>
+</div>
+<p>If the new version causes troubles, going back to the old one is as fast as
+changing the symbolic link and restarting the WSGI server.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> rm current
+<span class="gp">$</span> ln -s My-Overlay-0.1.dev1 current
+<span class="gp">$</span> touch wsgi.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="dealing-with-versions">
+<h3>Dealing with versions<a class="headerlink" href="#dealing-with-versions" title="Permalink to this headline">¶</a></h3>
+<p>One good idea is to use symlink to point to your current virtualenv and run
+your overlay from there. Doing that via Fabric is left as an exercise to the
+reader.</p>
+<p>When installing a new version, copying the <code class="docutils literal"><span class="pre">invenio.cfg</span></code> file over is the
+only requirements. Restarting the WSGI server is usually done by <code class="docutils literal"><span class="pre">touch</span></code>-ing
+the <code class="docutils literal"><span class="pre">wsgi.py</span></code> file.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="common-concepts.html" class="btn btn-neutral float-right" title="Common Concepts" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="first-steps.html" class="btn btn-neutral" title="First Steps with Invenio" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, 2014, 2015 CERN.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.2.0.dev20150608',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

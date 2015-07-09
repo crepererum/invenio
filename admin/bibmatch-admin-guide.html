@@ -1,0 +1,1049 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibMatch Admin Guide &mdash; Invenio 2.2.0.dev20150608 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Invenio 2.2.0.dev20150608 documentation" href="../index.html"/>
+        <link rel="up" title="Admin’s Guide" href="index.html"/>
+        <link rel="next" title="BibSched Admin Guide" href="bibsched-admin-guide.html"/>
+        <link rel="prev" title="BibKnowledge Admin Guide" href="bibknowledge-admin-guide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Invenio
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/introduction.html">Introduction to Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-is-a-registry">What is a Registry?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-do-i-need">What do I need?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo and Example Sites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#demo-sites">Demo Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#production-sites">Production Sites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/features.html">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#navigable-collection-tree">Navigable collection tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#powerful-search-engine">Powerful search engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#flexible-metadata">Flexible metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#user-personalization">User personalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#multiple-output-formats">Multiple output formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/first-steps.html">First Steps with Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#about">1. About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#prerequisites">2. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#debian-ubuntu-lts">2.1. Debian / Ubuntu LTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#centos-rhel">2.2. Centos / RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#os-x">2.3. OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#extra-tools">2.4. Extra tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#quick-instructions-for-the-impatient-invenio-developer">3. Quick instructions for the impatient Invenio developer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#installation">3.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#configuration">3.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#development">3.3. Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#final-words">4. Final words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/overlay.html">How to create an Invenio overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#what-is-an-overlay">What is an overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#creating-your-first-invenio-overlay">Creating your first Invenio overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-global-setup">The global setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-virtual-environment">The virtual environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-base-of-the-overlay">The base of the overlay</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#sensitive-configuration">Sensitive configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#database-setup">Database setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#assets">Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#running">Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#translations">Translations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#message-extraction">Message Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#create-catalog-for-new-language">Create Catalog for New Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#compiling-catalog">Compiling Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#updating-strings">Updating Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#deployment">Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#preparing-the-tarball">Preparing the tarball</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#creating-the-virtual-environement">Creating the virtual environement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#installing-the-package">Installing the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id2">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#dealing-with-versions">Dealing with versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/common-concepts.html">Common Concepts</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developer&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers/introduction.html">Introducing Invenio for Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/extensions.html">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#plugging-an-existing-extension">Plugging an Existing Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#code-structure">Code structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/registries.html">Pluggable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/models.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#quering">Quering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#subqueries">Subqueries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#schema">Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#improve-code-readability">Improve code readability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/modules.html#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodule.html">How to develop a module: Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodule.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart2.html">How to develop a module: Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#multiple-views">Multiple views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#module-wide-configuration">Module-wide configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart3.html">How to develop a module: Part 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/git-workflow.html">Git Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#setting-things-up">Setting things up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s1-setting-up-your-git-identity">S1. Setting up your Git identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s2-setting-up-your-private-repo">S2. Setting up your private repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s3-backuping-your-private-repo-only-developers-at-cern">S3. Backuping your private repo (only developers at CERN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s4-setting-up-your-public-repo">S4. Setting up your public repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s5-pushing-to-your-public-repo-from-outside-cern">S5. Pushing to your public repo from outside CERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s6-making-your-public-repo-visible-on-the-web">S6. Making your public repo visible on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s7-using-remote-repository-locally">S7. Using remote repository locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#understanding-official-repo-branches">Understanding official repo branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#maint"><code class="docutils literal"><span class="pre">maint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#next"><code class="docutils literal"><span class="pre">next</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-overview">Working on new features - overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-details">Working on new features - details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w1-cloning-the-repo">W1. Cloning the repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w2-working-with-local-topic-branches">W2. Working with local topic branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w3-working-on-new-feature-b">W3. Working on new-feature-b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w4-using-temporary-stash">W4. Using temporary stash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w5-testing-on-dev-servers">W5. Testing on DEV servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w6-rebasing-against-latest-git-master">W6. Rebasing against latest git/master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w7-publishing-your-work">W7. Publishing your work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w8-review-process">W8. Review process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#remarks-often-made-during-code-review">Remarks often made during code review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r1-remarks-on-commit-history">R1. Remarks on commit history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r2-remarks-on-commit-log-messages">R2. Remarks on commit log messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r3-remarks-on-the-coding">R3. Remarks on the coding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r4-notes-on-the-review-process-timeline">R4. Notes on the review process timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/kwalitee.html">Commit quality check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/docker.html">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#interactive-sessions">Interactive sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#code-changes-and-live-reloading">Code changes and live reloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#overlays">Overlays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Admin&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#enforcing-types-of-authority-records">Enforcing types of authority records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#bibedit">BibEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#bibindex">BibIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibauthority-admin-guide.html#configuration-file-overview">Configuration File Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibclassify-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibclassify-admin-guide.html#thesaurus">1.1 Thesaurus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibclassify-admin-guide.html#keyword-extraction">1.2 Keyword extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibclassify-admin-guide.html#running-bibclassify">2. Running BibClassify</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibconvert-admin-guide.html#a-overview">A. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibconvert-admin-guide.html#b-xml-oriented-mode">B. XML-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#configuration-file-examples">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#running-bibconvert">2. Running BibConvert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibconvert-admin-guide.html#c-plain-text-oriented-mode">C. Plain Text-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#id2">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#id3">2. Running BibConvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibconvert-admin-guide.html#bibconvert-configuration-guide">3. BibConvert Configuration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#edit-records-via-web-interface">2. Edit records via Web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibedit-admin-guide.html#keyboard-shortcuts-on-bibedit">2.1 Keyboard shortcuts on BibEdit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#edit-multiple-records-via-web-interface">3. Edit multiple records via web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibedit-admin-guide.html#multi-record-editor-user-guide">3.1 Multi-Record Editor user guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#edit-records-via-command-line">4. Edit records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#delete-records-via-command-line">5. Delete records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#delete-all-records">6. Delete all records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibedit-admin-guide.html#access-record-history">7. Access record history</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibknowledge-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibknowledge-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibknowledge-admin-guide.html#configure-knowledge-bases">2. Configure Knowledge Bases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#add-a-knowledge-base">2.1 Add a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#remove-a-knowledge-base">2.2 Remove a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#add-a-mapping">2.3 Add a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#remove-a-mapping">2.4 Remove a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#edit-a-mapping">2.5 Edit a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibknowledge-admin-guide.html#edit-the-attributes-of-a-knowledge-base">2.6 Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibMatch Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-bibmatch">1.1 What is BibMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#features">1.2 Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-usage">2.1 Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-usage">2.2 Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#more-examples">3. More examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.1 More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix">Appendix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-querystrings">A. Querystrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-bibconvert-formats">B. BibConvert formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-predefined-fields">C. Predefined fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-bibmatch-commmand-line-tool">D. BibMatch commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#bibsched-graphical-interface">Bibsched graphical interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibsched-admin-guide.html#manual-mode">Manual mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibsched-admin-guide.html#automatic-mode">Automatic mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#bibsched-maintenance">Bibsched maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#priorities">Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#task-logging">Task logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#task-concurrency">Task concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#bibsched-command-line-interface">Bibsched command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#bibtasks-command-line-interface">Bibtasks command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibsched-admin-guide.html#bibsched-tasklets">BibSched Tasklets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#configuring-bibupload">2. Configuring BibUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#running-bibupload">3. Running BibUpload</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#inserting-new-records">3.1 Inserting new records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#inserting-records-into-the-holding-pen">3.2 Inserting records into the Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#updating-existing-records">3.3 Updating existing records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#inserting-and-updating-at-the-same-time">3.4 Inserting and updating at the same time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#obtaining-feedbacks">3.7 Obtaining feedbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#assigning-additional-information-to-documents-and-other-entities">3.8 Assigning additional information to documents and other entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bibupload-admin-guide.html#batch-uploader">4. Batch Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#web-interface-cataloguers">4.1 Web interface - Cataloguers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#web-interface-robots">4.2 Web interface - Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bibupload-admin-guide.html#daemon-mode">4.2 Daemon mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oaiharvest-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oaiharvest-admin-guide.html#oai-data-harvesting">2. OAI Data Harvesting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="oaiharvest-admin-guide.html#oai-harvest-admin-interface">2.1 OAI Harvest Admin Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oaiharvest-admin-guide.html#oaiharvest-commmand-line-tool">2.2 oaiharvest commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oairepository-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oairepository-admin-guide.html#oai-repository-exporting">2. OAI Repository (<em>Exporting</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="oairepository-admin-guide.html#definition-of-oai-sets">2.1. Definition of OAI sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oairepository-admin-guide.html#exposing-metadata-via-oai-repository-gateway">2.2. Exposing metadata via OAI Repository Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="publiline-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publiline-admin-guide.html#configure-publiline">Configure Publiline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="publiline-admin-guide.html#step-1-define-a-publication-committee-chair">Step 1 : Define a Publication Committee Chair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="publiline-admin-guide.html#step-2-create-a-group">Step 2 : Create a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="publiline-admin-guide.html#step-3-define-project-leader-s">Step 3 : Define Project Leader(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="publiline-admin-guide.html#overview-and-usage">Overview and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="websession-admin-guide.html#guest-user-sessions">Guest User Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webstyle-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webstyle-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#css-style-sheet-and-images">1.1 CSS Style Sheet and Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#html-page-layout">1.2 HTML Page Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#look-of-bibliographic-references">1.3 Look of Bibliographic References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#specific-configurations">1.4 Specific Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webstyle-admin-guide.html#detailed-record-pages">2. Detailed Record Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#available-tabs">2.1 Available tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#showing-hiding-tabs">2.2 Showing/Hiding tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#customizing-content-of-tabs">2.3 Customizing content of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#customizing-look-of-tabs">2.4 Customizing look of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#custom-redirections">Custom Redirections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webstyle-admin-guide.html#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../base.html">Base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#invenio-base">invenio.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.wrappers">Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.bundles">Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#extensions">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ext/assets.html">Assets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.commands">Flask-Script commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.registry">Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/assets.html#module-invenio.ext.assets.wrappers">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/arxiv.html">ArXiv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/arxiv.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/crossref.html">CrossRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/crossref.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/es.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/fs.html">Cloud Filesystems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#dropbox">Dropbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/fs.html#google-drive">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/jasmine.html">Jasmine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#missing-features">Missing features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#flightjs-tests">FlightJS tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#fixtures">Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/jasmine.html#howto">HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/logging.html">Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#logging-errors">Logging errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#log-handlers">Log handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#legacy-handling-of-errors">Legacy handling of errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#error-handling-do-s-and-don-ts">Error handling do&#8217;s and don&#8217;ts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/logging.html#backends">Backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/login.html">Login</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login">invenio.ext.login package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/login.html#module-invenio.ext.login.legacy_user">invenio.ext.login.legacy_user module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/passlib.html">Passlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/passlib.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/script.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/script.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.backends">Backends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/session.html#module-invenio.ext.session.interface">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/sqlalchemy.html">SQLAlchemy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ext/template.html">Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.config">Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.loader">Loader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.bccache">BCCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ext/template.html#module-invenio.ext.template.context_processor">Context Processor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules/annotations.html">Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#invenio-modules-annotations">invenio.modules.annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.noteutils">Noteutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/apikeys.html">API Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documentation.html">Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documents.html">Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-api">invenio.modules.documents.api</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-errors">invenio.modules.documents.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/formatter.html">Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/jsonalchemy.html">JSONAlchemy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#module-structure">Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-to-extend-jsonalchemy-behaviour">How to Extend JSONAlchemy Behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#invenio-use-cases">Invenio Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/knowledge.html">Knowledge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/oauthclient.html">OAuthClient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#authorization-flow-overview">Authorization Flow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#module-invenio.modules.oauthclient.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#contrib">Contrib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/redirector.html">Redirector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.manage">Manage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/upgrader.html">Upgrader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#module-invenio.modules.upgrader.models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/uploader.html">Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.workflows">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/workflows.html">Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-workflow">Create a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-task">Create a task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#run-a-workflow">Run a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#holding-pen">Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#engine">Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#id2">Workers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#views">Views</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../utils/datastructures.html">Datastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/washers.html">Washers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/forms.html">Forms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#legacy">Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../legacy/bibrecord.html">BibRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community/code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecationpolicy.html">Deprecation policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#fast-track-deprecation">Fast track deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#how-to-deprecate-a-feature">How to deprecate a feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#invenio-license">Invenio License</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Invenio</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Admin&#8217;s Guide</a> &raquo;</li>
+      
+    <li>BibMatch Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="bibmatch-admin-guide">
+<span id="id1"></span><h1>BibMatch Admin Guide<a class="headerlink" href="#bibmatch-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-bibmatch">
+<h3>1.1 What is BibMatch<a class="headerlink" href="#what-is-bibmatch" title="Permalink to this headline">¶</a></h3>
+<p>BibMatch is a tool for matching bibliographic meta-data records against
+a local or remote Invenio repository. The incoming records can be
+matched against zero, one or more then one records. This way, it is
+possible to identify potential duplicate entries before they are
+uploaded into the repository. This can also be helpful in detecting
+already existing duplicates in the database.</p>
+<p>BibMatch also acts as a filter for incoming records, by splitting the
+records into &#8216;new records&#8217; or &#8216;existing records&#8217;. In most cases this
+separation makes a big difference when ingesting content into a digital
+repository.</p>
+</div>
+<div class="section" id="features">
+<h3>1.2 Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Matches meta-data records locally and remotely</li>
+<li>Supports user authentication to allow matching against restricted
+collections</li>
+<li>Highly configurable match validation step for reliable matching
+results</li>
+<li>Allows full customisation of the search queries used to find matching
+candidates</li>
+<li>Incoming meta-data can be manipulated through BibConvert formatting
+functions</li>
+<li>Supports transliteration of Unicode meta-data into ASCII (useful for
+legacy systems)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>2. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-usage">
+<h3>2.1 Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="input-records">
+<h4>Input records<a class="headerlink" href="#input-records" title="Permalink to this headline">¶</a></h4>
+<p>BibMatch needs a set of records to match. You can give BibMatch these
+records in two ways:</p>
+<p>By standard input::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch &lt; input.xml
+</pre></div>
+</div>
+<p>or, by <em>-i</em> parameter::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -i input.xml
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-records">
+<h4>Output records<a class="headerlink" href="#output-records" title="Permalink to this headline">¶</a></h4>
+<p>When BibMatch matches records, they will be classified in one of 4
+ways:</p>
+<ul class="simple">
+<li><strong>Match</strong> - exact match found</li>
+<li><strong>Ambiguous</strong> - record matches more then one record</li>
+<li><strong>Fuzzy</strong> - record <em>may</em> match a record</li>
+<li><strong>New</strong> - record does not match any record</li>
+</ul>
+<p>You can choose which types of records to output after matching has
+completed by specifying it in the command::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-match &lt; input.xml
+$ bibmatch --print-new &lt; input.xml
+</pre></div>
+</div>
+<p>You can also output all matching results to a set of files, by
+specifying a filename-prefix to the command-line option <em>-b</em>::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -b output_results &lt; input.xml
+</pre></div>
+</div>
+<p>This will create a set of 4 files: <em>output_results.matched.xml</em>,
+<em>output_results.new.xml</em>, <em>output_results.fuzzy.xml</em>,
+<em>output_results.ambiguous.xml</em></p>
+</div>
+<div class="section" id="matching-queries">
+<h4>Matching queries<a class="headerlink" href="#matching-queries" title="Permalink to this headline">¶</a></h4>
+<p>By default, BibMatch will try to find potential record matches using the
+MARC tag 245__$$a, i.e. the title. In many cases this is not an
+efficient metric to find all potential matching records with, because of
+its ambiguous nature. As such, BibMatch provide users a way to specify
+the exact queries to use and where to extract meta-data to put in the
+queries.</p>
+<p>Using the command-line option <em>-q</em> you can specify your own
+<em>querystrings</em> to use when searching for records. Read more about
+querystrings <a class="reference external" href="#querystrings">here</a>.</p>
+<p>For example, if available in the meta-data, you can search using the
+ISBN or DOI, which <em>usually</em> are stable identifiers::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -q &quot;[020__a] or [0247_a]&quot; -b output_results &lt; input.xml
+</pre></div>
+</div>
+<p>As you can see, any data from the input record you want to replace in
+the query is referenced using square-brackets [] containing the exact
+MARC notation.</p>
+<p>You can specify several <em>-q</em> queries and they will all be performed in
+order, until a match is found. If you want to avoid specifying long
+complicated query-strings every time, you can use short-hand <em>template
+queries</em> that can be defined in the configuration of BibMatch. (See
+hacking guide)</p>
+</div>
+<div class="section" id="match-remote-installations">
+<h4>Match remote installations<a class="headerlink" href="#match-remote-installations" title="Permalink to this headline">¶</a></h4>
+<p>By default, BibMatch will try to match records on the local
+installation. In order to match against records on a remote Invenio
+installation (like <a class="reference external" href="http://cds.cern.ch">http://cds.cern.ch</a> or <a class="reference external" href="http://inspire-hep.net">http://inspire-hep.net</a>) you can
+use the option <em>-r</em>::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -r &quot;http://cds.cern.ch&quot; -q &quot;[020__a] or [0247_a]&quot; -b output_results &lt; input.xml
+</pre></div>
+</div>
+<p>If the remote installation requires user authentication, you can also
+specify this using <em>&#8211;user</em>. You will then be prompted for a password::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -r &quot;http://cds.cern.ch&quot; --user admin -q &quot;[020__a] or [0247_a]&quot; -b output_results &lt; input.xml
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-textmarc">
+<h4>Using TEXTMARC<a class="headerlink" href="#using-textmarc" title="Permalink to this headline">¶</a></h4>
+<p>BibMatch usually works with MARCXML, but you can still input TEXTMARC
+files that will be automatically converted to MARCXML in BibMatch. If
+you want to also receive the output in TEXTMARC (limited support) you
+can use the command-line option <em>-t</em>::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -b out.marc -t &lt; input.marc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="advanced-usage">
+<h3>2.2 Advanced usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h3>
+<p>When matching records against a repository you <em>may</em> sometimes want to
+update or replace any existing records in the database with the given
+records. In order to allow for easy upload after BibMatch has run, you
+can use the <em>-a</em> parameter to tell BibMatch to add the matched records
+001 identifier.:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -q &quot;[020__a] or [0247_a]&quot; -b output_records -a &lt; input.xml
+</pre></div>
+</div>
+<p>To match using BibConvert formats to manipulate MARC field-values from
+the input records. See <a class="reference external" href="/help/admin/bibconvert-admin-guide#C.3.4">BibConvert Admin
+Guide</a>
+for more details on formats. An example of extracting the first word
+from the 100__a field and lower-case it::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --query-string=\&quot;[245__a] [100__a::WORDS(1,R)::DOWN()]&quot; &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>You can also search directly in specific collection(s) in the repository
+using the <em>&#8211;collection</em> option. To match more then one collection,
+separate each with comma::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --collection &#39;Books,Articles&#39; &lt; input.xml
+</pre></div>
+</div>
+<p>If some collections are restricted or you are searching for restricted
+meta-data fields in the repository, you can specify a user login with
+the <em>&#8211;user</em> command::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --collection &#39;Theses&#39; --user admin &lt; input.xml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="more-examples">
+<h2>3. More examples<a class="headerlink" href="#more-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>3.1 More examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>To match records on title in the title index, also print out only new
+(unmatched) ones::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-new -q &quot;[title]&quot; --field=\&quot;title\&quot; &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>To print potential duplicate entries before manual upload using
+predefined queries, use::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-match -q title-author &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>Two options for matching on multiple fields, including predefined fields
+(title, author etc.)::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --query-string=&quot;[245__a] [author]&quot; &lt; input.xml &gt; output.xml
+$ bibmatch --query-string=&quot;245__a||author&quot; &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>To print &#8220;fuzzy&#8221; (almost matching by title) records::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-fuzzy  &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>An example of use of predefined searching:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-match -q title-author &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="appendix">
+<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-querystrings">
+<h3>A. Querystrings<a class="headerlink" href="#a-querystrings" title="Permalink to this headline">¶</a></h3>
+<p>Querystrings determine which type of query/strategy to use when
+searching for the matching records in the database.</p>
+<p><strong>Predefined querystrings:</strong></p>
+<p>There are some predefined querystrings available:</p>
+<ul class="simple">
+<li><strong>title</strong> - standard title search. (i.e. &#8220;this is a title&#8221;) (default)</li>
+<li><strong>title-author</strong> - title and author search (i.e. &#8220;this is a title AND
+Lastname, F&#8221;)</li>
+<li><strong>reportnumber</strong> - reportnumber search (i.e.
+reportnumber:REP-NO-123).</li>
+</ul>
+<p>You can also add your own predefined querystrings inside invenio.conf
+file.</p>
+<p>You can structure your query in different ways:</p>
+<ul>
+<li><p class="first">Old-style: fieldnames separated by &#8216;||&#8217; (conforms with earlier
+BibMatch versions):</p>
+<div class="highlight-python"><div class="highlight"><pre>-q &quot;773__p||100__a&quot;
+</pre></div>
+</div>
+</li>
+<li><p class="first">New-style: Invenio query syntax with &#8220;bracket syntax&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre>-q &quot;773__p:\&quot;[773__p]\&quot; 100__a:[100__a]&quot;
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Depending on the structure of the query, it will fetch associated values
+from each record and put it into the final search query. i.e in the
+above example it will put journal-title from 773__p.</p>
+<p>When more then one value/datafield is found, i.e. when looking for
+700__a (additional authors), several queries will be put together to
+make sure all combinations of values are accounted for. The queries are
+separated with given operator (-o, &#8211;operator) value.</p>
+<p>Note: You can add more then one query to a search, just give more (-q,
+&#8211;query-string) arguments. The results of all queries will be combined
+when matching.</p>
+</div>
+<div class="section" id="b-bibconvert-formats">
+<h3>B. BibConvert formats<a class="headerlink" href="#b-bibconvert-formats" title="Permalink to this headline">¶</a></h3>
+<p>Another option to further improve your matching strategy is to use
+BibConvert formats. By using the formats available by BibConvert you can
+change the values from the retrieved record-fields.</p>
+<p>i.e. using WORDS(1,R) will only return the first (1) word from the right
+(R). This can be very useful when adjusting your matching parameters to
+better match the content. For example only getting authors last-name
+instead of full-name.</p>
+<p>You can use these formats directly in the querystrings (indicated by &#8216;::&#8217;):</p>
+<ul class="simple">
+<li>Old-style: -q &#8220;100__a::WORDS(1,R)::DOWN()&#8221;
+This query will take first word from the right from 100__a and
+also convert it to lower-case.</li>
+<li>New-style: -q &#8220;100__a:[100__a::WORDS(1,R)::DOWN()]&#8221;
+See BibConvert documentation for a more detailed explanation of
+formats.</li>
+</ul>
+</div>
+<div class="section" id="c-predefined-fields">
+<h3>C. Predefined fields<a class="headerlink" href="#c-predefined-fields" title="Permalink to this headline">¶</a></h3>
+<p>In addition to specifying distinct MARC fields in the querystrings you
+can use predefined fields as configured in the LOCAL(!) Invenio system.
+These fields will then be mapped to one or more fieldtags to be
+retrieved from input records.</p>
+<p>Common predefined fields used in querystrings: (for Invenio demo site,
+your fields may vary!)</p>
+<div class="highlight-python"><div class="highlight"><pre>&#39;abstract&#39;, &#39;affiliation&#39;, &#39;anyfield&#39;, &#39;author&#39;, &#39;coden&#39;, &#39;collaboration&#39;,
+ &#39;collection&#39;, &#39;datecreated&#39;, &#39;datemodified&#39;, &#39;division&#39;, &#39;exactauthor&#39;, &#39;exactfirstauthor&#39;,
+ &#39;experiment&#39;, &#39;fulltext&#39;, &#39;isbn&#39;, &#39;issn&#39;, &#39;journal&#39;, &#39;keyword&#39;, &#39;recid&#39;,
+ &#39;reference&#39;, &#39;reportnumber&#39;, &#39;subject&#39;, &#39;title&#39;, &#39;year&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="d-bibmatch-commmand-line-tool">
+<h3>D. BibMatch commmand-line tool<a class="headerlink" href="#d-bibmatch-commmand-line-tool" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>Output:
+
+ -0 --print-new (default) print unmatched in stdout
+ -1 --print-match print matched records in stdout
+ -2 --print-ambiguous print records that match more than 1 existing records
+ -3 --print-fuzzy print records that match the longest words in existing records
+
+ -b --batch-output=(filename). filename.new will be new records, filename.matched will be matched,
+      filename.ambiguous will be ambiguous, filename.fuzzy will be fuzzy match
+ -t --text-marc-output transform the output to text-marc format instead of the default MARCXML
+
+ Simple query:
+
+ -q --query-string=(search-query/predefined-query) See &quot;Querystring&quot;-section below.
+ -f --field=(field)
+
+ General options:
+
+ -n   --noprocess          Do not print records in stdout.
+ -i,  --input              use a named file instead of stdin for input
+ -v,  --verbose=LEVEL      verbose level (from 0 to 9, default 1)
+ -r,  --remote=URL         match against a remote Invenio installation (Full URL, no trailing &#39;/&#39;)
+                           Beware: Only searches public records attached to home collection
+ -a,  --alter-recid        The recid (controlfield 001) of matched or fuzzy matched records in
+                           output will be replaced by the 001 value of the matched record.
+                           Note: Useful if you want to replace matched records using BibUpload.
+ -z,  --clean              clean queries before searching
+ --no-validation           do not perform post-match validation
+ -h,  --help               print this help and exit
+ -V,  --version            print version information and exit
+
+ Advanced options:
+
+ -m --mode=(a|e|o|p|r)     perform an advanced search using special search mode.
+                             Where mode is:
+                               &quot;a&quot; all of the words,
+                               &quot;o&quot; any of the words,
+                               &quot;e&quot; exact phrase,
+                               &quot;p&quot; partial phrase,
+                               &quot;r&quot; regular expression.
+
+ -o --operator(a|o)        used to concatenate identical fields in search query (i.e. several report-numbers)
+                             Where operator is:
+                               &quot;a&quot; boolean AND (default)
+                               &quot;o&quot; boolean OR
+
+ -c --config=filename      load querystrings from a config file. Each line starting with QRYSTR will
+                           be added as a query. i.e. QRYSTR --- [title] [author]
+
+ -x --collection           only perform queries in certain collection(s).
+                           Note: matching against restricted collections requires authentication.
+
+ --user=USERNAME           username to use when connecting to Invenio instance. Useful when searching
+                           restricted collections. You will be prompted for password.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibsched-admin-guide.html" class="btn btn-neutral float-right" title="BibSched Admin Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibknowledge-admin-guide.html" class="btn btn-neutral" title="BibKnowledge Admin Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, 2014, 2015 CERN.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.2.0.dev20150608',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

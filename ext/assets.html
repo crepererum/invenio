@@ -1,0 +1,1097 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assets &mdash; Invenio 2.2.0.dev20150608 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Invenio 2.2.0.dev20150608 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="../api.html"/>
+        <link rel="next" title="ArXiv" href="arxiv.html"/>
+        <link rel="prev" title="Base" href="../base.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Invenio
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/introduction.html">Introduction to Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-is-a-registry">What is a Registry?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#what-do-i-need">What do I need?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/introduction.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo and Example Sites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#demo-sites">Demo Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/demo.html#production-sites">Production Sites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/features.html">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#navigable-collection-tree">Navigable collection tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#powerful-search-engine">Powerful search engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#flexible-metadata">Flexible metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#user-personalization">User personalization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/features.html#multiple-output-formats">Multiple output formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/first-steps.html">First Steps with Invenio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#about">1. About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#prerequisites">2. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#debian-ubuntu-lts">2.1. Debian / Ubuntu LTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#centos-rhel">2.2. Centos / RHEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#os-x">2.3. OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#extra-tools">2.4. Extra tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#quick-instructions-for-the-impatient-invenio-developer">3. Quick instructions for the impatient Invenio developer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#installation">3.1. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#configuration">3.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/first-steps.html#development">3.3. Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/first-steps.html#final-words">4. Final words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/overlay.html">How to create an Invenio overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#what-is-an-overlay">What is an overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#creating-your-first-invenio-overlay">Creating your first Invenio overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-global-setup">The global setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-virtual-environment">The virtual environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#the-base-of-the-overlay">The base of the overlay</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#sensitive-configuration">Sensitive configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#database-setup">Database setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#assets">Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#running">Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#translations">Translations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#message-extraction">Message Extraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#create-catalog-for-new-language">Create Catalog for New Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#compiling-catalog">Compiling Catalog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#updating-strings">Updating Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/overlay.html#deployment">Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#preparing-the-tarball">Preparing the tarball</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#creating-the-virtual-environement">Creating the virtual environement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#installing-the-package">Installing the package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#id2">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#running-the-server">Running the server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/overlay.html#dealing-with-versions">Dealing with versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/common-concepts.html">Common Concepts</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">Developer&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers/introduction.html">Introducing Invenio for Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/introduction.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/extensions.html">Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#plugging-an-existing-extension">Plugging an Existing Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/extensions.html#code-structure">Code structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/registries.html">Pluggable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/models.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#quering">Quering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#subqueries">Subqueries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#schema">Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/models.html#improve-code-readability">Improve code readability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/modules.html#views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodule.html">How to develop a module: Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodule.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart2.html">How to develop a module: Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#multiple-views">Multiple views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart2.html#module-wide-configuration">Module-wide configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/howtomodulepart3.html">How to develop a module: Part 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/howtomodulepart3.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/git-workflow.html">Git Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#setting-things-up">Setting things up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s1-setting-up-your-git-identity">S1. Setting up your Git identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s2-setting-up-your-private-repo">S2. Setting up your private repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s3-backuping-your-private-repo-only-developers-at-cern">S3. Backuping your private repo (only developers at CERN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s4-setting-up-your-public-repo">S4. Setting up your public repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s5-pushing-to-your-public-repo-from-outside-cern">S5. Pushing to your public repo from outside CERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s6-making-your-public-repo-visible-on-the-web">S6. Making your public repo visible on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#s7-using-remote-repository-locally">S7. Using remote repository locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#understanding-official-repo-branches">Understanding official repo branches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#maint"><code class="docutils literal"><span class="pre">maint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#master"><code class="docutils literal"><span class="pre">master</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#next"><code class="docutils literal"><span class="pre">next</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-overview">Working on new features - overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#working-on-new-features-details">Working on new features - details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w1-cloning-the-repo">W1. Cloning the repo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w2-working-with-local-topic-branches">W2. Working with local topic branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w3-working-on-new-feature-b">W3. Working on new-feature-b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w4-using-temporary-stash">W4. Using temporary stash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w5-testing-on-dev-servers">W5. Testing on DEV servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w6-rebasing-against-latest-git-master">W6. Rebasing against latest git/master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w7-publishing-your-work">W7. Publishing your work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#w8-review-process">W8. Review process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/git-workflow.html#remarks-often-made-during-code-review">Remarks often made during code review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r1-remarks-on-commit-history">R1. Remarks on commit history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r2-remarks-on-commit-log-messages">R2. Remarks on commit log messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r3-remarks-on-the-coding">R3. Remarks on the coding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developers/git-workflow.html#r4-notes-on-the-review-process-timeline">R4. Notes on the review process timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/kwalitee.html">Commit quality check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/docker.html">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#interactive-sessions">Interactive sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#code-changes-and-live-reloading">Code changes and live reloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#running-tests">Running tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/docker.html#overlays">Overlays</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Admin&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibauthority-admin-guide.html">BibAuthority Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#enforcing-types-of-authority-records">Enforcing types of authority records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibedit">BibEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#bibindex">BibIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibauthority-admin-guide.html#configuration-file-overview">Configuration File Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibclassify-admin-guide.html">BibClassify Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#thesaurus">1.1 Thesaurus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#keyword-extraction">1.2 Keyword extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibclassify-admin-guide.html#running-bibclassify">2. Running BibClassify</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibconvert-admin-guide.html">BibConvert Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#a-overview">A. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#b-xml-oriented-mode">B. XML-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#configuration-file-examples">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#running-bibconvert">2. Running BibConvert</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#c-plain-text-oriented-mode">C. Plain Text-Oriented Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id2">1. Configuration File Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#id3">2. Running BibConvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibconvert-admin-guide.html#bibconvert-configuration-guide">3. BibConvert Configuration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibedit-admin-guide.html">BibEdit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-web-interface">2. Edit records via Web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#keyboard-shortcuts-on-bibedit">2.1 Keyboard shortcuts on BibEdit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-multiple-records-via-web-interface">3. Edit multiple records via web interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibedit-admin-guide.html#multi-record-editor-user-guide">3.1 Multi-Record Editor user guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#edit-records-via-command-line">4. Edit records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-records-via-command-line">5. Delete records via command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#delete-all-records">6. Delete all records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibedit-admin-guide.html#access-record-history">7. Access record history</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#configure-knowledge-bases">2. Configure Knowledge Bases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-knowledge-base">2.1 Add a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-knowledge-base">2.2 Remove a Knowledge Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#add-a-mapping">2.3 Add a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#remove-a-mapping">2.4 Remove a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-a-mapping">2.5 Edit a Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html#edit-the-attributes-of-a-knowledge-base">2.6 Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibmatch-admin-guide.html">BibMatch Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#what-is-bibmatch">1.1 What is BibMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#features">1.2 Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#usage">2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#basic-usage">2.1 Basic usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#advanced-usage">2.2 Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#more-examples">3. More examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#id2">3.1 More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#appendix">Appendix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#a-querystrings">A. Querystrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#b-bibconvert-formats">B. BibConvert formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#c-predefined-fields">C. Predefined fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibmatch-admin-guide.html#d-bibmatch-commmand-line-tool">D. BibMatch commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsched-admin-guide.html">BibSched Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-graphical-interface">Bibsched graphical interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#manual-mode">Manual mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibsched-admin-guide.html#automatic-mode">Automatic mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-maintenance">Bibsched maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#priorities">Priorities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-logging">Task logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#task-concurrency">Task concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-command-line-interface">Bibsched command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibtasks-command-line-interface">Bibtasks command line interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibsched-admin-guide.html#bibsched-tasklets">BibSched Tasklets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibupload-admin-guide.html">BibUpload Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#configuring-bibupload">2. Configuring BibUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#running-bibupload">3. Running BibUpload</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-new-records">3.1 Inserting new records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-records-into-the-holding-pen">3.2 Inserting records into the Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#updating-existing-records">3.3 Updating existing records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#inserting-and-updating-at-the-same-time">3.4 Inserting and updating at the same time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#obtaining-feedbacks">3.7 Obtaining feedbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#assigning-additional-information-to-documents-and-other-entities">3.8 Assigning additional information to documents and other entities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/bibupload-admin-guide.html#batch-uploader">4. Batch Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-cataloguers">4.1 Web interface - Cataloguers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#web-interface-robots">4.2 Web interface - Robots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/bibupload-admin-guide.html#daemon-mode">4.2 Daemon mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-data-harvesting">2. OAI Data Harvesting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oai-harvest-admin-interface">2.1 OAI Harvest Admin Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html#oaiharvest-commmand-line-tool">2.2 oaiharvest commmand-line tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/oairepository-admin-guide.html">OAIRepository Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/oairepository-admin-guide.html#oai-repository-exporting">2. OAI Repository (<em>Exporting</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#definition-of-oai-sets">2.1. Definition of OAI sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/oairepository-admin-guide.html#exposing-metadata-via-oai-repository-gateway">2.2. Exposing metadata via OAI Repository Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/publiline-admin-guide.html">Publiline Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#configure-publiline">Configure Publiline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-1-define-a-publication-committee-chair">Step 1 : Define a Publication Committee Chair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-2-create-a-group">Step 2 : Create a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/publiline-admin-guide.html#step-3-define-project-leader-s">Step 3 : Define Project Leader(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/publiline-admin-guide.html#overview-and-usage">Overview and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/websession-admin-guide.html">WebSession Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/websession-admin-guide.html#guest-user-sessions">Guest User Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/webstyle-admin-guide.html">WebStyle Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#css-style-sheet-and-images">1.1 CSS Style Sheet and Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#html-page-layout">1.2 HTML Page Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#look-of-bibliographic-references">1.3 Look of Bibliographic References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#specific-configurations">1.4 Specific Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/webstyle-admin-guide.html#detailed-record-pages">2. Detailed Record Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#available-tabs">2.1 Available tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#showing-hiding-tabs">2.2 Showing/Hiding tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-content-of-tabs">2.3 Customizing content of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#customizing-look-of-tabs">2.4 Customizing look of tabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#custom-redirections">Custom Redirections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admin/webstyle-admin-guide.html#command-line-interface">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../base.html">Base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#invenio-base">invenio.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.wrappers">Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../base.html#module-invenio.base.bundles">Bundles</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#extensions">Extensions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Assets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-invenio.ext.assets.commands">Flask-Script commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-invenio.ext.assets.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-invenio.ext.assets.registry">Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-invenio.ext.assets.wrappers">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arxiv.html">ArXiv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arxiv.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="crossref.html">CrossRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="crossref.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="es.html">Elasticsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fs.html">Cloud Filesystems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fs.html#dropbox">Dropbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fs.html#google-drive">Google Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="jasmine.html">Jasmine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="jasmine.html#missing-features">Missing features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jasmine.html#flightjs-tests">FlightJS tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jasmine.html#fixtures">Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jasmine.html#howto">HOWTO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html">Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="logging.html#logging-errors">Logging errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logging.html#log-handlers">Log handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logging.html#legacy-handling-of-errors">Legacy handling of errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logging.html#error-handling-do-s-and-don-ts">Error handling do&#8217;s and don&#8217;ts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logging.html#backends">Backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="login.html">Login</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="login.html#module-invenio.ext.login">invenio.ext.login package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="login.html#module-invenio.ext.login.legacy_user">invenio.ext.login.legacy_user module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="passlib.html">Passlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="passlib.html#configuration-settings">Configuration Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="script.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="script.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="session.html#module-invenio.ext.session.backends">Backends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="session.html#module-invenio.ext.session.interface">Wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sqlalchemy.html">SQLAlchemy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="template.html">Templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="template.html#module-invenio.ext.template.extensions">Jinja2 extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html#module-invenio.ext.template.config">Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html#module-invenio.ext.template.loader">Loader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html#module-invenio.ext.template.bccache">BCCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html#module-invenio.ext.template.context_processor">Context Processor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules/annotations.html">Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#invenio-modules-annotations">invenio.modules.annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.noteutils">Noteutils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/annotations.html#module-invenio.modules.annotations.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/apikeys.html">API Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documentation.html">Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documentation.html#module-invenio.modules.documentation.views">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/documents.html">Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-api">invenio.modules.documents.api</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/documents.html#invenio-modules-documents-errors">invenio.modules.documents.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/formatter.html">Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/jsonalchemy.html">JSONAlchemy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#module-structure">Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#how-to-extend-jsonalchemy-behaviour">How to Extend JSONAlchemy Behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#invenio-use-cases">Invenio Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/jsonalchemy.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/knowledge.html">Knowledge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/knowledge.html#module-invenio.modules.knowledge.api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/oauthclient.html">OAuthClient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#authorization-flow-overview">Authorization Flow Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#module-invenio.modules.oauthclient.config">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#contrib">Contrib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/oauthclient.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/redirector.html">Redirector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.models">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/redirector.html#module-invenio.modules.redirector.manage">Manage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/upgrader.html">Upgrader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/upgrader.html#module-invenio.modules.upgrader.models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/uploader.html">Uploader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/uploader.html#module-invenio.modules.uploader.workflows">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/workflows.html">Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-workflow">Create a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#create-a-task">Create a task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#run-a-workflow">Run a workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#holding-pen">Holding Pen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#models">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#engine">Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#id2">Workers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules/workflows.html#views">Views</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../utils/datastructures.html">Datastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/washers.html">Washers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utils/forms.html">Forms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#legacy">Legacy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../legacy/bibrecord.html">BibRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community/code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecationpolicy.html">Deprecation policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#fast-track-deprecation">Fast track deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deprecationpolicy.html#how-to-deprecate-a-feature">How to deprecate a feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#recommendations-for-writing-upgrades">Recommendations for writing upgrades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-modules">Upgrade modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrading.html#upgrade-dependency-graph">Upgrade dependency graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#invenio-license">Invenio License</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Invenio</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../api.html">API</a> &raquo;</li>
+      
+    <li>Assets</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-invenio.ext.assets">
+<span id="assets"></span><span id="ext-assets"></span><h1>Assets<a class="headerlink" href="#module-invenio.ext.assets" title="Permalink to this headline">¶</a></h1>
+<p>Additional extensions and functions for the <cite>flask_assets</cite> module.</p>
+<dl class="data">
+<dt id="invenio.ext.assets.command">
+<code class="descclassname">invenio.ext.assets.</code><code class="descname">command</code><a class="headerlink" href="#invenio.ext.assets.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flask-Script command that deals with assets.</p>
+<p>Documentation is on: <cite>webassets</cite> <a class="reference external" href="http://webassets.readthedocs.org/en/latest/script.html#script-commands" title="(in webassets v0.11.dev)"><span>Included Commands</span></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># How to install it</span>
+<span class="kn">from</span> <span class="nn">flask_script</span> <span class="kn">import</span> <span class="n">Manager</span>
+<span class="n">manager</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">()</span>
+<span class="n">manager</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="s">&quot;assets&quot;</span><span class="p">,</span> <span class="n">command</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="invenio.ext.assets.registry">
+<code class="descclassname">invenio.ext.assets.</code><code class="descname">registry</code><a class="headerlink" href="#invenio.ext.assets.registry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flask-Registry registry that handles the bundles. Use it directly as it&#8217;s
+lazy loaded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="invenio.ext.assets.setup_app">
+<code class="descclassname">invenio.ext.assets.</code><code class="descname">setup_app</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.setup_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize Assets extension.</p>
+<p>Use the <code class="docutils literal"><span class="pre">ASSETS_BUNDLES_DIR</span></code> option to change the name of the directory
+where the assets are generated (by default <code class="docutils literal"><span class="pre">gen</span></code>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>app</strong> &#8211; Flask application</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.Bundle">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.</code><code class="descname">Bundle</code><span class="sig-paren">(</span><em>*contents</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#webassets.bundle.Bundle" title="webassets.bundle.Bundle"><code class="xref py py-class docutils literal"><span class="pre">webassets.bundle.Bundle</span></code></a></p>
+<p>Bundle extension with a name and bower dependencies.</p>
+<p>The name is only used for the requirements from the templates and the
+weight does the bundle ordering.</p>
+<p>The bower dependencies are used to generate a bower.json file.</p>
+<dl class="method">
+<dt id="invenio.ext.assets.Bundle.has_filter">
+<code class="descname">has_filter</code><span class="sig-paren">(</span><em>*filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.Bundle.has_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tell whether a given filter is set up for this bundle.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.RequireJSFilter">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.</code><code class="descname">RequireJSFilter</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.RequireJSFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://webassets.readthedocs.org/en/latest/builtin_filters.html#webassets.filter.requirejs.RequireJSFilter" title="(in webassets v0.11.dev)"><code class="xref py py-class docutils literal"><span class="pre">webassets.filter.requirejs.RequireJSFilter</span></code></a></p>
+<p>Optimize AMD-style modularized JavaScript into a single asset.</p>
+<p>Adds support for exclusion of files already in defined in other bundles.</p>
+<dl class="attribute">
+<dt id="invenio.ext.assets.RequireJSFilter.method">
+<code class="descname">method</code><em class="property"> = False</em><a class="headerlink" href="#invenio.ext.assets.RequireJSFilter.method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.RequireJSFilter.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.RequireJSFilter.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup filter (only called when filter is actually used).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.CleanCSSFilter">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.</code><code class="descname">CleanCSSFilter</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#webassets.filter.ExternalTool" title="webassets.filter.ExternalTool"><code class="xref py py-class docutils literal"><span class="pre">webassets.filter.ExternalTool</span></code></a></p>
+<p>Minify css using cleancss.</p>
+<p>Implements opener capable of rebasing relative CSS URLs against
+<code class="docutils literal"><span class="pre">COLLECT_STATIC_ROOT</span></code>.</p>
+<dl class="method">
+<dt id="invenio.ext.assets.CleanCSSFilter.input">
+<code class="descname">input</code><span class="sig-paren">(</span><em>_in</em>, <em>out</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input filtering.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.CleanCSSFilter.method">
+<code class="descname">method</code><em class="property"> = u'open'</em><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.CleanCSSFilter.name">
+<code class="descname">name</code><em class="property"> = u'cleancssurl'</em><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.CleanCSSFilter.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>out</em>, <em>source_path</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open source.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.CleanCSSFilter.options">
+<code class="descname">options</code><em class="property"> = {u'binary': u'CLEANCSS_BIN'}</em><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.CleanCSSFilter.output">
+<code class="descname">output</code><span class="sig-paren">(</span><em>_in</em>, <em>out</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output filtering.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.CleanCSSFilter.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.CleanCSSFilter.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize filter just before it will be used.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="module-invenio.ext.assets.commands">
+<span id="flask-script-commands"></span><h2>Flask-Script commands<a class="headerlink" href="#module-invenio.ext.assets.commands" title="Permalink to this headline">¶</a></h2>
+<p>Command-line tools for assets.</p>
+<dl class="class">
+<dt id="invenio.ext.assets.commands.AssetsCommand">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.commands.</code><code class="descname">AssetsCommand</code><span class="sig-paren">(</span><em>assets_env=None</em>, <em>impl=&lt;class 'flask_assets.FlaskArgparseInterface'&gt;</em>, <em>log=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.commands.AssetsCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#flask_assets.ManageAssets" title="flask_assets.ManageAssets"><code class="xref py py-class docutils literal"><span class="pre">flask_assets.ManageAssets</span></code></a></p>
+<p>Command-line operation for assets.</p>
+<dl class="method">
+<dt id="invenio.ext.assets.commands.AssetsCommand.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.commands.AssetsCommand.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the command-line.</p>
+<p>It loads the bundles from the <a class="reference internal" href="#invenio.ext.assets.registry.bundles" title="invenio.ext.assets.registry.bundles"><code class="xref py py-data docutils literal"><span class="pre">bundles</span> <span class="pre">registry</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.commands.BowerCommand">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.commands.</code><code class="descname">BowerCommand</code><span class="sig-paren">(</span><em>func=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.commands.BowerCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#flask_script.commands.Command" title="flask_script.commands.Command"><code class="xref py py-class docutils literal"><span class="pre">flask_script.commands.Command</span></code></a></p>
+<p>Command-line operation for bower.</p>
+<dl class="attribute">
+<dt id="invenio.ext.assets.commands.BowerCommand.option_list">
+<code class="descname">option_list</code><em class="property"> = (&lt;flask_script.commands.Option object at 0x7fdcf03b7590&gt;, &lt;flask_script.commands.Option object at 0x7fdcf03b7610&gt;, &lt;flask_script.commands.Option object at 0x7fdcf03b7650&gt;)</em><a class="headerlink" href="#invenio.ext.assets.commands.BowerCommand.option_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.commands.BowerCommand.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>filename=None</em>, <em>override=False</em>, <em>output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.commands.BowerCommand.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a bower.json file.</p>
+<p>It comes with default values for the ignore. Name and version are set
+to be invenio&#8217;s.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-invenio.ext.assets.extensions">
+<span id="jinja2-extensions"></span><h2>Jinja2 extensions<a class="headerlink" href="#module-invenio.ext.assets.extensions" title="Permalink to this headline">¶</a></h2>
+<p>Custom <cite>Jinja2</cite> extensions.</p>
+<dl class="class">
+<dt id="invenio.ext.assets.extensions.BundleExtension">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.extensions.</code><code class="descname">BundleExtension</code><span class="sig-paren">(</span><em>environment</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://jinja.pocoo.org/docs/extensions/#jinja2.ext.Extension" title="(in Jinja2 v2.8-dev)"><code class="xref py py-class docutils literal"><span class="pre">jinja2.ext.Extension</span></code></a></p>
+<p>Jinja extension for css and js bundles.</p>
+<p>Definition of the required bundles.</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span>- <span class="k">bundles</span> <span class="s2">&quot;jquery.js&quot;</span><span class="o">,</span> <span class="s2">&quot;invenio.css&quot;</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span>- <span class="k">bundle</span> <span class="s2">&quot;require.js&quot;</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>Usage.</p>
+<div class="highlight-jinja"><div class="highlight"><pre><span class="cp">{%</span>- <span class="k">for</span> <span class="nv">bundle</span> <span class="k">in</span> <span class="nv">get_bundle</span><span class="o">(</span><span class="s1">&#39;js&#39;</span><span class="o">)</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;!-- </span><span class="cp">{{</span> <span class="nv">bundle.output</span> <span class="cp">}}</span><span class="x"> --&gt;</span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">assets</span> <span class="nv">bundle</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;script type=&quot;text/javascript&quot; src=&quot;</span><span class="cp">{{</span> <span class="nv">ASSET_URL</span> <span class="cp">}}</span><span class="x">&quot;&gt;&lt;/script&gt;</span>
+<span class="x">  </span><span class="cp">{%</span>- <span class="k">endassets</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span>- <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="invenio.ext.assets.extensions.BundleExtension.identifier">
+<code class="descname">identifier</code><em class="property"> = 'invenio.ext.assets.extensions.BundleExtension'</em><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension.identifier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.ext.assets.extensions.BundleExtension.inject">
+<em class="property">classmethod </em><code class="descname">inject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension.inject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inject the get_bundle function into the jinja templates.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.ext.assets.extensions.BundleExtension.install">
+<em class="property">classmethod </em><code class="descname">install</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension.install" title="Permalink to this definition">¶</a></dt>
+<dd><p>Install the extension into the application.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.extensions.BundleExtension.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the bundles block and feed the bundles environment.</p>
+<p>Bundles entries are replaced by an empty string.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="invenio.ext.assets.extensions.BundleExtension.storage">
+<em class="property">classmethod </em><code class="descname">storage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension.storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store used bundles on request context stack.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.extensions.BundleExtension.tags">
+<code class="descname">tags</code><em class="property"> = set(['bundles', 'bundle'])</em><a class="headerlink" href="#invenio.ext.assets.extensions.BundleExtension.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.extensions.InvenioResolver">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.extensions.</code><code class="descname">InvenioResolver</code><a class="headerlink" href="#invenio.ext.assets.extensions.InvenioResolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#flask_assets.FlaskResolver" title="flask_assets.FlaskResolver"><code class="xref py py-class docutils literal"><span class="pre">flask_assets.FlaskResolver</span></code></a></p>
+<p>Custom resource resolver for webassets.</p>
+<dl class="method">
+<dt id="invenio.ext.assets.extensions.InvenioResolver.resolve_source">
+<code class="descname">resolve_source</code><span class="sig-paren">(</span><em>ctx</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.InvenioResolver.resolve_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the absolute path of the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.extensions.InvenioResolver.resolve_source_to_url">
+<code class="descname">resolve_source_to_url</code><span class="sig-paren">(</span><em>ctx</em>, <em>filepath</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.InvenioResolver.resolve_source_to_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the url of the resource.</p>
+<p>Displaying them as is in debug mode as the web server knows where to
+search for them.</p>
+<p><a class="reference external" href="http://webassets.readthedocs.org/en/latest/generic/custom_resolver.html#webassets.env.Resolver.resolve_source_to_url" title="(in webassets v0.11.dev)"><code class="xref py py-meth docutils literal"><span class="pre">webassets.env.Resolver.resolve_source_to_url()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.extensions.InvenioResolver.search_for_source">
+<code class="descname">search_for_source</code><span class="sig-paren">(</span><em>ctx</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.extensions.InvenioResolver.search_for_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return absolute path of the resource.</p>
+<p><a class="reference external" href="http://webassets.readthedocs.org/en/latest/generic/custom_resolver.html#webassets.env.Resolver.search_for_source" title="(in webassets v0.11.dev)"><code class="xref py py-meth docutils literal"><span class="pre">webassets.env.Resolver.search_for_source()</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ctx</strong> &#8211; environment</li>
+<li><strong>item</strong> &#8211; resource filename</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">absolute path</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-invenio.ext.assets.registry">
+<span id="registry"></span><h2>Registry<a class="headerlink" href="#module-invenio.ext.assets.registry" title="Permalink to this headline">¶</a></h2>
+<p>Registry for bundles.</p>
+<dl class="data">
+<dt id="invenio.ext.assets.registry.bundles">
+<code class="descclassname">invenio.ext.assets.registry.</code><code class="descname">bundles</code><a class="headerlink" href="#invenio.ext.assets.registry.bundles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flask-Registry registry that handles the bundles. Use it directly as it&#8217;s
+lazy loaded.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-invenio.ext.assets.wrappers">
+<span id="wrappers"></span><h2>Wrappers<a class="headerlink" href="#module-invenio.ext.assets.wrappers" title="Permalink to this headline">¶</a></h2>
+<p>Custom modified classes.</p>
+<dl class="class">
+<dt id="invenio.ext.assets.wrappers.Bundle">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.wrappers.</code><code class="descname">Bundle</code><span class="sig-paren">(</span><em>*contents</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#webassets.bundle.Bundle" title="webassets.bundle.Bundle"><code class="xref py py-class docutils literal"><span class="pre">webassets.bundle.Bundle</span></code></a></p>
+<p>Bundle extension with a name and bower dependencies.</p>
+<p>The name is only used for the requirements from the templates and the
+weight does the bundle ordering.</p>
+<p>The bower dependencies are used to generate a bower.json file.</p>
+<dl class="method">
+<dt id="invenio.ext.assets.wrappers.Bundle.has_filter">
+<code class="descname">has_filter</code><span class="sig-paren">(</span><em>*filters</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.Bundle.has_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tell whether a given filter is set up for this bundle.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.wrappers.BundlesAutoDiscoveryRegistry">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.wrappers.</code><code class="descname">BundlesAutoDiscoveryRegistry</code><span class="sig-paren">(</span><em>module_name=None</em>, <em>app=None</em>, <em>with_setup=False</em>, <em>silent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.BundlesAutoDiscoveryRegistry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://flask-registry.readthedocs.org/en/latest/api.html#flask_registry.registries.modulediscovery.ModuleAutoDiscoveryRegistry" title="(in Flask-Registry v0.2.1.dev20140801)"><code class="xref py py-class docutils literal"><span class="pre">flask_registry.registries.modulediscovery.ModuleAutoDiscoveryRegistry</span></code></a></p>
+<p>Registry that searches for bundles.</p>
+<p>Its registry is a list of the package name and the bundle itself. This way
+you can keep track of where a bundle was loaded from.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.wrappers.</code><code class="descname">CleanCSSFilter</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../aliases.html#webassets.filter.ExternalTool" title="webassets.filter.ExternalTool"><code class="xref py py-class docutils literal"><span class="pre">webassets.filter.ExternalTool</span></code></a></p>
+<p>Minify css using cleancss.</p>
+<p>Implements opener capable of rebasing relative CSS URLs against
+<code class="docutils literal"><span class="pre">COLLECT_STATIC_ROOT</span></code>.</p>
+<dl class="method">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.input">
+<code class="descname">input</code><span class="sig-paren">(</span><em>_in</em>, <em>out</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input filtering.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.method">
+<code class="descname">method</code><em class="property"> = u'open'</em><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.name">
+<code class="descname">name</code><em class="property"> = u'cleancssurl'</em><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>out</em>, <em>source_path</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open source.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.options">
+<code class="descname">options</code><em class="property"> = {u'binary': u'CLEANCSS_BIN'}</em><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.output">
+<code class="descname">output</code><span class="sig-paren">(</span><em>_in</em>, <em>out</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output filtering.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.wrappers.CleanCSSFilter.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.CleanCSSFilter.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize filter just before it will be used.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="invenio.ext.assets.wrappers.RequireJSFilter">
+<em class="property">class </em><code class="descclassname">invenio.ext.assets.wrappers.</code><code class="descname">RequireJSFilter</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.RequireJSFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://webassets.readthedocs.org/en/latest/builtin_filters.html#webassets.filter.requirejs.RequireJSFilter" title="(in webassets v0.11.dev)"><code class="xref py py-class docutils literal"><span class="pre">webassets.filter.requirejs.RequireJSFilter</span></code></a></p>
+<p>Optimize AMD-style modularized JavaScript into a single asset.</p>
+<p>Adds support for exclusion of files already in defined in other bundles.</p>
+<dl class="attribute">
+<dt id="invenio.ext.assets.wrappers.RequireJSFilter.method">
+<code class="descname">method</code><em class="property"> = False</em><a class="headerlink" href="#invenio.ext.assets.wrappers.RequireJSFilter.method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="invenio.ext.assets.wrappers.RequireJSFilter.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invenio.ext.assets.wrappers.RequireJSFilter.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup filter (only called when filter is actually used).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arxiv.html" class="btn btn-neutral float-right" title="ArXiv" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../base.html" class="btn btn-neutral" title="Base" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, 2014, 2015 CERN.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.2.0.dev20150608',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
