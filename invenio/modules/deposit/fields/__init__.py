@@ -29,6 +29,7 @@ from .file_upload import *
 from .issn import *
 from .jinja import *
 from .journal import *
+from .jsonfield import *
 from .keywords import *
 from .language import *
 from .notes import *

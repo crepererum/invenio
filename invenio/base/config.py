@@ -65,6 +65,7 @@ PACKAGES = [
     'invenio_comments',
     'invenio_documents',
     'invenio_pidstore',
+    'invenio_jsonschemas',
     'invenio.modules.*',
     'invenio_groups',
     'invenio_accounts',

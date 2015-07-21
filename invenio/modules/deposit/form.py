@@ -21,6 +21,9 @@
 
 from wtforms import Field, FieldList, Form, FormField
 
+from wtforms.form import FormMeta
+
+
 CFG_GROUPS_META = {
     'classes': None,
     'indication': None,
@@ -381,3 +384,23 @@ class DataExporter(FormVisitor):
             self._push_stack(fieldlist, [])
             super(DataExporter, self).visit_fieldlist(fieldlist)
             self._pop_stack()
+
+
+class JsonForm(FormMeta):
+    def __getattr__(cls, name):
+        if name is 'json':
+            if not 'json' in cls.__dict__:
+                # do not import on module level, god knows why
+                from .fields.jsonfield import JsonField
+                json = JsonField(
+                    label='',
+                    schema=getattr(cls, '_schema'),
+                    export_key='_json'
+                )
+                setattr(cls, 'json', json)
+            return cls.__dict__['json']
+        else:
+            return super(JsonForm, cls).__getattribute__(name)
+
+    def __dir__(cls):
+        return cls.__dict__.keys() + ['json']

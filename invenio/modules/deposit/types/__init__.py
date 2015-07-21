@@ -18,6 +18,10 @@
 # 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
 
 from __future__ import print_function, absolute_import
+from .jsonrecord import JsonRecordDeposition
 from .simplerecord import SimpleRecordDeposition
 
-__all__ = ['SimpleRecordDeposition']
+__all__ = [
+    'JsonRecordDeposition',
+    'SimpleRecordDeposition',
+]
