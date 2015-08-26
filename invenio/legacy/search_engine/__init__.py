@@ -77,7 +77,6 @@ from invenio.config import \
      CFG_WEBSEARCH_VIEWRESTRCOLL_POLICY, \
      CFG_WEBSEARCH_WILDCARD_LIMIT
 
-from invenio_search.searchext.engines.native import search_unit
 from invenio_search.utils import get_most_popular_field_values
 from invenio_search.errors import \
      InvenioWebSearchUnknownCollectionError, \
@@ -177,54 +176,6 @@ def get_coll_ancestors(coll):
 
 
 from invenio_collections.cache import get_collection_allchildren
-
-
-def search_pattern(req=None, p=None, f=None, m=None, ap=0, of="id", verbose=0,
-                   ln=CFG_SITE_LANG, display_nearest_terms_box=True, wl=0):
-    """Search for complex pattern 'p' within field 'f' according to
-       matching type 'm'.  Return hitset of recIDs.
-
-       The function uses multi-stage searching algorithm in case of no
-       exact match found.  See the Search Internals document for
-       detailed description.
-
-       The 'ap' argument governs whether an alternative patterns are to
-       be used in case there is no direct hit for (p,f,m).  For
-       example, whether to replace non-alphanumeric characters by
-       spaces if it would give some hits.  See the Search Internals
-       document for detailed description.  (ap=0 forbits the
-       alternative pattern usage, ap=1 permits it.)
-       'ap' is also internally used for allowing hidden tag search
-       (for requests coming from webcoll, for example). In this
-       case ap=-9
-
-       The 'of' argument governs whether to print or not some
-       information to the user in case of no match found.  (Usually it
-       prints the information in case of HTML formats, otherwise it's
-       silent).
-
-       The 'verbose' argument controls the level of debugging information
-       to be printed (0=least, 9=most).
-
-       All the parameters are assumed to have been previously washed.
-
-       This function is suitable as a mid-level API.
-    """
-    if f is None:
-        from invenio_search.api import Query
-        results = Query(p).search()
-    else:
-        results = search_unit(p, f, m, wl=wl)
-    import warnings
-    warnings.warn(
-        'Deprecated search_pattern(p={0}, f={1}, m={2}) = {3}.'.format(
-            p, f, m, results),
-        stacklevel=2
-    )
-    return results
-
-
-from invenio_search.searchext.engines.native import *
 
 
 def guess_primary_collection_of_a_record(recID):
