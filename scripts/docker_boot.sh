@@ -28,7 +28,7 @@
 
 
 # location of the folder that gets shared between containers
-CFG_SHARED_FOLDER=/home/invenio
+export CFG_SHARED_FOLDER=${CFG_SHARED_FOLDER:=/opt/invenio}
 
 CFG_MARKER_LOCK=$CFG_SHARED_FOLDER/boot.lock
 CFG_MARKER_DONE=$CFG_SHARED_FOLDER/boot.initialized
@@ -107,12 +107,16 @@ wait_for_services() {
 }
 
 init() {
+    # hook: preinit
+    for c in $(ls /src/hook_docker_preinit/*.sh); do
+        $c
+    done
+
     # prepare bower installation
     # bower is not able to handle absolute paths very well
     mkdir -p $CFG_SHARED_FOLDER/static/vendors
     ln -s $CFG_SHARED_FOLDER/static/vendors bower_components
     rm .bowerrc
-
 
     # set some additional configs to be in sync with the docker-compose
     # setup. do this before the dev setup, because it sets some paths to
@@ -148,19 +152,21 @@ EOF
 
     # additional config through hook
     # this can be used by overlays and module testers
-    if [ -n "$INVENIO_ADD_CONFIG" ]; then
-        for c in $INVENIO_ADD_CONFIG; do
-            cat $c >> "$cfgfile"
-        done
-    fi
+    for c in $(ls /src/docker_config_add/*.cfg); do
+        cat $c >> "$cfgfile"
+    done
 
     # load dev config
     /code/scripts/setup_devmode.sh
 
-
     # final shot
     inveniomanage database init --user=root --password=mysecretpassword --yes-i-know
     inveniomanage database create
+
+    # hook: postinit
+    for c in $(ls /src/hook_docker_postinit/*.sh); do
+        $c
+    done
 }
 
 # before doing anything, we wait for our services
@@ -181,7 +187,6 @@ wait_for_services
         touch $CFG_MARKER_RUNNING
 
         init
-
 
         # remember that we reached this point
         touch $CFG_MARKER_DONE
